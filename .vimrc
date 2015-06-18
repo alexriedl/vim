@@ -5,9 +5,6 @@ execute pathogen#infect()
 let g:proj_window_width = 33
 nnoremap <F9> :Project<CR>
 
-"Supertab Plugin (Use tab to auto-complete instead of <c-x> <x-o>)
-"let g:SuperTabDefaultCompletionType = ""
-
 "Taggatron Plugin (auto generate tag files - requires ctags-exuberant installed)
 let g:tagcommands = {
 \    "php" : {"tagfile":".php.tags","args":"-R"},
@@ -16,6 +13,11 @@ let g:tagcommands = {
 
 "Autocomplete
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+"CTags Exuberant - Load tag files
+autocmd FileType php setlocal tags=.php.tags
+autocmd FileType javascript setlocal tags=.js.tags
 
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
