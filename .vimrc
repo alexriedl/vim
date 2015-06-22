@@ -16,8 +16,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 "CTags Exuberant - Load tag files
-autocmd FileType php setlocal tags=.php.tags
-autocmd FileType javascript setlocal tags=.js.tags
+autocmd FileType php setlocal tags=./.php.tags
+autocmd FileType javascript setlocal tags=./.js.tags
 
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
