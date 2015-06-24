@@ -26,12 +26,18 @@ set tabstop=4           "Tab width
 set shiftwidth=4        "Tab width
 set expandtab           "Use spaces instead of tabs
 set cindent             "Auto indent using c style indents
-set foldmethod=indent   "Fold on indent level
-set foldlevelstart=1    "Default fold level
-set foldnestmax=2       "Set max folds to 2
 set cursorline          "Highlight line cursor is on
 set hlsearch            "Highlight search matches
 set incsearch           "Search as characters are entered
+set foldmethod=indent   "Fold on indent level
+
+"set foldlevelstart=1    "Default fold level
+"set foldnestmax=2       "Set max folds to 2
+
+"File type specific settings
+autocmd FileType php set foldlevelstart=1 foldnestmax=2
+autocmd FileType javascript set foldlevelstart=1 foldnestmax=2
+autocmd FileType cs set foldnestmax=3
 
 let mapleader=","       "Set comma as leader
 
