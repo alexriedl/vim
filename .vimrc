@@ -1,9 +1,15 @@
 "Pathogen
 execute pathogen#infect()
+filetype plugin on
+filetype plugin indent on
+syntax on
 
 "Project Plugin
 let g:proj_window_width = 33
 nnoremap <F9> :Project<CR>
+
+"Tagbar Plugin
+nnoremap <F8> :TagbarToggle<CR>
 
 "Taggatron Plugin (auto generate tag files - requires ctags-exuberant installed)
 let g:tagcommands = {
