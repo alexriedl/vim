@@ -72,3 +72,8 @@ nnoremap E $
 "Unbind old beginning/end of line movements (forces use of new bindings)
 nnoremap $ <nop>
 nnoremap ^ <nop>
+
+if(exists('+colorcolumn'))
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=9
+endif
