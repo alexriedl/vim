@@ -36,6 +36,9 @@ set cursorline          "Highlight line cursor is on
 set hlsearch            "Highlight search matches
 set incsearch           "Search as characters are entered
 set foldmethod=indent   "Fold on indent level
+set autoread            "Auto reload file if seved externally
+set ignorecase          "ignore case for searching
+set smartcase           "do case-sensitive if theres a cap
 
 "set foldlevelstart=1    "Default fold level
 "set foldnestmax=2       "Set max folds to 2
@@ -72,6 +75,17 @@ nnoremap E $
 "Unbind old beginning/end of line movements (forces use of new bindings)
 nnoremap $ <nop>
 nnoremap ^ <nop>
+
+"Unite
+"  file search
+nnoremap <C-p> :Unite file_rec/async<cr>
+"  Content search
+nnoremap <space>/ :Unite grep:.<cr>
+"  Yank History
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>
+"  Buffer Switching
+nnoremap <space>s :Unite -quick-match buffer<cr>
 
 if(exists('+colorcolumn'))
     set colorcolumn=80
