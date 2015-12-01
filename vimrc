@@ -1,3 +1,8 @@
+"-----------------------------------------"
+"               VERY IMPORTANT            "
+" goto .vim/bundle/vim-proc/ and do .make "
+"-----------------------------------------"
+
 "Pathogen
 execute pathogen#infect()
 filetype plugin on
@@ -39,6 +44,11 @@ set foldmethod=indent   "Fold on indent level
 set autoread            "Auto reload file if seved externally
 set ignorecase          "ignore case for searching
 set smartcase           "do case-sensitive if theres a cap
+
+if(exists('+colorcolumn'))
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=9
+endif
 
 "set foldlevelstart=1    "Default fold level
 "set foldnestmax=2       "Set max folds to 2
@@ -86,8 +96,12 @@ let g:unite_source_history_yank_enable = 1
 nnoremap <space>y :Unite history/yank<cr>
 "  Buffer Switching
 nnoremap <space>s :Unite -quick-match buffer<cr>
-
-if(exists('+colorcolumn'))
-    set colorcolumn=80
-    highlight ColorColumn ctermbg=9
-endif
+try
+    let g:unite_source_rec_async_command='ag --nocolor --nogroup -g ""'
+    call unite#filters#matcher_default#use(['matcher_fuzzy'])
+catch
+endtry
+" search a file in the filetree
+nnoremap <space><space> :split<cr> :<C-u>Unite -start-insert file_rec/async<cr>
+" reset not it is <C-l> normally
+nnoremap <space>r <Plug>(unite_restart)
