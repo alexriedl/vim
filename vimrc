@@ -1,7 +1,9 @@
-"-----------------------------------------"
-"               VERY IMPORTANT            "
-" goto .vim/bundle/vim-proc/ and do .make "
-"-----------------------------------------"
+"-----------------------------------------------------------------------------"
+"                         !!! VERY IMPORTANT !!!                              "
+" git submodule init                                                          "
+" git submodule update                                                        "
+" then goto .vim/bundle/vim-proc/ and do ./make                               "
+"-----------------------------------------------------------------------------"
 
 "Pathogen
 execute pathogen#infect()
@@ -11,9 +13,6 @@ syntax on
 
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
-
-"Tagbar Plugin
-nnoremap <F8> :TagbarToggle<CR>
 
 "Taggatron Plugin (auto generate tag files - requires ctags-exuberant installed)
 let g:tagcommands = {
@@ -43,6 +42,10 @@ set foldmethod=indent   "Fold on indent level
 set autoread            "Auto reload file if seved externally
 set ignorecase          "ignore case for searching
 set smartcase           "do case-sensitive if theres a cap
+
+"gvim settings
+set guioptions-=m
+set guioptions-=T
 
 "Highlight column 80
 if(exists('+colorcolumn'))
