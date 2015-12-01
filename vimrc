@@ -45,9 +45,10 @@ set autoread            "Auto reload file if seved externally
 set ignorecase          "ignore case for searching
 set smartcase           "do case-sensitive if theres a cap
 
+"Highlight column 80
 if(exists('+colorcolumn'))
     set colorcolumn=80
-    highlight ColorColumn ctermbg=9
+    highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
 endif
 
 "set foldlevelstart=1    "Default fold level
