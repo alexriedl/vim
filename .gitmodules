@@ -10,3 +10,6 @@
 [submodule "bundle/vim-proc"]
 	path = bundle/vim-proc
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/vim-nerdtree"]
+	path = bundle/vim-nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
