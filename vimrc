@@ -76,3 +76,7 @@ nnoremap E $
 "Unbind old beginning/end of line movements (forces use of new bindings)
 nnoremap $ <nop>
 nnoremap ^ <nop>
+
+"Disable backup files
+set nobackup
+set noswapfile
