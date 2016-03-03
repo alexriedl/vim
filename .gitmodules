@@ -4,12 +4,6 @@
 [submodule "bundle/vim-hack"]
 	path = bundle/vim-hack
 	url = git://github.com/hhvm/vim-hack.git
-[submodule "bundle/vim-unite"]
-	path = bundle/vim-unite
-	url = https://github.com/Shougo/unite.vim.git
-[submodule "bundle/vim-proc"]
-	path = bundle/vim-proc
-	url = https://github.com/Shougo/vimproc.vim.git
 [submodule "bundle/vim-nerdtree"]
 	path = bundle/vim-nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
