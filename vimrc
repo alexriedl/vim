@@ -80,6 +80,12 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 
+"Easier change windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 "Disable backup files
 set nobackup
 set noswapfile
