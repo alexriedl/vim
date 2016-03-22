@@ -90,6 +90,3 @@ map <C-l> <C-w>l
 set nobackup
 set noswapfile
 
-"Disable relative numbers by default
-autocmd VimEnter * let g:relativemode = 0
-
