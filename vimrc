@@ -14,9 +14,6 @@ syntax on
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
 
-"Conque Shell Plugin
-nnoremap <F5> :ConqueTermVSplit bash<CR>
-
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
 set nu                  "Show line numbers
