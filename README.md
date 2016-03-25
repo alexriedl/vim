@@ -18,3 +18,10 @@ cd .vim
 git submodule update --init --recursive
 ls -s /home/{USER}/.vim/vimrc /home/{USER}/.vimrc
 ```
+
+Update submodules by:
+
+```
+#!bash
+git submodule foreach git pull origin master
+```
