@@ -87,6 +87,9 @@ map <C-l> <C-w>l
 set nobackup
 set noswapfile
 
+"Hide current buffers instead of complain
+set hidden
+
 "For local replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 
