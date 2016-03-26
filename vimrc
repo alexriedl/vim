@@ -79,8 +79,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-"For local replace
+"For local/global replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
-
-"For global replace
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
+" Quickly edit/reload the vimrc file
+nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :so $MYVIMRC<CR>
