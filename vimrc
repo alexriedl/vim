@@ -35,24 +35,17 @@ set smartcase           "do case-sensitive if theres a cap
 set foldmethod=indent   "Fold on indent level
 set foldlevelstart=20
 set foldnestmax=2
-
-"gvim settings
-set guioptions-=m
-set guioptions-=T
+set nobackup            "Disable backup files
+set noswapfile          "Disable backup files
+set hidden              "Hide current buffers instead of complain
+set guioptions-=m       "gvim settings
+set guioptions-=T       "gvim settings
 
 "Highlight column 80
 if(exists('+colorcolumn'))
     set colorcolumn=80
     highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
 endif
-
-"set foldlevelstart=1    "Default fold level
-"set foldnestmax=2       "Set max folds to 2
-
-"File type specific settings
-"autocmd FileType php set foldlevelstart=20 foldnestmax=2
-"autocmd FileType javascript set foldlevelstart=1 foldnestmax=2
-"autocmd FileType cs set foldnestmax=3
 
 "cancel search match highlights
 nnoremap <leader><space> :nohlsearch<CR>
@@ -85,13 +78,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-"Disable backup files
-set nobackup
-set noswapfile
-
-"Hide current buffers instead of complain
-set hidden
 
 "For local replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
