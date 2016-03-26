@@ -31,15 +31,16 @@ set hlsearch            "Highlight search matches
 set incsearch           "Search as characters are entered
 set autoread            "Auto reload file if seved externally
 set ignorecase          "ignore case for searching
-set smartcase           "do case-sensitive if theres a cap
+set smartcase           "do case-sensitive search only if theres a cap
 set foldmethod=indent   "Fold on indent level
 set foldlevelstart=20
 set foldnestmax=2
 set nobackup            "Disable backup files
 set noswapfile          "Disable backup files
 set hidden              "Hide current buffers instead of complain
-set guioptions-=m       "gvim settings
-set guioptions-=T       "gvim settings
+set guioptions-=m       "gvim settings to hide menu
+set guioptions-=T       "gvim settings to hide toolbar
+set showmatch           "show matching parenthesis
 
 "Highlight column 80
 if(exists('+colorcolumn'))
