@@ -11,8 +11,13 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
+let mapleader=","       "Set comma as leader
+
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
+
+"compile .less into .css
+nnoremap <Leader>m :w <BAR> !lessc % > css/%:t:r.css<CR><space>
 
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
@@ -48,8 +53,6 @@ endif
 "autocmd FileType php set foldlevelstart=20 foldnestmax=2
 "autocmd FileType javascript set foldlevelstart=1 foldnestmax=2
 "autocmd FileType cs set foldnestmax=3
-
-let mapleader=","       "Set comma as leader
 
 "cancel search match highlights
 nnoremap <leader><space> :nohlsearch<CR>
