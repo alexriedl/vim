@@ -25,3 +25,20 @@ Update submodules by:
 #!bash
 git submodule foreach git pull origin master
 ```
+
+Add Submodule:
+
+```
+#!bash
+git submodule add <http path to project> bundles/vim-<project>
+```
+
+Remove Submodule:
+
+```
+#!bash
+delete the relevant line from the .gitmodules file
+delete the relevant section from .git/config
+git rm --cached path_to_submodule (no trailing slash)
+commit and delete the now untracked submodule files
+```
