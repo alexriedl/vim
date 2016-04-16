@@ -18,6 +18,16 @@ nnoremap <F9> :NERDTree<CR>
 "compile .less into .css
 nnoremap <Leader>m :w <BAR> !lessc % > css/%:t:r.css<CR><space>
 
+"Syntastic Plugin
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
 set nu                  "Show line numbers
