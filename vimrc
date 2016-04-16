@@ -2,7 +2,6 @@
 "                         !!! VERY IMPORTANT !!!                              "
 " git submodule init                                                          "
 " git submodule update                                                        "
-" then goto .vim/bundle/vim-proc/ and do ./make                               "
 "-----------------------------------------------------------------------------"
 
 "Pathogen
