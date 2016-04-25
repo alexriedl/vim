@@ -29,6 +29,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_include_dirs = ['/usr/include', '/usr/include/SDL2']
 
+nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
+inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
+
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
 set nu                  "Show line numbers
