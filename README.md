@@ -30,7 +30,7 @@ Add Submodule:
 
 ```
 #!bash
-git submodule add <http path to project> bundles/vim-<project>
+git submodule add <http path to project> bundle/vim-<project>
 ```
 
 Remove Submodule:
