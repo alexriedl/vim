@@ -55,6 +55,7 @@ endif
 
 "Cancel search match highlights
 nnoremap <leader><space> :nohlsearch<CR>
+set nohlsearch
 
 "Toggle folding
 nnoremap <space> za
