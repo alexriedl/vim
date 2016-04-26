@@ -1,6 +1,4 @@
-# README #
-
-= Init Repository =
+# Init Repository #
 ```
 #!bash
 cd ~
@@ -19,19 +17,19 @@ git submodule update --init --recursive
 ls -s /home/{USER}/.vim/vimrc /home/{USER}/.vimrc
 ```
 
-= Update submodules =
+# Update submodules #
 ```
 #!bash
 git submodule update --recursive
 ```
 
-= Add Submodule =
+# Add Submodule #
 ```
 #!bash
 git submodule add <http path to project> bundle/vim-<project>
 ```
 
-= Remove Submodule =
+# Remove Submodule #
 ```
 #!bash
 delete the relevant line from the .gitmodules file
