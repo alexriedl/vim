@@ -25,7 +25,6 @@ let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
 let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
 
 "Normal Settings
-colorscheme desert      "Gvim Color Scheme
 set nu                  "Show line numbers
 set tabstop=4           "Tab width
 set shiftwidth=4        "Tab width
