@@ -21,8 +21,8 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
 
 "Airline
-let g:airline#extensions#tabline#enabled=1   "Enable list of buffers
-let g:airline#extensions#tabline#fnamedmod=':t'
+let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
+let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
 
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
