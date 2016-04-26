@@ -26,6 +26,7 @@ let mapleader=","
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
 let NERDTreeIgnore = ['\.json$', '\.lock$', '\.ico$', 'rsc$', 'node_modules$', 'vendor$']
+autocmd BufWinEnter * NERDTreeMirror "Open the tree in all tabs the same way
 
 "Syntastic Plugin
 let g:syntastic_always_populate_loc_list = 1
