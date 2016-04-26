@@ -24,6 +24,9 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
 let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
 
+"Colors
+let g:airline_theme='base16'
+
 "Normal Settings
 set nu                  "Show line numbers
 set tabstop=4           "Tab width
