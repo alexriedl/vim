@@ -6,27 +6,12 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-"Statusline
-set statusline=
-set statusline=%2*[%n%H%M%R%W]%*                "Buffer Number
-set statusline+=%f                              "Filename
-set statusline+=%m\                             "Filename
-
-set statusline+=%#warningmsg#                   "Set warning color
-set statusline+=%{SyntasticStatuslineFlag()}    "Display syntastic message
-set statusline+=%*                              "Back to normal color
-
-set statusline+=%=                              "Switch to the right side
-set statusline+=%10((%l/%L)%)                   "Line numbers
-set statusline+=\ %P                            "Percentage of file
-
 "Define leader key
 let mapleader=","
 
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
 let NERDTreeIgnore = ['\.json$', '\.lock$', '\.ico$', 'rsc$', 'node_modules$', 'vendor$']
-autocmd BufWinEnter * NERDTreeMirror "Open the tree in all tabs the same way
 
 "Syntastic Plugin
 let g:syntastic_always_populate_loc_list = 1
@@ -34,6 +19,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
+
+"Airline
+let g:airline#extensions#tabline#enabled=1   "Enable list of buffers
+let g:airline#extensions#tabline#fnamedmod=':t'
 
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
@@ -95,6 +84,12 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+"Buffer commands
+nmap <S-l> :bnext<CR>
+nmap <S-h> :bprevious<CR>
+nmap <leader>T :enew<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>  "Close current buffer, and open previous
 
 "For local/global replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
