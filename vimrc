@@ -1,22 +1,17 @@
-"-----------------------------------------------------------------------------"
-"                         !!! VERY IMPORTANT !!!                              "
-" git submodule init                                                          "
-" git submodule update                                                        "
-"-----------------------------------------------------------------------------"
-
 "Pathogen
 execute pathogen#infect()
+
+"Base Setup
 filetype plugin on
 filetype plugin indent on
 syntax on
 
-let mapleader=","       "Set comma as leader
+"Define leader key
+let mapleader=","
 
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
-
-"compile .less into .css
-nnoremap <Leader>m :w <BAR> !lessc % > css/%:t:r.css<CR><space>
+let NERDTreeIgnore = ['\.json$', '\.lock$', '\.ico$', 'rsc$', 'node_modules$', 'vendor$']
 
 "Syntastic Plugin
 set statusline+=%#warningmsg#
@@ -28,9 +23,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
-
-nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
-inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
 "Normal Settings
 colorscheme desert      "Gvim Color Scheme
@@ -61,7 +53,7 @@ if(exists('+colorcolumn'))
     highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
 endif
 
-"cancel search match highlights
+"Cancel search match highlights
 nnoremap <leader><space> :nohlsearch<CR>
 
 "Toggle folding
@@ -97,6 +89,10 @@ map <C-l> <C-w>l
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
-" Quickly edit/reload the vimrc file
+"Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+
+"Run build.sh in working directory
+nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
+inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
