@@ -52,9 +52,9 @@ set guioptions-=m       "gvim settings to hide menu
 set guioptions-=T       "gvim settings to hide toolbar
 set showmatch           "show matching parenthesis
 
-"Highlight column 80
+"Highlight column 100
 if(exists('+colorcolumn'))
-    set colorcolumn=80
+    set colorcolumn=100
     highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
 endif
 
