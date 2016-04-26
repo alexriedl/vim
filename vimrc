@@ -6,6 +6,20 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
+"Statusline
+set statusline=
+set statusline=%2*[%n%H%M%R%W]%*                "Buffer Number
+set statusline+=%f                              "Filename
+set statusline+=%m\                             "Filename
+
+set statusline+=%#warningmsg#                   "Set warning color
+set statusline+=%{SyntasticStatuslineFlag()}    "Display syntastic message
+set statusline+=%*                              "Back to normal color
+
+set statusline+=%=                              "Switch to the right side
+set statusline+=%10((%l/%L)%)                   "Line numbers
+set statusline+=\ %P                            "Percentage of file
+
 "Define leader key
 let mapleader=","
 
@@ -14,10 +28,6 @@ nnoremap <F9> :NERDTree<CR>
 let NERDTreeIgnore = ['\.json$', '\.lock$', '\.ico$', 'rsc$', 'node_modules$', 'vendor$']
 
 "Syntastic Plugin
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
