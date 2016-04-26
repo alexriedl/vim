@@ -1,3 +1,3 @@
 "Color Settings
-colorscheme desert      "Gvim Color Scheme
+colorscheme monokai
 let g:airline_theme='jellybeans'

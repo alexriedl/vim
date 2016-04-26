@@ -26,6 +26,7 @@ let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer lis
 
 "Colors
 let g:airline_theme='base16'
+colorscheme desert
 
 "Normal Settings
 set nu                  "Show line numbers
