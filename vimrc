@@ -93,7 +93,8 @@ map <C-l> <C-w>l
 nmap <S-l> :bnext<CR>
 nmap <S-h> :bprevious<CR>
 nmap <leader>T :enew<CR>
-nmap <leader>bq :bp <BAR> bd #<CR>  "Close current buffer, and open previous
+"Close current buffer, and open previous
+nmap <leader>bq :bp <BAR> bd #<CR>
 
 "For local/global replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
