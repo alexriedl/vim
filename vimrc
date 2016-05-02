@@ -102,7 +102,10 @@ nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 "Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,vimrc,vimrc,.gvimrc,gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
 
 "Run build.sh in working directory
 nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
