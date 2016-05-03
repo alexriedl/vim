@@ -13,6 +13,7 @@ let mapleader=","
 nnoremap <F9> :NERDTree<CR>
 let NERDTreeIgnore = ['\.json$', '\.lock$', '\.ico$', 'rsc$', 'node_modules$', 'vendor$']
 let NERDTreeSortOrder = ['PL\/$', 'BLL\/$', 'SL\/$', 'DAL\/$', 'tests\/$', 'css\/$', 'js\/$', 'scripts\/$', '\/$', '*']
+let NERDTreeAutoDeleteBuffer=1
 
 "Syntastic Plugin
 let g:syntastic_always_populate_loc_list = 1
