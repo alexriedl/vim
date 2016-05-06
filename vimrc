@@ -112,3 +112,6 @@ augroup END
 "Run build.sh in working directory
 nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
+
+"Auto sort using statements
+nnoremap <leader>s :0;/^use /;/^$/-1:sort<CR>
