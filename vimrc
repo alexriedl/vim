@@ -11,7 +11,7 @@ let mapleader=","
 
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
-let NERDTreeIgnore = ['\.json$', '\.lock$', '\.ico$', 'rsc$', 'node_modules$', 'vendor$']
+let NERDTreeIgnore = ['\.ico$', 'rsc$', 'node_modules$', 'vendor$']
 let NERDTreeSortOrder = ['PL\/$', 'BLL\/$', 'SL\/$', 'DAL\/$', 'tests\/$', 'css\/$', 'js\/$', 'scripts\/$', '\/$', '*']
 let NERDTreeAutoDeleteBuffer=1
 
