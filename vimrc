@@ -112,8 +112,8 @@ augroup END
 nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
-"Auto sort using statements
-nnoremap <leader>s :0;/^use /;/^$/-1:sort<CR>
+"Rebind open url to leader u
+nmap <leader>u gx
 
 "Calendar Settings
 nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\" -split=\"vertical\" -width=40\<CR>"
