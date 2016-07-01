@@ -31,3 +31,12 @@
 [submodule "bundle/vim-monokai"]
 	path = bundle/vim-monokai
 	url = https://github.com/sickill/vim-monokai.git
+[submodule "bundle\\vim-less"]
+	path = bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "bundle/vim-wiki"]
+	path = bundle/vim-wiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule "bundle\\vim-calendar"]
+	path = bundle\\vim-calendar
+	url = https://github.com/itchyny/calendar.vim.git

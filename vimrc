@@ -11,7 +11,7 @@ let mapleader=","
 
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
-let NERDTreeIgnore = ['\.json$', '\.lock$', '\.ico$', 'rsc$', 'node_modules$', 'vendor$']
+let NERDTreeIgnore = ['\.ico$', 'rsc$', 'node_modules$', 'vendor$']
 let NERDTreeSortOrder = ['PL\/$', 'BLL\/$', 'SL\/$', 'DAL\/$', 'tests\/$', 'css\/$', 'js\/$', 'scripts\/$', '\/$', '*']
 let NERDTreeAutoDeleteBuffer=1
 
@@ -25,9 +25,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 "Airline
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
 let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
-
-"Gitgutter
-nnoremap <F4> :GitGutterToggle<CR>
 
 "Colors
 let g:airline_theme='base16'
@@ -63,7 +60,6 @@ endif
 
 "Cancel search match highlights
 nnoremap <leader><space> :nohlsearch<CR>
-set nohlsearch
 
 "Toggle folding
 nnoremap <space> za
@@ -116,5 +112,11 @@ augroup END
 nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
-"Auto sort using statements
-nnoremap <leader>s :0;/^use /;/^$/-1:sort<CR>
+"Rebind open url to leader u
+nmap <leader>u gx
+
+"Calendar Settings
+nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\" -split=\"vertical\" -width=40\<CR>"
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
+let g:calendar_first_day = "sunday"
