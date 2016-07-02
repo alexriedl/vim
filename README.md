@@ -38,9 +38,10 @@ git rm --cached path_to_submodule (no trailing slash)
 commit and delete the now untracked submodule files
 ```
 
-# Syntastic #
+# Syntastic jshint setup #
 (Assuming nodejs is installed)
 ```
 #!bash
 sudo npm install -g jshint
+sudo ln -s /usr/bin/node{js,}
 ```
