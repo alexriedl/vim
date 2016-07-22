@@ -103,6 +103,7 @@ nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 "Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
+nmap <silent> <leader>eg :e $MYGVIMRC<CR>
 augroup myvimrc
     au!
     au BufWritePost .vimrc,vimrc,vimrc,.gvimrc,gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
