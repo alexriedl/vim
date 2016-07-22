@@ -6,6 +6,9 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
+"Hack filetype
+au BufNewFile,BufRead *.hh setf php
+
 "Define leader key
 let mapleader=","
 
@@ -115,6 +118,10 @@ inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
 "Rebind open url to leader u
 nmap <leader>u gx
+
+"Wiki
+nnoremap <F4> :VimwikiAll2HTML<cr>
+
 
 "Calendar Settings
 nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\" -split=\"vertical\" -width=40\<CR>"
