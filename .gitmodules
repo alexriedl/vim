@@ -40,3 +40,6 @@
 [submodule "bundle/vim-calendar"]
 	path = bundle/vim-calendar
 	url = https://github.com/itchyny/calendar.vim.git
+[submodule "bundle/vim-clighter"]
+	path = bundle/vim-clighter
+	url = https://github.com/bbchung/clighter.git
