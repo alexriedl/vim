@@ -10,7 +10,7 @@ set guioptions-=L  "remove left-hand scroll bar
 
 "Font Settings
 if has("gui_gtk2")
-    set guifont=Inconsolata\ 9
+    set guifont=Inconsolata\ 8
 elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
 elseif has("gui_win32")
