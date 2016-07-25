@@ -124,7 +124,7 @@ nnoremap <F4> :VimwikiAll2HTML<cr>
 
 
 "Calendar Settings
-nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\" -split=\"vertical\" -width=40\<CR>"
+nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\"\<CR>"
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 let g:calendar_first_day = "sunday"
