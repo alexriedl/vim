@@ -119,12 +119,8 @@ augroup END
 nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
-"Rebind open url to leader u
-nmap <leader>u gx
-
 "Wiki
 nnoremap <F4> :VimwikiAll2HTML<cr>
-
 
 "Calendar Settings
 nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\"\<CR>"
