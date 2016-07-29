@@ -45,3 +45,13 @@ commit and delete the now untracked submodule files
 sudo npm install -g jshint
 sudo ln -s /usr/bin/node{js,}
 ```
+
+# ag Installagion #
+Ubuntu
+```
+sudo apt install silversearcher-ag
+```
+Fedora
+```
+sudo dnf install the_silver_searcher
+```
