@@ -7,7 +7,7 @@ filetype plugin indent on
 syntax on
 
 "Hack filetype
-au BufNewFile,BufRead *.hh setf php
+au BufRead,BufNewFile *.hh setl filetype=php
 
 "Define leader key
 let mapleader=","
