@@ -29,9 +29,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
 let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
 
-"Silver Searcher (ag - ack | grep replacement)
-let g:ackgrg = 'ag --nogroup --nocolor --column'
-
 "Colors
 let g:airline_theme='base16'
 colorscheme desert
