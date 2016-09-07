@@ -118,9 +118,3 @@ inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
 "Wiki
 nnoremap <F4> :VimwikiAll2HTML<cr>
-
-"Calendar Settings
-nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\"\<CR>"
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
-let g:calendar_first_day = "sunday"
