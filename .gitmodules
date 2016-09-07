@@ -37,6 +37,3 @@
 [submodule "bundle/vim-wiki"]
 	path = bundle/vim-wiki
 	url = https://github.com/vimwiki/vimwiki.git
-[submodule "bundle/vim-calendar"]
-	path = bundle/vim-calendar
-	url = https://github.com/itchyny/calendar.vim.git
