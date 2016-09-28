@@ -40,20 +40,18 @@ set shiftwidth=4        "Tab width
 set expandtab           "Use spaces instead of tabs
 set cindent             "Auto indent using c style indents
 set cursorline          "Highlight line cursor is on
+set showmatch           "Show matching parenthesis
 set hlsearch            "Highlight search matches
 set incsearch           "Search as characters are entered
-set autoread            "Auto reload file if seved externally
-set ignorecase          "ignore case for searching
-set smartcase           "do case-sensitive search only if theres a cap
+set ignorecase          "Ignore case for searching
+set smartcase           "Do case-sensitive search only if theres a cap
 set foldmethod=indent   "Fold on indent level
 set foldlevelstart=20
 set foldnestmax=2
+set autoread            "Auto reload file if seved externally
 set nobackup            "Disable backup files
 set noswapfile          "Disable backup files
 set hidden              "Hide current buffers instead of complain
-set guioptions-=m       "gvim settings to hide menu
-set guioptions-=T       "gvim settings to hide toolbar
-set showmatch           "show matching parenthesis
 
 "Highlight column 100
 if(exists('+colorcolumn'))
@@ -118,9 +116,3 @@ inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
 "Wiki
 nnoremap <F4> :VimwikiAll2HTML<cr>
-
-"Calendar Settings
-nmap <expr> <F8> &ft ==# 'calendar' ? "\<Plug>(calendar_exit)" : ":\<C-u>Calendar -view=\"week\"\<CR>"
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
-let g:calendar_first_day = "sunday"
