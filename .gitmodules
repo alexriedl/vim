@@ -19,9 +19,6 @@
 [submodule "bundle/vim-cpp-enhanced-highlight"]
 	path = bundle/vim-cpp-enhanced-highlight
 	url = https://github.com/octol/vim-cpp-enhanced-highlight.git
-[submodule "bundle/vim-javascript-syntax"]
-	path = bundle/vim-javascript-syntax
-	url = https://github.com/jelera/vim-javascript-syntax.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
@@ -40,3 +37,6 @@
 [submodule "bundle/vim-calendar"]
 	path = bundle/vim-calendar
 	url = https://github.com/itchyny/calendar.vim.git
+[submodule "bundle/vim-jsx"]
+	path = bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
