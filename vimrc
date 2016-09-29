@@ -6,8 +6,10 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-"Hack filetype
+"Hack filetype and autocomplete
 au BufRead,BufNewFile *.hh setl filetype=php
+au FileType php set omnifunc=hackcomplete#Complete
+au FileType php let g:SuperTabDefaultCompletionType="<C-X><C-O>"
 
 "Define leader key
 let mapleader=","
