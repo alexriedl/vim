@@ -16,8 +16,8 @@ let mapleader=","
 
 "NERDTree Plugin
 nnoremap <F9> :NERDTree<CR>
-let NERDTreeIgnore = ['\.ico$', 'rsc$', 'node_modules$', 'vendor$']
-let NERDTreeSortOrder = ['PL\/$', 'BLL\/$', 'SL\/$', 'DAL\/$', 'tests\/$', 'css\/$', 'js\/$', 'scripts\/$', '\/$', '*']
+let NERDTreeIgnore = ['\.ico$', 'public$', 'node_modules$', 'vendor$']
+let NERDTreeSortOrder = ['src\/$', 'tests\/$', 'dal\/$', 'sl\/$', 'pl\/$', 'bll\/$', 'js\/$', 'less\/$', '\/$', '*']
 let NERDTreeAutoDeleteBuffer=1
 
 "Syntastic Plugin
