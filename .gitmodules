@@ -40,3 +40,6 @@
 [submodule "bundle/vim-proc"]
 	path = bundle/vim-proc
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/vim-ghcmod"]
+	path = bundle/vim-ghcmod
+	url = https://github.com/eagletmt/ghcmod-vim.git
