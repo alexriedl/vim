@@ -46,3 +46,6 @@
 [submodule "bundle/vim-haskell"]
 	path = bundle/vim-haskell
 	url = https://github.com/neovimhaskell/haskell-vim.git
+[submodule "bundle/vim-ps1"]
+	path = bundle/vim-ps1
+	url = https://github.com/PProvost/vim-ps1.git
