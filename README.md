@@ -20,7 +20,7 @@ ls -s /home/{USER}/.vim/vimrc /home/{USER}/.vimrc
 # Update submodules #
 ```
 #!bash
-git submodule update --recursive
+git submodule update --init --recursive
 ```
 
 # Add Submodule #
@@ -39,9 +39,17 @@ commit and delete the now untracked submodule files
 ```
 
 # Syntastic jshint setup #
-(Assuming nodejs is installed)
+(Assumes nodejs is installed)
 ```
 #!bash
 sudo npm install -g jshint
 sudo ln -s /usr/bin/node{js,}
+```
+
+# Haskell Setup #
+(Assumes ghc and stack are installed)
+```
+#!bash
+cd bundles/vim-proc
+make
 ```
