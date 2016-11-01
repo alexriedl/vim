@@ -9,7 +9,8 @@ sub_add() {
         return 1
     fi
 
-    $GIT submodule add "$1" "bundle/vim-$2"
+    path="bundle/vim-$2"
+    $GIT submodule add "$1" "$path"
     sub_update
 }
 
