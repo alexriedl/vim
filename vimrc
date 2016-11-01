@@ -27,6 +27,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
 
+"YouCompleteMe Plugin
+let g:ycm_min_num_of_chars_for_completion = 3           "Defaults 2
+let g:ycm_warning_symbol = '>'                          "Defaults '>>'
+let g:ycm_autoclose_preview_window_after_insertion = 1  "Defaults 0
+
 "Airline
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
 let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
