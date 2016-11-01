@@ -23,7 +23,7 @@ function! SetSystemFontSize(base)
 endfunction
 
 function! FontChangeOnResize()
-    if &columns > 200
+    if &columns > 250
         call SetSystemFontSize(9)
     elseif &columns > 110
         call SetSystemFontSize(8)
