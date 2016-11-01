@@ -27,7 +27,7 @@ sub_remove() {
     path="bundle/vim-$1"
     $GIT submodule deinit $path
     $GIT rm $path
-    rm -rf ".git/modules/$1"
+    rm -rf ".git/modules/$path"
 }
 
 sub_update() {
