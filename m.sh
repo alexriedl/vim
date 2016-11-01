@@ -4,6 +4,11 @@ ProgName=$(basename $0)
 GIT="/usr/bin/git"
 
 sub_add() {
+    if [ "$1" = "" ] || [ "$2" = "" ]; then
+        printf "Missing parameters. Call add --help for more information\n\n"
+        return 1
+    fi
+
     $GIT submodule add "$1" "bundle/vim-$2"
     sub_update
 }
@@ -14,7 +19,15 @@ sub_pull() {
 }
 
 sub_remove() {
-    echo "NOT IMPLEMENTED YET"
+    if [ "$1" = "" ]; then
+        printf "Missing parameters. Call add --help for more information\n\n"
+        return 1
+    fi
+
+    path="bundle/vim-$1"
+    $GIT submodule deinit $path
+    $GIT rm $path
+    rm -rf ".git/modules/$1"
 }
 
 sub_update() {
@@ -44,7 +57,13 @@ Usage:
 
 sub_remove_help() {
     printf "
-        "
+Subcommand 'remove' is used to remove a submodule from the repository.
+This command takes one paramter.
+  First paramter is the short name submodule is called
+
+Usage:
+  ./$ProgName <NAME>
+  This command will delete the submodule from ./bundle/vim-<NAME>.\n\n"
 }
 
 sub_update_help() {
