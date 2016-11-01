@@ -10,6 +10,7 @@ Usage:
 
   Subcommands:
     add <GIT ADDRESS> <short name>    [Add a new submodule]
+    pull                              [Updates local repository]
     remove <short name>               [Deletes a submodule from the repository]
     update                            [Initializes and updates submodules]
 
@@ -19,6 +20,11 @@ Usage:
 
 sub_add() {
     $GIT submodule add "$1" "bundle/vim-$2"
+    sub_update
+}
+
+sub_pull() {
+    $GIT pull
     sub_update
 }
 
@@ -42,6 +48,15 @@ Usage:
   This command will add a submodule from <USER> <REPO> repository to the ./bundle/vim-<NAME> submodule location.\n\n"
 }
 
+sub_pull_help() {
+    printf "
+Subcommand 'pull' is used to update the local repository with the latest vim configuration. The update subcommand will be called after loading updated code is finished. This subcommand takes no paramters.
+
+Usage:
+  ./$ProgName pull
+"
+}
+
 sub_remove_help() {
     printf "
         "
@@ -60,7 +75,7 @@ case $subcommand in
         sub_help
         ;;
     *)
-        # Drop the argument that is the name of the script
+        # Drop the argument that is the name of the subcommand
         shift
 
         if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
