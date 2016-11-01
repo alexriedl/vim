@@ -11,7 +11,7 @@ set guioptions-=L  "remove left-hand scroll bar
 "Font Settings
 function! SetSystemFontSize(base)
     if has("gui_gtk2")
-        let scale = a:base - 1
+        let scale = a:base
         execute ':set guifont=Inconsolata\ ' . scale
     elseif has("gui_macvim")
         let scale = a:base + 6
@@ -23,11 +23,11 @@ function! SetSystemFontSize(base)
 endfunction
 
 function! FontChangeOnResize()
-    if &columns > 150
+    if &columns > 200
         call SetSystemFontSize(9)
-    elseif &columns > 80
+    elseif &columns > 110
         call SetSystemFontSize(8)
-    elseif &columns > 60
+    elseif &columns > 80
         call SetSystemFontSize(7)
     endif
 endfunction
