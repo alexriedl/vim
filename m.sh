@@ -10,33 +10,48 @@ Usage:
 
   Subcommands:
     add <GIT ADDRESS> <short name>    [Add a new submodule]
+    remove <short name>               [Deletes a submodule from the repository]
     update                            [Initializes and updates submodules]
 
   For help with each subcommand run:
-  ./$ProgName <subcommand> -h|--help\n"
-}
-
-sub_update() {
-    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-        printf "
-Subcommand 'update' takes no paramters. Calling this subcommand will run the 'git submodule update' command.
-Usage:
-  ./$ProgName update\n"
-        return
-    fi
-    $GIT submodule update --init --recursive
+  ./$ProgName <subcommand> -h|--help\n\n"
 }
 
 sub_add() {
-    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-        printf "Adding submodule\n"
-        printf "arg1 %s\n" $1
-        printf "arg2 %s\n" $2
-        printf "\n"
-        return
-    fi
+    $GIT submodule add "$1" "bundle/vim-$2"
+    sub_update
+}
 
-    printf "Doing add work\n"
+sub_remove() {
+    echo "NOT IMPLEMENTED YET"
+}
+
+sub_update() {
+    $GIT submodule update --init --recursive
+}
+
+sub_add_help() {
+    printf "
+Subcommand 'add' is used to add new submodules to the repository. The update subcommand will be called after new module is added
+This command takes two paramters.
+  First paramter is the git repository of the submodule to add
+  Second paramter is the short name you want to call the new submodule
+
+Usage:
+  ./$ProgName https://github.com/<USER>/<REPO> <NAME>
+  This command will add a submodule from <USER> <REPO> repository to the ./bundle/vim-<NAME> submodule location.\n\n"
+}
+
+sub_remove_help() {
+    printf "
+        "
+}
+
+sub_update_help() {
+    printf "
+Subcommand 'update' takes no paramters. Calling this subcommand will run the 'git submodule update' command.
+Usage:
+  ./$ProgName update\n\n"
 }
 
 subcommand=$1
@@ -48,8 +63,11 @@ case $subcommand in
         # Drop the argument that is the name of the script
         shift
 
-        # Run subcommand passing remaining arguments
-        sub_$subcommand $@
+        if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+            sub_${subcommand}_help
+        else
+            sub_$subcommand $@
+        fi
 
         # Report Failure
         if [ $? = 127 ]; then
