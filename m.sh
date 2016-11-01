@@ -3,21 +3,6 @@
 ProgName=$(basename $0)
 GIT="/usr/bin/git"
 
-sub_help() {
-    printf "
-Usage:
-  ./$ProgName <subcommand> [options]
-
-  Subcommands:
-    add <GIT ADDRESS> <short name>    [Add a new submodule]
-    pull                              [Updates local repository]
-    remove <short name>               [Deletes a submodule from the repository]
-    update                            [Initializes and updates submodules]
-
-  For help with each subcommand run:
-  ./$ProgName <subcommand> -h|--help\n\n"
-}
-
 sub_add() {
     $GIT submodule add "$1" "bundle/vim-$2"
     sub_update
@@ -69,6 +54,21 @@ Usage:
   ./$ProgName update\n\n"
 }
 
+sub_help() {
+    printf "
+Usage:
+  ./$ProgName <subcommand> [options]
+
+  Subcommands:
+    add <GIT ADDRESS> <short name>    [Add a new submodule]
+    pull                              [Updates local repository]
+    remove <short name>               [Deletes a submodule from the repository]
+    update                            [Initializes and updates submodules]
+
+  For help with each subcommand run:
+  ./$ProgName <subcommand> -h|--help\n\n"
+}
+
 subcommand=$1
 case $subcommand in
     "" | "-h" | "--help")
@@ -84,7 +84,7 @@ case $subcommand in
             sub_$subcommand $@
         fi
 
-        # Report Failure
+        # Report unknown subcommands
         if [ $? = 127 ]; then
             printf "Error: '$subcommand' is not a known subcommand.\n" >&2
             printf "  Run './$ProgName --help' for a list of known subcommands.\n" >&2
