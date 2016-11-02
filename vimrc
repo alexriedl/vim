@@ -76,7 +76,6 @@ ino jk <esc>
 ino kj <esc>
 
 "Add a new line without entering insert mode
-nnoremap <CR> o<Esc>
 nnoremap <S-CR> O<Esc>
 
 "Map movements to visual movements (if a line wraps to multiple lines, dont
