@@ -6,10 +6,8 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 
-"Hack filetype and autocomplete
+"Hack filetype
 au BufRead,BufNewFile *.hh setl filetype=php
-au FileType php set omnifunc=hackcomplete#Complete
-au FileType php let g:SuperTabDefaultCompletionType="<C-X><C-O>"
 
 "Define leader key
 let mapleader=","
@@ -30,6 +28,8 @@ let g:syntastic_javascript_checkers = ['jshint']
 "YouCompleteMe Plugin
 let g:ycm_warning_symbol = '>'                          "Defaults '>>'
 let g:ycm_autoclose_preview_window_after_insertion = 1  "Defaults 0
+noremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+noremap <leader>ji :YcmCompleter GoToImplementation<CR>
 
 "Airline
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
