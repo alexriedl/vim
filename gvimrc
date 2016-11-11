@@ -32,3 +32,4 @@ function! FontChangeOnResize()
     endif
 endfunction
 autocmd VimResized,GUIEnter * call FontChangeOnResize()
+call SetSystemFontSize(9)
