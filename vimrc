@@ -35,6 +35,10 @@ noremap <leader>ji :YcmCompleter GoToImplementation<CR>
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
 let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
 
+"Git Gutter
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
+
 "Colors
 let g:airline_theme='base16'
 colorscheme desert
