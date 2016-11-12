@@ -21,7 +21,7 @@ sub_pull() {
 
 sub_remove() {
     if [ "$1" = "" ]; then
-        printf "Missing parameters. Call add --help for more information\n\n"
+        printf "Missing parameters. Call remove --help for more information\n\n"
         return 1
     fi
 
@@ -52,8 +52,7 @@ sub_pull_help() {
 Subcommand 'pull' is used to update the local repository with the latest vim configuration. The update subcommand will be called after loading updated code is finished. This subcommand takes no paramters.
 
 Usage:
-  ./$ProgName pull
-"
+  ./$ProgName pull\n\n"
 }
 
 sub_remove_help() {
