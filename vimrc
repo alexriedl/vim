@@ -1,51 +1,47 @@
+" vim:fdm=marker
+
+" Basic Setup {{{
 "Pathogen
 execute pathogen#infect()
 
 "Base Setup
 set nocompatible
-filetype plugin on
 filetype plugin indent on
 syntax on
-syntax enable
-
-"Hack filetype
-au BufRead,BufNewFile *.hh setl filetype=php
-
-"Define leader key
 let mapleader=","
-
-"NERDTree Plugin
+" }}}
+" NERDTree Plugin {{{
 nnoremap <F9> :NERDTree<CR>
 let NERDTreeIgnore = ['\.ico$', 'public$', 'fonts$', 'node_modules$', 'vendor$']
 let NERDTreeSortOrder = ['src\/$', 'tests\/$', 'dal\/$', 'sl\/$', 'pl\/$', 'bll\/$', 'js\/$', 'less\/$', '\/$', '*']
 let NERDTreeAutoDeleteBuffer=1
-
-"Syntastic Plugin
+" }}}
+" Syntastic Plugin {{{
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
-
-"YouCompleteMe Plugin
+" }}}
+" YouCompleteMe Plugin {{{
 let g:ycm_warning_symbol = '>'                          "Defaults '>>'
 let g:ycm_autoclose_preview_window_after_insertion = 1  "Defaults 0
 noremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 noremap <leader>ji :YcmCompleter GoToImplementation<CR>
-
-"Airline
+" }}}
+" Airline Plugin {{{
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
 let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer list
-
-"Git Gutter
+" }}}
+" Git Gutter Plugin {{{
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-
-"Colors
+" }}}
+" Colors {{{
 let g:airline_theme='base16'
 colorscheme desert
-
-"Normal Settings
+" }}}
+" Normal Settings {{{
 set nu                  "Show line numbers
 set tabstop=4           "Tab width
 set shiftwidth=4        "Tab width
@@ -64,26 +60,8 @@ set autoread            "Auto reload file if seved externally
 set nobackup            "Disable backup files
 set noswapfile          "Disable backup files
 set hidden              "Hide current buffers instead of complain
-
-"Highlight column 100
-if(exists('+colorcolumn'))
-    set colorcolumn=100
-    highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
-endif
-
-"Cancel search match highlights
-nnoremap <leader><space> :nohlsearch<CR>
-
-"Toggle folding
-nnoremap <space> za
-
-"Alternate escape sequences
-ino jk <esc>
-ino kj <esc>
-
-"Add a new line without entering insert mode
-nnoremap <S-CR> O<Esc>
-
+" }}}
+" Moving {{{
 "Map movements to visual movements (if a line wraps to multiple lines, dont
 "skip 'fake' lines
 nnoremap j gj
@@ -101,17 +79,32 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-"Buffer commands
+" }}}
+" Buffer commands {{{
 nmap <S-l> :bnext<CR>
 nmap <S-h> :bprevious<CR>
 nmap <leader>T :enew<CR>
 "Close current buffer, and open previous
 nmap <leader>bq :bp <BAR> bd #<CR>
-
+" }}}
+" Editing {{{
 "For local/global replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
+"Add a new line without entering insert mode
+nnoremap <S-CR> O<Esc>
+" }}}
+" Convenience Shortcuts {{{
+"Wiki
+nnoremap <F4> :VimwikiAll2HTML<cr>
+
+"Search 
+vnoremap <F8> y:execute 'vimgrep /\V' . escape(@@, '/\') . '/ %'<CR>
+
+"Run build.sh in working directory
+nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
+inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
 "Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
@@ -120,13 +113,26 @@ augroup myvimrc
     au!
     au BufWritePost .vimrc,vimrc,vimrc,.gvimrc,gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
+" }}}
 
-"Run build.sh in working directory
-nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
-inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
+"Hack filetype
+au BufRead,BufNewFile *.hh setl filetype=php
 
-"Wiki
-nnoremap <F4> :VimwikiAll2HTML<cr>
+"Highlight column 100
+if(exists('+colorcolumn'))
+    set colorcolumn=100
+    highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
+endif
 
-"Search
-vnoremap <F8> y:execute 'vimgrep /\V' . escape(@@, '/\') . '/ %'<CR>
+"Cancel search match highlights
+nnoremap <leader><space> :nohlsearch<CR>
+
+"Toggle folding
+nnoremap <space> za
+
+"Alternate escape sequences
+inoremap jk <esc>
+inoremap kj <esc>
+
+"Save marks between closes of vim
+set viminfo='100,f1
