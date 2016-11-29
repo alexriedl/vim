@@ -2,9 +2,11 @@
 execute pathogen#infect()
 
 "Base Setup
+set nocompatible
 filetype plugin on
 filetype plugin indent on
 syntax on
+syntax enable
 
 "Hack filetype
 au BufRead,BufNewFile *.hh setl filetype=php
@@ -55,7 +57,7 @@ set hlsearch            "Highlight search matches
 set incsearch           "Search as characters are entered
 set ignorecase          "Ignore case for searching
 set smartcase           "Do case-sensitive search only if theres a cap
-set foldmethod=indent   "Fold on indent level
+set foldmethod=syntax   "Fold on syntx
 set foldlevelstart=20
 set foldnestmax=2
 set autoread            "Auto reload file if seved externally
@@ -125,3 +127,6 @@ inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
 
 "Wiki
 nnoremap <F4> :VimwikiAll2HTML<cr>
+
+"Search
+vnoremap <F8> y:execute 'vimgrep /\V' . escape(@@, '/\') . '/ %'<CR>
