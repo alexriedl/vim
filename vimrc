@@ -28,6 +28,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 "YouCompleteMe Plugin
 let g:ycm_warning_symbol = '>'                          "Defaults '>>'
 let g:ycm_autoclose_preview_window_after_insertion = 1  "Defaults 0
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 noremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 noremap <leader>ji :YcmCompleter GoToImplementation<CR>
 
@@ -119,9 +120,8 @@ augroup myvimrc
     au BufWritePost .vimrc,vimrc,vimrc,.gvimrc,gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 
-"Run build.sh in working directory
-nnoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
-inoremap <F5> <esc>:wa<enter>:!%:p:h/build.sh<enter>
+"Run makefile in current directory
+nnoremap <F5> <esc>:wa<enter>:make<enter>
 
 "Wiki
 nnoremap <F4> :VimwikiAll2HTML<cr>
