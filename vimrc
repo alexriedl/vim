@@ -16,13 +16,6 @@ let NERDTreeIgnore = ['\.ico$', 'public$', 'fonts$', 'node_modules$', 'vendor$']
 let NERDTreeSortOrder = ['src\/$', 'tests\/$', 'dal\/$', 'sl\/$', 'pl\/$', 'bll\/$', 'js\/$', 'less\/$', '\/$', '*']
 let NERDTreeAutoDeleteBuffer=1
 " }}}
-" Syntastic Plugin {{{
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['jshint']
-" }}}
 " YouCompleteMe Plugin {{{
 let g:ycm_warning_symbol = '>'                          "Defaults '>>'
 let g:ycm_autoclose_preview_window_after_insertion = 1  "Defaults 0
