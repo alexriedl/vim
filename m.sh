@@ -32,7 +32,13 @@ sub_remove() {
 }
 
 sub_update() {
+    printf "Updating submodules\n"
     $GIT submodule update --init --recursive
+    if [ "$?" = 0 ]; then
+        printf "Submodules updated\n"
+    else
+        printf "Failed to update submodules\n"
+    fi
 }
 
 sub_add_help() {
