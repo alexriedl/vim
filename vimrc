@@ -53,6 +53,7 @@ set foldnestmax=2
 set autoread            "Auto reload file if seved externally
 set nobackup            "Disable backup files
 set noswapfile          "Disable backup files
+set noundofile          "Disable undo files
 set hidden              "Hide current buffers instead of complain
 " }}}
 " Moving {{{
