@@ -108,9 +108,10 @@ augroup myvimrc
     au BufWritePost .vimrc,vimrc,vimrc,.gvimrc,gvimrc,gvimrc so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
 " }}}
-
+" Special Filetypes {{{
 "Hack filetype
 au BufRead,BufNewFile *.hh setl filetype=php
+"}}}
 
 "Highlight column 100
 if(exists('+colorcolumn'))
