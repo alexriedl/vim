@@ -1,6 +1,6 @@
 "Color Settings
 colorscheme monokai
-let g:airline_theme='jellybeans'
+let g:airline_theme='molokai'
 
 "Gvim Settings
 set guioptions-=m  "remove menu bar
