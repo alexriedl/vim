@@ -26,7 +26,12 @@ endfunction
 
 "Sort-cut function to allow user to call change font with only FS
 com! -nargs=1 FS call SetSystemFontSize(<f-args>)
-
-"Default font size
-call SetSystemFontSize(8)
+"}}}
+" Local System Settings (LEAVE ON BOTTOM) {{{
+if filereadable(expand("~/projects/gvimrc"))
+    source ~/projects/gvimrc
+else
+    "Default font size
+    call SetSystemFontSize(8)
+endif
 "}}}

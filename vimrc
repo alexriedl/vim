@@ -112,7 +112,7 @@ augroup END
 "Hack filetype
 au BufRead,BufNewFile *.hh setl filetype=php
 "}}}
-
+" Other {{{
 "Highlight column 100
 if(exists('+colorcolumn'))
     set colorcolumn=100
@@ -131,3 +131,9 @@ inoremap kj <esc>
 
 "Save marks between closes of vim
 set viminfo='100,f1
+"}}}
+" Local System Settings (LEAVE ON BOTTOM) {{{
+if filereadable(expand("~/projects/vimrc"))
+    source ~/projects/vimrc
+endif
+"}}}
