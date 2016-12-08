@@ -46,3 +46,9 @@
 [submodule "bundle/vim-ycm"]
 	path = bundle/vim-ycm
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-signature"]
+	path = bundle/vim-signature
+	url = https://github.com/kshenoy/vim-signature.git
+[submodule "bundle/vim-nertree-tabs"]
+	path = bundle/vim-nertree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git

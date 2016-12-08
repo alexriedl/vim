@@ -77,11 +77,15 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 " }}}
 " Buffer commands {{{
-nmap <S-l> :bnext<CR>
-nmap <S-h> :bprevious<CR>
-nmap <leader>T :enew<CR>
+"nmap <S-l> :bnext<CR>
+"nmap <S-h> :bprevious<CR>
+"nmap <leader>T :enew<CR>
 "Close current buffer, and open previous
-nmap <leader>bq :bp <BAR> bd #<CR>
+"nmap <leader>bq :bp <BAR> bd #<CR>
+" TABS....
+nmap <S-l> :tabn<CR>
+nmap <S-h> :tabp<CR>
+nmap <leader>bq :tabc<CR>
 " }}}
 " Editing {{{
 "For local/global replace
