@@ -94,8 +94,17 @@ nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 "Add a new line without entering insert mode
 nnoremap <S-CR> O<Esc>
+
+"Cleaner inner paste
+nnoremap "p vi"p
+nnoremap 'p vi'p
+nnoremap (p vi(p
+nnoremap )p vi)p
 " }}}
 " Convenience Shortcuts {{{
+"Save as sudo
+cmap w!! w !sudo tee > /dev/null %
+
 "Wiki
 nnoremap <F4> :VimwikiAll2HTML<cr>
 
@@ -136,6 +145,9 @@ inoremap kj <esc>
 
 "Save marks between closes of vim
 set viminfo='100,f1
+
+"Share clipboard with system
+set clipboard=unnamed
 "}}}
 " Local System Settings (LEAVE ON BOTTOM) {{{
 if filereadable(expand("~/projects/vimrc"))
