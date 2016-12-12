@@ -144,9 +144,6 @@ inoremap kj <esc>
 
 "Save marks between closes of vim
 set viminfo='100,f1
-
-"Share clipboard with system
-set clipboard=unnamed
 "}}}
 " Local System Settings (LEAVE ON BOTTOM) {{{
 if filereadable(expand("~/projects/vimrc"))
