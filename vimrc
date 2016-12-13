@@ -11,7 +11,6 @@ syntax on
 let mapleader=","
 " }}}
 " NERDTree Plugin {{{
-nnoremap <F9> :NERDTree<CR>
 let NERDTreeIgnore = ['\.ico$', 'public$', 'fonts$', 'node_modules$', 'vendor$']
 let NERDTreeSortOrder = ['src\/$', 'tests\/$', 'dal\/$', 'sl\/$', 'pl\/$', 'bll\/$', 'js\/$', 'less\/$', '\/$', '*']
 let NERDTreeAutoDeleteBuffer=1
