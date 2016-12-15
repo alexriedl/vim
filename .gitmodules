@@ -52,3 +52,6 @@
 [submodule "bundle/vim-nertree-tabs"]
 	path = bundle/vim-nertree-tabs
 	url = https://github.com/jistr/vim-nerdtree-tabs.git
+[submodule "bundle/vim-typescript"]
+	path = bundle/vim-typescript
+	url = https://github.com/leafgarland/typescript-vim.git
