@@ -98,6 +98,18 @@ nnoremap "p vi"p
 nnoremap 'p vi'p
 nnoremap (p vi(p
 nnoremap )p vi)p
+
+"Cleaner inner change
+nnoremap "c ci"
+nnoremap 'c ci'
+nnoremap (c ci(
+nnoremap )c ci)
+
+"Cleaner Yanks
+nnoremap "y yi"
+nnoremap 'y yi'
+nnoremap (y yi(
+nnoremap )y yi)
 " }}}
 " Convenience Shortcuts {{{
 "Save as sudo
