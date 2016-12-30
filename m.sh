@@ -33,7 +33,7 @@ sub_remove() {
 
 sub_update() {
     printf "Updating submodules\n"
-    $GIT submodule update --init --recursive
+    $GIT submodule update --init
     if [ "$?" = 0 ]; then
         printf "Submodules updated\n"
     else
