@@ -77,12 +77,12 @@ map <C-l> <C-w>l
 " }}}
 " Tab/Buffer commands {{{
 "Tabs
-nmap <S-l> :tabn<CR>
-nmap <S-h> :tabp<CR>
+nmap <M-l> :tabn<CR>
+nmap <M-h> :tabp<CR>
 nmap <leader>tq :tabc<CR>
 "Buffers
-nmap <M-l> :bnext<CR>
-nmap <M-h> :bprevious<CR>
+nmap <S-l> :bnext<CR>
+nmap <S-h> :bprevious<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 " }}}
 " Editing {{{
