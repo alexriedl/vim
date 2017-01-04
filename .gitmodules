@@ -55,3 +55,6 @@
 [submodule "bundle/vim-typescript"]
 	path = bundle/vim-typescript
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "scripts/manager"]
+	path = scripts/manager
+	url = git@bitbucket.org:snippets/ariedl/opxr8/git-submodule-manager.git
