@@ -58,3 +58,6 @@
 [submodule "scripts/manager"]
 	path = scripts/manager
 	url = git@bitbucket.org:snippets/ariedl/opxr8/git-submodule-manager.git
+[submodule "bundle/vim-tmux"]
+	path = bundle/vim-tmux
+	url = https://github.com/tmux-plugins/vim-tmux.git
