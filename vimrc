@@ -134,7 +134,8 @@ augroup END
 " }}}
 " Special Filetypes {{{
 "Hack filetype
-au BufRead,BufNewFile *.hh setl filetype=php
+autocmd BufRead,BufNewFile *.hh setl filetype=php
+autocmd BufRead,BufNewFile *.json set filetype=javascript
 "}}}
 " Other {{{
 "Highlight column 100
