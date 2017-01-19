@@ -31,6 +31,12 @@ let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer lis
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 " }}}
+" CtrlP{{{
+let g:ctrlp_custom_ignore = {
+            \ 'dir': '\.(git\/)|(node_modules\/)',
+            \ 'file': '\.(exe|so)$'
+            \}
+" }}}
 " Colors {{{
 let g:airline_theme='base16'
 colorscheme desert
