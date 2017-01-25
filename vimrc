@@ -1,12 +1,56 @@
 " vim:fdm=marker
-
-" Basic Setup {{{
-"Pathogen
-execute pathogen#infect()
-
-"Base Setup
+" Vundle Setup {{{
 set nocompatible
-filetype plugin indent on
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+" }}}
+" Plugins {{{
+"##################################
+"#       Layout + Look/Feel
+"##################################
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'sickill/vim-monokai'
+
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
+
+"##################################
+"#          Languages
+"##################################
+" C / C++
+Bundle 'octol/vim-cpp-enhanced-highlight'
+" Haskel
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'neovimhaskell/haskell-vim'
+" Hack
+Bundle 'hhvm/vim-hack'
+" Javascript + Client Side Stuffs
+Bundle 'mxw/vim-jsx'
+Bundle 'groenewege/vim-less'
+Bundle 'pangloss/vim-javascript'
+Bundle 'leafgarland/typescript-vim'
+" Shell Scripts
+Bundle 'PProvost/vim-ps1'
+
+"##################################
+"#          Usablility
+"##################################
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Valloric/YouCompleteMe'
+
+"##################################
+"#             Other
+"##################################
+Bundle 'vimwiki/vimwiki'
+Bundle 'tmux-plugins/vim-tmux'
+" }}}
+" Basic Setup {{{
+call vundle#end()
 syntax on
 let mapleader=","
 " }}}
