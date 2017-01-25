@@ -1,10 +1,10 @@
 # Initialize Repository #
-1. Clone to ~/.vim
-2. Run ./m.sh update
-
-Run help on manager script for more information about commands:
 ```
-./m.sh help
+git clone git@github.com:alexriedl/vim.git ~/.vim
+cd ~/.vim
+git submodule update --init --recursive
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +BundleInstall +qall
 ```
 
 # Syntastic jshint setup #

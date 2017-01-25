@@ -50,7 +50,7 @@ Bundle 'vimwiki/vimwiki'
 Bundle 'tmux-plugins/vim-tmux'
 " }}}
 " Basic Setup {{{
-filetype plugin indent on
+call vundle#end()
 syntax on
 let mapleader=","
 " }}}
