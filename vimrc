@@ -2,9 +2,9 @@
 " Vundle Setup {{{
 set nocompatible
 filetype off
-set runtimepath+=~/.vim/bundle/Vundle
-call vundle#rc()
-Bundle 'gmark/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
 " }}}
 " Plugins {{{
 "##################################
