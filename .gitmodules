@@ -1,0 +1,3 @@
+[submodule "scripts/manager"]
+	path = scripts/manager
+	url = git@bitbucket.org:snippets/ariedl/opxr8/git-submodule-manager.git

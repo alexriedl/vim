@@ -2,7 +2,7 @@
 " Vundle Setup {{{
 set nocompatible
 filetype off
-set runtimepath+=~/.vim/bundle/vim-vundle
+set runtimepath+=~/.vim/bundle/Vundle
 call vundle#rc()
 Bundle 'gmark/vundle'
 " }}}
@@ -10,44 +10,44 @@ Bundle 'gmark/vundle'
 "##################################
 "#       Layout + Look/Feel
 "##################################
-Bundle '/vim-airline/vim-airline'
-Bundle '/vim-airline/vim-airline-themes'
-Bundle '/sickill/vim-monokai'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
+Bundle 'sickill/vim-monokai'
 
-Bundle '/scrooloose/nerdtree'
-Bundle '/jistr/vim-nerdtree-tabs'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jistr/vim-nerdtree-tabs'
 
 "##################################
 "#          Languages
 "##################################
 " C / C++
-Bundle '/octol/vim-cpp-enhanced-highlight'
+Bundle 'octol/vim-cpp-enhanced-highlight'
 " Haskel
-Bundle '/eagletmt/ghcmod-vim'
-Bundle '/neovimhaskell/haskell-vim'
+Bundle 'eagletmt/ghcmod-vim'
+Bundle 'neovimhaskell/haskell-vim'
 " Hack
-Bundle '/hhvm/vim-hack'
+Bundle 'hhvm/vim-hack'
 " Javascript + Client Side Stuffs
-Bundle '/mxw/vim-jsx'
-Bundle '/groenewege/vim-less'
-Bundle '/pangloss/vim-javascript'
-Bundle '/leafgarland/typescript-vim'
+Bundle 'mxw/vim-jsx'
+Bundle 'groenewege/vim-less'
+Bundle 'pangloss/vim-javascript'
+Bundle 'leafgarland/typescript-vim'
 " Shell Scripts
-Bundle '/PProvost/vim-ps1'
+Bundle 'PProvost/vim-ps1'
 
 "##################################
 "#          Usablility
 "##################################
-Bundle '/ctrlpvim/ctrlp.vim'
-Bundle '/airblade/vim-gitgutter'
-Bundle '/Shougo/vimproc.vim'
-Bundle '/Valloric/YouCompleteMe'
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Valloric/YouCompleteMe'
 
 "##################################
 "#             Other
 "##################################
-Bundle '/vimwiki/vimwiki'
-Bundle '/tmux-plugins/vim-tmux'
+Bundle 'vimwiki/vimwiki'
+Bundle 'tmux-plugins/vim-tmux'
 " }}}
 " Basic Setup {{{
 filetype plugin indent on
