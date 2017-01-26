@@ -2,8 +2,13 @@
 " Vundle Setup {{{
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has("win32")
+    set rtp+=$VIMRUNTIME/../vimfiles/bundle/Vundle.vim
+    call vundle#begin('$VIMRUNTIME/../vimfiles/bundle')
+else
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+endif
 Plugin 'VundleVim/Vundle.vim'
 " }}}
 " Plugins {{{
