@@ -87,6 +87,7 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "customSnippets"]
 " }}}
 " Airline Plugin {{{
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers

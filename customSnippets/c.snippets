@@ -1,0 +1,6 @@
+snippet header "H file header"
+#if !defined(${1/([A-Za-z0-9_]+).*/$1/}_H)
+
+#define ${1:SYMBOL}_H
+#endif
+endsnippet
