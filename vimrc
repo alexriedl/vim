@@ -46,7 +46,13 @@ Bundle 'PProvost/vim-ps1'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Shougo/vimproc.vim'
+
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'ervandew/supertab'
+
+" Snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 "##################################
 "#             Other
@@ -71,6 +77,16 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_auto_trigger = 0                              "Do not search for completions automatically
 noremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 noremap <leader>ji :YcmCompleter GoToImplementation<CR>
+
+" Updated to work with snippets
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+" }}}
+" Snippets {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }}}
 " Airline Plugin {{{
 let g:airline#extensions#tabline#enabled=1      "Enable list of buffers
