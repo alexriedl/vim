@@ -19,6 +19,8 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'sickill/vim-monokai'
 
+Bundle 'nathanaelkane/vim-indent-guides'
+
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 
@@ -103,12 +105,16 @@ let g:ctrlp_custom_ignore = {
             \ 'file': '\.(exe|so)$'
             \}
 " }}}
+" Indent Guides {{{
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+" }}}
 " Colors {{{
 let g:airline_theme='base16'
 colorscheme desert
 " }}}
 " Normal Settings {{{
-set nu                  "Show line numbers
+set number              "Show line numbers
 set tabstop=2           "Tab width
 set shiftwidth=2        "Tab width
 set expandtab           "Use spaces instead of tabs
@@ -117,7 +123,6 @@ set cursorline          "Highlight line cursor is on
 set showmatch           "Show matching parenthesis
 set hlsearch            "Highlight search matches
 set incsearch           "Search as characters are entered
-set ignorecase          "Ignore case for searching
 set smartcase           "Do case-sensitive search only if theres a cap
 set foldmethod=indent   "Fold on indents
 set foldlevelstart=20
@@ -127,6 +132,11 @@ set nobackup            "Disable backup files
 set noswapfile          "Disable backup files
 set noundofile          "Disable undo files
 set hidden              "Hide current buffers instead of complain
+
+" White Space
+set listchars=tab:>-,trail:~,extends:>,precedes:<,space:␣
+"set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+"set list
 " }}}
 " Moving {{{
 "Map movements to visual movements (if a line wraps to multiple lines, dont
