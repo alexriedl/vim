@@ -106,8 +106,9 @@ let g:ctrlp_custom_ignore = {
             \}
 " }}}
 " Indent Guides {{{
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
+let g:indent_guides_enable_on_vim_startup=1
 " }}}
 " Colors {{{
 let g:airline_theme='base16'
@@ -133,10 +134,13 @@ set noswapfile          "Disable backup files
 set noundofile          "Disable undo files
 set hidden              "Hide current buffers instead of complain
 
-" White Space
-set listchars=tab:>-,trail:~,extends:>,precedes:<,space:␣
-"set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-"set list
+if has("win32")
+else
+  " White Space
+  set listchars=tab:>-,trail:~,extends:>,precedes:<,space:␣
+  "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+  "set list
+endif
 " }}}
 " Moving {{{
 "Map movements to visual movements (if a line wraps to multiple lines, dont
