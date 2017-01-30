@@ -116,8 +116,8 @@ colorscheme desert
 " }}}
 " Normal Settings {{{
 set number              "Show line numbers
-set tabstop=2           "Tab width
-set shiftwidth=2        "Tab width
+set tabstop=4           "Tab width
+set shiftwidth=4        "Tab width
 set expandtab           "Use spaces instead of tabs
 set cindent             "Auto indent using c style indents
 set cursorline          "Highlight line cursor is on
