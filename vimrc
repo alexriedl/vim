@@ -106,9 +106,11 @@ let g:ctrlp_custom_ignore = {
             \}
 " }}}
 " Indent Guides {{{
+let g:indent_guides_enable_on_vim_startup=0 " Default keybinding to toggle is <leader>ig
+let g:indent_guides_color_change_percent=5
+let g:indent_guides_exclude_filetypes=['help', 'nerdtree']
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
-let g:indent_guides_enable_on_vim_startup=1
 " }}}
 " Colors {{{
 let g:airline_theme='base16'
@@ -116,8 +118,8 @@ colorscheme desert
 " }}}
 " Normal Settings {{{
 set number              "Show line numbers
-set tabstop=4           "Tab width
-set shiftwidth=4        "Tab width
+set tabstop=2           "Tab width
+set shiftwidth=2        "Tab width
 set expandtab           "Use spaces instead of tabs
 set cindent             "Auto indent using c style indents
 set cursorline          "Highlight line cursor is on
