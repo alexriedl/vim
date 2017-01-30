@@ -76,7 +76,7 @@ let NERDTreeAutoDeleteBuffer=1
 let g:ycm_warning_symbol = '>'                          "Defaults '>>'
 let g:ycm_autoclose_preview_window_after_insertion = 1  "Defaults 0
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-let g:ycm_auto_trigger = 0                              "Do not search for completions automatically
+let g:ycm_auto_trigger = 1                              "Do not search for completions automatically
 noremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 noremap <leader>ji :YcmCompleter GoToImplementation<CR>
 
