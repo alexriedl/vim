@@ -76,33 +76,16 @@ let NERDTreeIgnore = ['\.ico$', 'public$', 'fonts$', 'node_modules$', 'vendor$',
 let NERDTreeSortOrder = ['src\/$', 'tests\/$', 'dal\/$', 'sl\/$', 'pl\/$', 'bll\/$', 'js\/$', 'less\/$', '\/$', '*']
 let NERDTreeAutoDeleteBuffer=1
 " }}}
-" YouCompleteMe Plugin {{{
-
-" Syntastic
+" Syntastic Plugin {{{
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Checkers
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_typescript_checkers = ['tsc', 'tslint']
 let g:syntastic_cs_checkers = ['code_checker', 'syntax', 'semantic', 'issues']
-
-" Omni sharp
-let g:OmniSharp_selector_ui = 'ctrlp'
-let g:OmniSharp_server_type = 'roslyn'
-
-"let g:ycm_warning_symbol = '>'                          "Defaults '>>'
-"let g:ycm_autoclose_preview_window_after_insertion = 1  "Defaults 0
-"let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-"let g:ycm_auto_trigger = 0                              "Do not search for completions automatically
-"noremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"noremap <leader>ji :YcmCompleter GoToImplementation<CR>
-
-" Updated to work with snippets
-"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-"let g:SuperTabDefaultCompletionType = '<C-n>'
 " }}}
 " Snippets {{{
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -265,6 +248,10 @@ inoremap kj <esc>
 set viminfo='100,f1
 "}}}
 " OMNISHARP TESTING STUFFS {{{
+
+let g:OmniSharp_selector_ui = 'ctrlp'
+let g:OmniSharp_server_type = 'roslyn'
+
 " OmniSharp won't work without this setting
 filetype plugin on
 
