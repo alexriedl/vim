@@ -84,8 +84,22 @@ let g:syntastic_check_on_wq = 0
 
 " Checkers
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_typescript_checkers = ['tsc', 'tslint']
+let g:syntastic_typescript_checkers = ['tsc']
 let g:syntastic_cs_checkers = ['code_checker', 'syntax', 'semantic', 'issues']
+
+function! FindConfig(prefix, what, where)
+    let cfg = findfile(a:what, escape(a:where, ' ') . ';')
+    return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
+endfunction
+
+"autocmd FileType javascript let b:syntastic_javascript_jscs_args =
+    "\ get(g:, 'syntastic_javascript_jscs_args', '') .
+    "\ FindConfig('-c', '.jscsrc', expand('<afile>:p:h', 1))
+
+"autocmd FileType typescript let b:syntastic_typescript_tsc_args =
+    "\ get(g:, 'syntastic_typescript_tsc_args', '') .
+    "\ FindConfig('--config', 'tsconfig.json', expand('<afile>:p:h', 1))
+
 " }}}
 " Snippets {{{
 let g:UltiSnipsExpandTrigger="<tab>"
