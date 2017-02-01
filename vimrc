@@ -19,7 +19,7 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'sickill/vim-monokai'
 
-Bundle 'nathanaelkane/vim-indent-guides'
+"Bundle 'nathanaelkane/vim-indent-guides'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -36,9 +36,10 @@ Bundle 'neovimhaskell/haskell-vim'
 Bundle 'hhvm/vim-hack'
 " Javascript + Client Side Stuffs
 Bundle 'mxw/vim-jsx'
-Bundle 'groenewege/vim-less'
 Bundle 'pangloss/vim-javascript'
+"Bundle 'Quramy/tsuquyomi' - supposedly works with syntastic
 Bundle 'leafgarland/typescript-vim'
+Bundle 'groenewege/vim-less'
 " Shell Scripts
 Bundle 'PProvost/vim-ps1'
 
@@ -82,6 +83,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_cs_checkers = ['code_checker', 'syntax', 'semantic', 'issues']
 
 " Omni sharp
 let g:OmniSharp_selector_ui = 'ctrlp'
@@ -295,10 +300,6 @@ set completeopt=longest,menuone,preview
 "You might also want to look at the echodoc plugin
 set splitbelow
 
-" Get Code Issues and syntax errors
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-" If you are using the omnisharp-roslyn backend, use the following
-let g:syntastic_cs_checkers = ['code_checker']
 augroup omnisharp_commands
     autocmd!
 
@@ -346,9 +347,9 @@ set updatetime=500
 set cmdheight=2
 
 " Contextual code actions (requires CtrlP or unite.vim)
-nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
+"nnoremap <leader><space> :OmniSharpGetCodeActions<cr>
 " Run code actions with text selected in visual mode to extract method
-vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
+"vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
 
 " rename with dialog
 nnoremap <leader>nm :OmniSharpRename<cr>

@@ -36,15 +36,18 @@ cd ../server
 server xbuild (or msbuild on windows)
 cd ../omnisharp-roslyn
 ./build.(sh|ps1)
+npm -g install typescript
 ```
 
 
 # Syntastic jshint setup #
 (Assumes nodejs is installed)
 ```
-sudo npm install -g jshint
 # For legacy support, sym link node and nodejs
 sudo ln -s /usr/bin/node{js,}
+
+sudo npm install -g jshint
+sudo npm install -g typescript
 ```
 
 
