@@ -29,17 +29,25 @@ Bundle 'jistr/vim-nerdtree-tabs'
 "##################################
 " C / C++
 Bundle 'octol/vim-cpp-enhanced-highlight'
+
 " Haskel
 Bundle 'eagletmt/ghcmod-vim'
 Bundle 'neovimhaskell/haskell-vim'
+
 " Hack
 Bundle 'hhvm/vim-hack'
+
 " Javascript + Client Side Stuffs
 Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
-"Bundle 'Quramy/tsuquyomi' - supposedly works with syntastic
-Bundle 'leafgarland/typescript-vim'
 Bundle 'groenewege/vim-less'
+
+" Type script
+" Syntax checker
+Bundle 'Quramy/tsuquyomi'
+" Syntax Highlighter
+Bundle 'leafgarland/typescript-vim'
+
 " Shell Scripts
 Bundle 'PProvost/vim-ps1'
 
@@ -84,21 +92,10 @@ let g:syntastic_check_on_wq = 0
 
 " Checkers
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_typescript_checkers = ['tsc']
+let g:syntastic_typescript_checkers = ['tsuquyomi']
 let g:syntastic_cs_checkers = ['code_checker', 'syntax', 'semantic', 'issues']
 
-function! FindConfig(prefix, what, where)
-    let cfg = findfile(a:what, escape(a:where, ' ') . ';')
-    return cfg !=# '' ? ' ' . a:prefix . ' ' . shellescape(cfg) : ''
-endfunction
-
-"autocmd FileType javascript let b:syntastic_javascript_jscs_args =
-    "\ get(g:, 'syntastic_javascript_jscs_args', '') .
-    "\ FindConfig('-c', '.jscsrc', expand('<afile>:p:h', 1))
-
-"autocmd FileType typescript let b:syntastic_typescript_tsc_args =
-    "\ get(g:, 'syntastic_typescript_tsc_args', '') .
-    "\ FindConfig('--config', 'tsconfig.json', expand('<afile>:p:h', 1))
+let g:tsuquyomi_disable_quickfix = 1
 
 " }}}
 " Snippets {{{
