@@ -367,8 +367,6 @@ nnoremap <leader>sp :OmniSharpStopServer<cr>
 
 " Add syntax highlighting for types and interfaces
 nnoremap <leader>th :OmniSharpHighlightTypes<cr>
-"Don't ask to save when changing buffers (i.e. when jumping to a type definition)
-set hidden
 
 " Enable snippet completion, requires completeopt-=preview
 let g:OmniSharp_want_snippet=1
