@@ -27,6 +27,9 @@ endfunction
 "Short-cut function to allow user to call change font with only FS
 com! -nargs=1 FS call SetSystemFontSize(<f-args>)
 "}}}
+
+
+
 " Local System Settings (LEAVE ON BOTTOM) {{{
 if filereadable(expand("~/projects/gvimrc"))
     source ~/projects/gvimrc
