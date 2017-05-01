@@ -69,6 +69,7 @@ Bundle 'tmux-plugins/vim-tmux'
 " Basic Setup {{{
 call vundle#end()
 syntax on
+filetype plugin on
 let mapleader=","
 " }}}
 " NERDTree Plugin {{{
