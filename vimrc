@@ -50,6 +50,7 @@ Bundle 'PProvost/vim-ps1'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'simnalamburt/vim-mundo'
 
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'ervandew/supertab'
@@ -71,6 +72,9 @@ call vundle#end()
 syntax on
 filetype plugin on
 let mapleader=","
+" }}}
+" Mundo Plugin {{{
+nnoremap <F6> :MundoToggle<CR>
 " }}}
 " NERDTree Plugin {{{
 let NERDTreeIgnore = ['\.ico$', 'public$', 'fonts$', 'node_modules$', 'vendor$', 'bin$', 'obj$']
@@ -133,8 +137,11 @@ set foldnestmax=2
 set autoread            "Auto reload file if seved externally
 set nobackup            "Disable backup files
 set noswapfile          "Disable backup files
-set noundofile          "Disable undo files
 set hidden              "Hide current buffers instead of complain
+
+" set noundofile          "Disable undo files
+set undofile
+set undodir=~/.vim/undo
 
 if has("win32")
 else
