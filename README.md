@@ -12,8 +12,18 @@ make
 
 neovim setup
 ```
+sudo add-apt-repository ppa:neovim-ppa/stable # Use unstable if not on ubuntu 16.04
+sudo apt update
+sudo apt install neovim python-dev python-pip python3-dev python3-pip
+
 mkdir ~/.config/nvim
 ln -s /home/$USER/.vim/init.vim /home/$USER/.config/nvim/init.vim
+
+# Default nvim instead of vi/vim
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
+sudo update-alternatives --config vi
+sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
+sudo update-alternatives --config vim
 ```
 
 
