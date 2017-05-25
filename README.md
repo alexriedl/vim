@@ -10,6 +10,13 @@ cd bundle/vimproc.vim
 make
 ```
 
+neovim setup
+```
+mkdir ~/.config/nvim
+ln -s /home/$USER/.vim/init.vim /home/$USER/.config/nvim/init.vim
+```
+
+
 ON WINDOWS
 ```
 cd %USERPROFILE%
@@ -27,13 +34,3 @@ Navigate to vim's install directory (C:\Program Files (x86)/vim) and update the 
 source C:\Users\$USERPROFILE\vimfiles\vimrc
 ```
 
-# Syntastic jshint setup #
-(Assumes nodejs is installed)
-```
-# For legacy support, sym link node and nodejs
-sudo ln -s /usr/bin/node{js,}
-
-sudo npm install -g jshint
-sudo npm install -g typescript
-sudo npm install -g jshint
-```
