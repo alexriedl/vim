@@ -48,11 +48,13 @@ Bundle 'PProvost/vim-ps1'
 "#          Usablility
 "##################################
 Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'Shougo/vimproc.vim'
+Bundle 'michaeljsmith/vim-indent-object'
+
+" Visual Undo tree
 Bundle 'simnalamburt/vim-mundo'
 
-"Bundle 'Valloric/YouCompleteMe'
+" Syntax + Code complete
 Bundle 'ervandew/supertab'
 Bundle 'vim-syntastic/syntastic'
 Bundle 'tpope/vim-dispatch'
@@ -61,9 +63,11 @@ Bundle 'tpope/vim-dispatch'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
+
 "##################################
 "#             Other
 "##################################
+Bundle 'airblade/vim-gitgutter'
 Bundle 'vimwiki/vimwiki'
 Bundle 'tmux-plugins/vim-tmux'
 " }}}
