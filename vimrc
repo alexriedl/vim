@@ -19,10 +19,10 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'sickill/vim-monokai'
 
-"Bundle 'nathanaelkane/vim-indent-guides'
-
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
+
+Bundle 'kshenoy/vim-signature'
 
 "##################################
 "#          Languages
