@@ -8,6 +8,8 @@ vim +BundleInstall +qall
 
 cd bundle/vimproc.vim
 make
+
+sudo apt install editorconfig
 ```
 
 neovim setup

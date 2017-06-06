@@ -58,11 +58,11 @@ Bundle 'simnalamburt/vim-mundo'
 Bundle 'ervandew/supertab'
 Bundle 'vim-syntastic/syntastic'
 Bundle 'tpope/vim-dispatch'
+Bundle 'editorconfig/editorconfig-vim'
 
 " Snippets
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-
 
 "##################################
 "#             Other
