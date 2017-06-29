@@ -144,6 +144,7 @@ set autoread            "Auto reload file if seved externally
 set nobackup            "Disable backup files
 set noswapfile          "Disable backup files
 set hidden              "Hide current buffers instead of complain
+set mouse=a             "Allow mouse scrolling + selecting like gvim
 
 " set noundofile          "Disable undo files
 set undofile
