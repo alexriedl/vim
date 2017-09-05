@@ -50,6 +50,7 @@ Bundle 'PProvost/vim-ps1'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " Visual Undo tree
 Bundle 'simnalamburt/vim-mundo'
@@ -266,6 +267,12 @@ inoremap kj <esc>
 "Save marks between closes of vim
 set viminfo='100,f1
 "}}}
+" Helper Functions {{{
+function! PrettyJson()
+  :%s/\\n/\r/g
+  :%s/\\"/"/g
+endfunction
+" }}}
 
 
 
