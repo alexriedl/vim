@@ -60,6 +60,7 @@ Bundle 'ervandew/supertab'
 Bundle 'vim-syntastic/syntastic'
 Bundle 'tpope/vim-dispatch'
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'tpope/vim-surround'
 
 " Snippets
 Plugin 'SirVer/ultisnips'
