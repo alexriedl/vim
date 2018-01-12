@@ -72,6 +72,12 @@ Plugin 'honza/vim-snippets'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'vimwiki/vimwiki'
 Bundle 'tmux-plugins/vim-tmux'
+
+"##################################
+"#        Neovim Plugins
+"##################################
+Bundle 'roxma/vim-tmux-clipboard'
+
 " }}}
 " Basic Setup {{{
 call vundle#end()
