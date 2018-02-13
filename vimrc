@@ -16,8 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 "#       Layout + Look/Feel
 "##################################
 Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'sickill/vim-monokai'
+Bundle 'morhetz/gruvbox'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
@@ -130,8 +129,9 @@ let g:ctrlp_custom_ignore = {
             \}
 " }}}
 " Colors {{{
-let g:airline_theme='base16'
-colorscheme desert
+let g:airline_theme='gruvbox'
+colorscheme gruvbox
+set background=dark
 " }}}
 " Normal Settings {{{
 set number                 "Show line numbers
@@ -234,9 +234,6 @@ cmap w!! w !sudo tee > /dev/null %
 
 "Wiki
 nnoremap <F4> :VimwikiAll2HTML<cr>
-
-"Search 
-vnoremap <F8> y:execute 'vimgrep /\V' . escape(@@, '/\') . '/ %'<CR>
 
 "Run build.sh in working directory
 nnoremap <F5> <esc>:wa<enter>:make<enter>

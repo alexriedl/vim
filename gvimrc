@@ -1,8 +1,8 @@
 " vim:fdm=marker
 
 " Color Settings {{{
-colorscheme monokai
-let g:airline_theme='molokai'
+" colorscheme monokai
+" let g:airline_theme='molokai'
 "}}}
 " GUI Settings {{{
 set guioptions-=m  "remove menu bar
