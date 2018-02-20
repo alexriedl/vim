@@ -49,6 +49,7 @@ Bundle 'PProvost/vim-ps1'
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'easymotion/vim-easymotion'
 Bundle 'christoomey/vim-tmux-navigator'
 
 " Visual Undo tree
@@ -93,6 +94,12 @@ let NERDTreeSortOrder = ['src\/$', 'tests\/$', 'dal\/$', 'sl\/$', 'pl\/$', 'bll\
 let NERDTreeAutoDeleteBuffer=1
 nnoremap <F9> :NERDTree<cr>
 nnoremap <C-f> :NERDTreeFocus<cr>
+" }}}
+" Easy Motion Plugin {{{
+" Easier easy motion keybindings
+map <Leader> <Plug>(easymotion-prefix)
+" Make easy motion work like default vim smart case search
+let g:EasyMotion_smartcase = 1
 " }}}
 " Syntastic Plugin {{{
 let g:syntastic_always_populate_loc_list = 1
