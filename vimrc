@@ -278,6 +278,11 @@ inoremap kj <esc>
 "Save marks between closes of vim
 set viminfo='100,f1
 "}}}
+" Neovim {{{
+if has('nvim')
+  set shada="NONE"
+endif
+" }}}
 " Helper Functions {{{
 function! PrettyJson()
   :%s/\\n/\r/g
