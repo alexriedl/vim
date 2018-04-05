@@ -21,6 +21,7 @@ Bundle 'morhetz/gruvbox'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 
+" Display marks in gutter
 Bundle 'kshenoy/vim-signature'
 
 "##################################
