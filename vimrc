@@ -35,6 +35,9 @@ Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
 Bundle 'groenewege/vim-less'
 
+" Markdown
+Bundle 'plasticboy/vim-markdown'
+
 " Type script
 " Syntax checker
 Bundle 'Quramy/tsuquyomi'
@@ -129,6 +132,10 @@ let g:airline#extensions#tabline#fnamemod=':t'  "Display only name in buffer lis
 " Git Gutter Plugin {{{
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
+" }}}
+" Markdown Plugin {{{
+let g:vim_markdown_frontmatter = 1
+set conceallevel=2
 " }}}
 " CtrlP{{{
 let g:ctrlp_custom_ignore = {
