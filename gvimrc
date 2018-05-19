@@ -1,16 +1,10 @@
-" vim:fdm=marker
-
-" Color Settings {{{
-" colorscheme monokai
-" let g:airline_theme='molokai'
-"}}}
-" GUI Settings {{{
+" GUI Settings 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
-"}}}
-" Font Settings {{{
+
+" Font Settings
 function! SetSystemFontSize(base)
     if has("gui_macvim")
         let scale = a:base + 6
@@ -26,15 +20,13 @@ endfunction
 
 "Short-cut function to allow user to call change font with only FS
 com! -nargs=1 FS call SetSystemFontSize(<f-args>)
-"}}}
 
 
 
-" Local System Settings (LEAVE ON BOTTOM) {{{
+" Local System Settings (LEAVE ON BOTTOM)
 if filereadable(expand("~/projects/gvimrc"))
     source ~/projects/gvimrc
 else
     "Default font size
     call SetSystemFontSize(8)
 endif
-"}}}
