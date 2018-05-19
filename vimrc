@@ -289,6 +289,7 @@ set viminfo='100,f1
 " Neovim {{{
 if has('nvim')
   set shada="NONE"
+  tnoremap <Esc> <C-\><C-n>
 endif
 " }}}
 " Helper Functions {{{
