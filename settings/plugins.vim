@@ -22,14 +22,14 @@ Bundle 'mxw/vim-jsx'
 Bundle 'pangloss/vim-javascript'
 Bundle 'groenewege/vim-less'
 
-" Markdown
-Bundle 'plasticboy/vim-markdown'
-
-" Type script
+" Typescript
 " Syntax checker
 Bundle 'Quramy/tsuquyomi'
 " Syntax Highlighter
 Bundle 'leafgarland/typescript-vim'
+
+" Markdown
+Bundle 'plasticboy/vim-markdown'
 
 " Shell Scripts
 Bundle 'PProvost/vim-ps1'
