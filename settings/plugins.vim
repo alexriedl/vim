@@ -25,7 +25,7 @@ Plugin 'groenewege/vim-less'
 " Markdown
 Plugin 'plasticboy/vim-markdown'
 
-" Type script
+" Typescript
 " Syntax checker
 Plugin 'Quramy/tsuquyomi'
 " Syntax Highlighter

@@ -1,1 +1,1 @@
-au FileType php set omnifunc=hackcomplete#Complete
+set omnifunc=hackcomplete#Complete

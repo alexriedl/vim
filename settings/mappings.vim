@@ -22,6 +22,17 @@ nnoremap ^ <nop>
 " Add a new line without entering insert mode
 nnoremap <S-CR> O<Esc>
 
+" Ctrl+Space for autocomplete
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+            \ "\<lt>C-n>" :
+            \ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+            \ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-p>\" :" .
+            \ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
+
+inoremap <C-j> <C-n>
+inoremap <C-k> <C-p>
+
 " Cleaner inner paste
 nnoremap "p vi"p
 nnoremap 'p vi'p
