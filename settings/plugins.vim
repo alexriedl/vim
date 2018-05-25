@@ -1,57 +1,58 @@
 "##################################
 "#       Layout + Look/Feel
 "##################################
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'morhetz/gruvbox'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'morhetz/gruvbox'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " Display marks in gutter
-Bundle 'kshenoy/vim-signature'
+Plugin 'kshenoy/vim-signature'
 
 "##################################
 "#          Languages
 "##################################
 " C / C++
-Bundle 'octol/vim-cpp-enhanced-highlight'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " Javascript + Client Side Stuffs
-Bundle 'mxw/vim-jsx'
-Bundle 'pangloss/vim-javascript'
-Bundle 'groenewege/vim-less'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'groenewege/vim-less'
 
 " Markdown
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 
 " Type script
 " Syntax checker
-Bundle 'Quramy/tsuquyomi'
+Plugin 'Quramy/tsuquyomi'
 " Syntax Highlighter
-Bundle 'leafgarland/typescript-vim'
+Plugin 'leafgarland/typescript-vim'
 
 " Shell Scripts
-Bundle 'PProvost/vim-ps1'
+Plugin 'PProvost/vim-ps1'
 
 "##################################
 "#          Usablility
 "##################################
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'Shougo/vimproc.vim'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'easymotion/vim-easymotion'
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'christoomey/vim-tmux-navigator'
+
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-surround'
 
 " Visual Undo tree
-Bundle 'simnalamburt/vim-mundo'
+Plugin 'simnalamburt/vim-mundo'
 
 " Syntax + Code complete
-Bundle 'ervandew/supertab'
-Bundle 'vim-syntastic/syntastic'
-Bundle 'tpope/vim-dispatch'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'tpope/vim-surround'
+Plugin 'ervandew/supertab'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'tpope/vim-dispatch'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Snippets
 Plugin 'SirVer/ultisnips'
@@ -60,12 +61,12 @@ Plugin 'honza/vim-snippets'
 "##################################
 "#             Other
 "##################################
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vimwiki/vimwiki'
-Bundle 'tmux-plugins/vim-tmux'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vimwiki/vimwiki'
+Plugin 'tmux-plugins/vim-tmux'
 
 "##################################
 "#        Neovim Plugins
 "##################################
-Bundle 'roxma/vim-tmux-clipboard'
+Plugin 'roxma/vim-tmux-clipboard'
 
