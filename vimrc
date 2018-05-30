@@ -63,6 +63,7 @@ source $VIMHOME/settings/plugin_nerdtree.vim
 source $VIMHOME/settings/plugin_omnisharp.vim
 source $VIMHOME/settings/plugin_snippets.vim
 source $VIMHOME/settings/plugin_syntastic.vim
+source $VIMHOME/settings/plugin_webdevicons.vim
 source $VIMHOME/settings/plugin_wiki.vim
 
 source $VIMHOME/settings/buffers.vim
