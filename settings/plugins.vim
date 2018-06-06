@@ -11,6 +11,12 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 
+" Repeat 
+Plugin 'tpope/vim-repeat'
+
+" Comment sections easily
+Plugin 'tpope/vim-commentary'
+
 " Visual Undo tree
 Plugin 'simnalamburt/vim-mundo'
 
