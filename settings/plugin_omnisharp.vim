@@ -1,4 +1,3 @@
-" let g:OmniSharp_server_path = '/home/alex/.omnisharp/omnisharp.http/omnisharp/OmniSharp.exe'
 let g:OmniSharp_server_path = '/opt/omnisharp/omnisharp/OmniSharp.exe'
 let g:OmniSharp_selector_ui = 'ctrlp'
 
