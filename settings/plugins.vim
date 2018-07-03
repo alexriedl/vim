@@ -73,6 +73,9 @@ Plugin 'leafgarland/typescript-vim'
 " Shell Scripts
 Plugin 'PProvost/vim-ps1'
 
+" Batsh (bash/batch transpiled language)
+Plugin 'vuryleo/vim-Batsh'
+
 "##################################
 "#             Other
 "##################################
