@@ -65,3 +65,9 @@ Navigate to vim's install directory (C:\Program Files (x86)/vim) and update the 
 source C:\Users\$USERPROFILE\vimfiles\vimrc
 ```
 
+
+
+## Languages ##
+### Typescript ###
+Must install checkers globally: `npm install -g typescript tslint`
+
