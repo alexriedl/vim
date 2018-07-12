@@ -78,7 +78,7 @@ source $VIMHOME/settings/windows.vim
 " nnoremap <F5> <esc>:wa<enter>:make<enter>
 
 if(exists('+colorcolumn'))
-    set colorcolumn=100
+    set colorcolumn=120
     highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
 endif
 

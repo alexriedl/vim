@@ -1,6 +1,7 @@
 " Cancel search match highlights
 nnoremap <leader><space> :nohlsearch<CR>
 
+" Sort selected lines (in visual line mode)
 xnoremap <C-s> :sort<CR>
 
 " Toggle folding
