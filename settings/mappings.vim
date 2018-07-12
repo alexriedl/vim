@@ -1,6 +1,8 @@
 " Cancel search match highlights
 nnoremap <leader><space> :nohlsearch<CR>
 
+xnoremap <C-s> :sort<CR>
+
 " Toggle folding
 nnoremap <space> za
 
