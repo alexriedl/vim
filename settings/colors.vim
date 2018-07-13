@@ -1,3 +1,3 @@
 let g:airline_theme='gruvbox'
-colorscheme gruvbox
+silent! colorscheme gruvbox
 set background=dark
