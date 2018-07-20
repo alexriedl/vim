@@ -56,3 +56,16 @@ nnoremap )y yi)
 
 " Save as sudo
 cmap w!! w !sudo tee > /dev/null %
+
+" Search for word under cursor in all files that share the same extension (use
+" normal searches by adding a space after lvim
+cabbrev lvim
+      \ lvim /\<lt><C-R><C-W>\>/gj
+      \ *<C-R>=(expand("%:e")=="" ? "" : ".".expand("%:e"))<CR>
+      \ <Bar> lw
+      \ <C-Left><C-Left><C-Left>
+nnoremap gf
+      \ :lvim /\<lt><C-R><C-W>\>/gj
+      \ **/*<C-R>=(expand("%:e")=="" ? "" : ".".expand("%:e"))<CR>
+      \ <Bar> lw
+      \ <C-Left><C-Left><C-Left><CR>
