@@ -11,7 +11,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'tpope/vim-surround'
 
-" Repeat 
+" Repeat
 Plugin 'tpope/vim-repeat'
 
 " Comment sections easily
@@ -45,6 +45,9 @@ Plugin 'ryanoasis/vim-devicons'
 
 " Display marks in gutter
 Plugin 'kshenoy/vim-signature'
+
+" Highlight word under cursor
+Plugin 'RRethy/vim-illuminate'
 
 "##################################
 "#          Languages
@@ -87,4 +90,3 @@ Plugin 'tmux-plugins/vim-tmux'
 "#        Neovim Plugins
 "##################################
 Plugin 'roxma/vim-tmux-clipboard'
-
