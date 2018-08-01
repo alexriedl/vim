@@ -40,14 +40,15 @@ set hidden                 "Hide current buffers instead of complain
 set mouse=a                "Allow mouse scrolling + selecting in terminal like gvim
 set clipboard=unnamedplus  "Use system clipboard as default register
 
-" Default ignores for stuff (searches and more?)
-set wildignore+=**/config/*
-set wildignore+=**/.git/*
-set wildignore+=**/.bin/*
-set wildignore+=**/bin/*
-set wildignore+=**/obj/*
-set wildignore+=**/.obj/*
-set wildignore+=**/node_modules/*
+" Default ignores for stuff (searches and more?) NOTE: Breaks normal vim
+" commands - but without this find commands search ALL files...
+" set wildignore+=**/config/*
+" set wildignore+=**/.git/*
+" set wildignore+=**/.bin/*
+" set wildignore+=**/bin/*
+" set wildignore+=**/obj/*
+" set wildignore+=**/.obj/*
+" set wildignore+=**/node_modules/*
 
 " Folds
 set foldmethod=indent      "Fold on indents
