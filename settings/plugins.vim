@@ -72,6 +72,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Quramy/tsuquyomi'
 " Syntax Highlighter
 Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript.git'
 
 " Shell Scripts
 Plugin 'PProvost/vim-ps1'
