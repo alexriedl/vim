@@ -8,8 +8,8 @@ xnoremap <C-s> :sort<CR>
 nnoremap <space> za
 
 " Alternate escape sequences
-inoremap jk <esc>
-inoremap kj <esc>
+" inoremap jk <esc>
+" inoremap kj <esc>
 
 " Skip 'fake' lines
 nnoremap j gj
