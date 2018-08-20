@@ -80,6 +80,10 @@ Plugin 'PProvost/vim-ps1'
 " Batsh (bash/batch transpiled language)
 Plugin 'vuryleo/vim-Batsh'
 
+" SQL
+" Plugin 'vim-scripts/dbext.vim'
+Plugin 'cosminadrianpopescu/vim-sql-workbench'
+
 "##################################
 "#             Other
 "##################################
