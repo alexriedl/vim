@@ -1,7 +1,11 @@
 
-let g:dbext_default_profile_OGM = 'type=PGSQL:host=localhost:dbname=order_guide_management:user=dbup_local:passwd=#1place2work'
+let g:dbext_default_profile_OGM_QA = 'type=PGSQL:host=localhost:port=1234:dbname=order_guide_management:user=dbup_qa'
+let g:dbext_default_profile_OGM = 'type=PGSQL:host=localhost:dbname=order_guide_management:user=dbup_local'
 let g:dbext_default_profile='OGM'
 
+
+autocmd VimEnter *.sql DBCompleteTables
+autocmd VimEnter *.sql DBCompleteProcedures
 
 
 " let g:sw_exe = '/home/alex/.local/share/sqlworkbench/sqlwbconsole.sh'
