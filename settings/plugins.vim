@@ -81,8 +81,8 @@ Plugin 'PProvost/vim-ps1'
 Plugin 'vuryleo/vim-Batsh'
 
 " SQL
-" Plugin 'vim-scripts/dbext.vim'
-Plugin 'cosminadrianpopescu/vim-sql-workbench'
+Plugin 'vim-scripts/dbext.vim'
+" Plugin 'cosminadrianpopescu/vim-sql-workbench'
 
 "##################################
 "#             Other
