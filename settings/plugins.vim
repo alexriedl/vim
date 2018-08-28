@@ -22,7 +22,7 @@ Plugin 'simnalamburt/vim-mundo'
 
 " Syntax + Code complete
 Plugin 'ervandew/supertab'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'editorconfig/editorconfig-vim'
 
 " Snippets
