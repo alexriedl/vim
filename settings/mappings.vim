@@ -48,7 +48,7 @@ nnoremap 'c ci'
 nnoremap (c ci(
 nnoremap )c ci)
 
-" Cleaner innter yanks
+" Cleaner inner yanks
 nnoremap "y yi"
 nnoremap 'y yi'
 nnoremap (y yi(
