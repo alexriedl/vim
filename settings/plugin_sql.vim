@@ -31,3 +31,20 @@ augroup production_ogm
  au!
  autocmd BufRead */sql/ogm-prod/* DBSetOption profile=OGM_PROD
 augroup end
+
+augroup local_supplier
+ au!
+ autocmd BufRead */sql/supplier-local/* DBSetOption profile=PRODUCT_LOCAL
+augroup end
+augroup dev_supplier
+ au!
+ autocmd BufRead */sql/supplier-dev/* DBSetOption profile=PRODUCT_DEV
+augroup end
+augroup qa_supplier
+ au!
+ autocmd BufRead */sql/supplier-qa/* DBSetOption profile=PRODUCT_QA
+augroup end
+augroup production_supplier
+ au!
+ autocmd BufRead */sql/supplier-prod/* DBSetOption profile=PRODUCT_PROD
+augroup end
