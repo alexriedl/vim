@@ -73,6 +73,7 @@ source $VIMHOME/settings/plugin_mundo.vim
 source $VIMHOME/settings/plugin_nerdtree.vim
 source $VIMHOME/settings/plugin_omnisharp.vim
 source $VIMHOME/settings/plugin_snippets.vim
+source $VIMHOME/settings/plugin_supertab.vim
 source $VIMHOME/settings/plugin_sql.vim
 source $VIMHOME/settings/plugin_typescript.vim
 source $VIMHOME/settings/plugin_webdevicons.vim
