@@ -1,7 +1,7 @@
 set noexpandtab
 
-nnoremap <buffer> <C-S-f> :OmniSharpCodeFormat<CR>
-nnoremap <buffer> <C-S-r> :OmniSharpRestartServer<CR>
+" nnoremap <buffer> <C-S-f> :OmniSharpCodeFormat<CR>
+" nnoremap <buffer> <C-S-r> :OmniSharpRestartServer<CR>
 nnoremap <buffer> <F2> :OmniSharpRename<CR>
 nnoremap <buffer> <M-CR> :OmniSharpFixIssue<CR>
 nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
@@ -21,4 +21,4 @@ set makeprg=dotnet\ build
 " You might also want to look at the echodoc plugin.
 set previewheight=5
 
-autocmd BufReadPost,FileReadPost *.cs :OmniSharpHighlightTypes
+" autocmd BufReadPost,FileReadPost *.cs :OmniSharpHighlightTypes
