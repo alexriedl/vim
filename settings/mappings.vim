@@ -53,7 +53,7 @@ cmap w!! w !sudo tee > /dev/null %
 " normal searches by adding a space after lvim
 cabbrev lvim
       \ lvim /\<lt><C-R><C-W>\>/gj
-      \ *<C-R>=(expand("%:e")=="" ? "" : ".".expand("%:e"))<CR>
+      \ **/*<C-R>=(expand("%:e")=="" ? "" : ".".expand("%:e"))<CR>
       \ <Bar> lw
       \ <C-Left><C-Left><C-Left>
 nnoremap gf
