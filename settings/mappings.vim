@@ -49,6 +49,9 @@ nnoremap )y yi)
 " Save as sudo
 cmap w!! w !sudo tee > /dev/null %
 
+" ctrl+space to omni complete
+inoremap <c-space> <c-x><c-o>
+
 " Search for word under cursor in all files that share the same extension (use
 " normal searches by adding a space after lvim
 cabbrev lvim
