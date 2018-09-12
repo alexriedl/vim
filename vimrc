@@ -21,6 +21,9 @@ syntax on
 filetype plugin on
 let mapleader=","
 
+" Simply command to empty the quick fix list
+command! ClearQuickfixList cexpr []
+
 " Normal Settings
 set number                 "Show line numbers
 set tabstop=2              "Tab width

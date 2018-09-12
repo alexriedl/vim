@@ -7,7 +7,7 @@ nnoremap <buffer> <M-CR> :OmniSharpFixIssue<CR>
 nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
 nnoremap <buffer> gh :OmniSharpTypeLookup<CR>
 nnoremap <buffer> gi :OmniSharpFindImplementations<CR>
-nnoremap <buffer> gr :OmniSharpFindUsages<CR>
+nnoremap <buffer> gr :ClearQuickfixList<cr>:OmniSharpFindUsages<CR>
 
 " Don't autoselect first omnicomplete option, show options even if there is only
 " one (so the preview documentation is accessible). Remove 'preview' if you
