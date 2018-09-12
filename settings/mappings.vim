@@ -4,6 +4,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Clear quick fix list
 nnoremap <leader>cf :ClearQuickfixList<cr>
 
+nnoremap <C-m> :cclose<cr>:lclose<cr>
+
 " Sort selected lines (in visual line mode)
 xnoremap <C-s> :sort<CR>
 
