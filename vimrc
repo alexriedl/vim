@@ -98,6 +98,9 @@ if(exists('+colorcolumn'))
     highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
 endif
 
+" Auto trim whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
 " Local System Settings (LEAVE ON BOTTOM)
 if filereadable(expand("~/projects/vimrc"))
     source ~/projects/vimrc
