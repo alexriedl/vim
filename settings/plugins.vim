@@ -40,6 +40,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+" Display gitblame for current line
+Plugin 'zivyangll/git-blame.vim'
+
 " Requires Nerd Fonts installed (Shows icons in nerdtree)
 Plugin 'ryanoasis/vim-devicons'
 
