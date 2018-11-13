@@ -9,6 +9,9 @@ nnoremap <C-m> :cclose<cr>:lclose<cr>
 " Sort selected lines (in visual line mode)
 xnoremap <C-s> :sort<CR>
 
+" Insert filename
+inoremap \fn <C-R>=expand("%:t:r")<CR>
+
 " Toggle folding
 nnoremap <space> za
 
