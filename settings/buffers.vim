@@ -13,3 +13,14 @@ augroup qf
     autocmd!
     autocmd FileType qf set nobuflisted
 augroup END
+
+" Split Window
+nmap <leader>bh  :topleft  vnew<CR>
+nmap <leader>bl  :botright vnew<CR>
+nmap <leader>bk  :topleft  new<CR>
+nmap <leader>bj  :botright new<CR>
+" Split Buffer
+nmap <leader>vh  :leftabove  vnew<CR>
+nmap <leader>vl  :rightbelow vnew<CR>
+nmap <leader>vk  :leftabove  new<CR>
+nmap <leader>vj  :rightbelow new<CR>
