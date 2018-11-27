@@ -2,3 +2,4 @@ autoload/
 .netrwhist
 bundle
 undo/
+tags
