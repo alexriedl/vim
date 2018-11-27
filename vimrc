@@ -4,13 +4,8 @@ let $VIMHOME=expand('<sfile>:p:h')
 set nocompatible
 filetype off
 
-if has("win32")
-    set rtp+=$USERPROFILE/vimfiles/bundle/Vundle.vim
-    call vundle#begin('$USERPROFILE/vimfiles/bundle')
-else
-    set rtp+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
-endif
+set rtp+=$VIMHOME/bundle/Vundle.vim
+call vundle#begin('$VIMHOME/bundle')
 
 Plugin 'VundleVim/Vundle.vim'
 source $VIMHOME/settings/plugins.vim
@@ -64,7 +59,7 @@ set foldnestmax=2
 " Undo Settings
 " set noundofile          "Disable undo files
 set undofile
-set undodir=~/.vim/undo
+set undodir=$VIMHOME/undo
 
 " Save marks between closes of vim
 set viminfo='100,f1
@@ -83,6 +78,7 @@ source $VIMHOME/settings/plugin_search.vim
 source $VIMHOME/settings/plugin_snippets.vim
 source $VIMHOME/settings/plugin_sql.vim
 source $VIMHOME/settings/plugin_supertab.vim
+source $VIMHOME/settings/plugin_tags.vim
 source $VIMHOME/settings/plugin_typescript.vim
 source $VIMHOME/settings/plugin_webdevicons.vim
 source $VIMHOME/settings/plugin_wiki.vim
