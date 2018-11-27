@@ -3,6 +3,7 @@
 "##################################
 Plugin 'tpope/vim-dispatch'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'mileszs/ack.vim'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'michaeljsmith/vim-indent-object'
@@ -43,6 +44,15 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Display gitblame for current line
 Plugin 'zivyangll/git-blame.vim'
 
+" More git functionality
+Plugin 'tpope/vim-fugitive'
+" Fugitive Gitlab
+Plugin 'shumphrey/fugitive-gitlab.vim'
+" Fugitive Github
+Plugin 'tpope/vim-rhubarb.git'
+" Fugitive Bitbucket
+Plugin 'tommcdo/vim-fubitive'
+
 " Requires Nerd Fonts installed (Shows icons in nerdtree)
 Plugin 'ryanoasis/vim-devicons'
 
@@ -55,6 +65,9 @@ Plugin 'RRethy/vim-illuminate'
 "##################################
 "#          Languages
 "##################################
+" Tag manager
+Plugin 'ludovicchabant/vim-gutentags'
+
 " C / C++
 Plugin 'octol/vim-cpp-enhanced-highlight'
 

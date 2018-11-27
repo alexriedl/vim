@@ -9,7 +9,7 @@ vim +BundleInstall +qall
 cd bundle/vimproc.vim
 make
 
-sudo apt install editorconfig
+sudo apt install editorconfig silversearcher-ag ctags
 
 # Setup Omnisharp
 # Setup Powerline fonts
