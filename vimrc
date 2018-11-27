@@ -48,9 +48,6 @@ set clipboard=unnamedplus  "Use system clipboard as default register
 " set wildignore+=**/.obj/*
 " set wildignore+=**/node_modules/*
 
-" Open quickfix window after any grep command
-autocmd QuickFixCmdPost *grep* cwindow
-
 " Folds
 set foldmethod=indent      "Fold on indents
 set foldlevelstart=20

@@ -7,3 +7,6 @@ endif
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 nnoremap gf :Ack!<CR>
+
+" Open quickfix window after any grep command
+autocmd QuickFixCmdPost *grep* cwindow
