@@ -1,113 +1,113 @@
+" Optionally load plugin helper
+function! Cond(cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+
 "##################################
 "#          Usablility
 "##################################
-Plugin 'tpope/vim-dispatch'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'mileszs/ack.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'Shougo/vimproc.vim'
+Plug 'mileszs/ack.vim'
 
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'michaeljsmith/vim-indent-object'
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'christoomey/vim-tmux-navigator'
 
-Plugin 'easymotion/vim-easymotion'
-Plugin 'tpope/vim-surround'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
 
 " Repeat
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 
 " Comment sections easily
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Visual Undo tree
-Plugin 'simnalamburt/vim-mundo'
+Plug 'simnalamburt/vim-mundo'
 
 " Syntax + Code complete
-Plugin 'ervandew/supertab'
-Plugin 'w0rp/ale'
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
+Plug 'w0rp/ale'
+Plug 'editorconfig/editorconfig-vim'
 
 " Snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 "##################################
 "#       Layout + Look/Feel
 "##################################
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-
-" Display gitblame for current line
-Plugin 'zivyangll/git-blame.vim'
-
-" More git functionality
-Plugin 'tpope/vim-fugitive'
-" Fugitive Gitlab
-Plugin 'shumphrey/fugitive-gitlab.vim'
-" Fugitive Github
-Plugin 'tpope/vim-rhubarb.git'
-" Fugitive Bitbucket
-Plugin 'tommcdo/vim-fubitive'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Requires Nerd Fonts installed (Shows icons in nerdtree)
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " Display marks in gutter
-Plugin 'kshenoy/vim-signature'
+Plug 'kshenoy/vim-signature'
 
 " Highlight word under cursor
-Plugin 'RRethy/vim-illuminate'
+Plug 'RRethy/vim-illuminate'
 
 "##################################
 "#          Languages
 "##################################
 " Tag manager
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'sakhnik/nvim-gdb', { 'do': './install.sh' }
 
 " C#
-Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'OrangeT/vim-csharp'
-
-" Javascript + Client Side Stuffs
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'groenewege/vim-less'
+Plug 'OmniSharp/omnisharp-vim'
+Plug 'OrangeT/vim-csharp'
 
 " Markdown
-Plugin 'plasticboy/vim-markdown'
+Plug 'plasticboy/vim-markdown'
 
-" Typescript
-" Syntax checker
-Plugin 'Quramy/tsuquyomi'
-" Syntax Highlighter
-Plugin 'leafgarland/typescript-vim'
-Plugin 'peitalin/vim-jsx-typescript.git'
+" Typescript/Javascript + Client Side Stuffs
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'peitalin/vim-jsx-typescript'
 
 " Shell Scripts
-Plugin 'PProvost/vim-ps1'
+Plug 'PProvost/vim-ps1'
 
 " Batsh (bash/batch transpiled language)
-Plugin 'vuryleo/vim-Batsh'
+Plug 'vuryleo/vim-Batsh'
 
 " SQL
-Plugin 'vim-scripts/dbext.vim'
-" Plugin 'cosminadrianpopescu/vim-sql-workbench'
+Plug 'vim-scripts/dbext.vim'
+
+"##################################
+"#             Tmux
+"##################################
+Plug 'tmux-plugins/vim-tmux'
+Plug 'roxma/vim-tmux-clipboard', Cond(has('nvim'))
+
+"##################################
+"#             git
+"##################################
+Plug 'zivyangll/git-blame.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+" Fugitive Gitlab
+Plug 'shumphrey/fugitive-gitlab.vim'
+" Fugitive Github
+Plug 'tpope/vim-rhubarb'
+" Fugitive Bitbucket
+Plug 'tommcdo/vim-fubitive'
 
 "##################################
 "#             Other
 "##################################
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vimwiki/vimwiki'
-Plugin 'tmux-plugins/vim-tmux'
-
-"##################################
-"#        Neovim Plugins
-"##################################
-Plugin 'roxma/vim-tmux-clipboard'
+Plug 'vimwiki/vimwiki'

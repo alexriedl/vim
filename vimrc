@@ -1,15 +1,16 @@
 let $VIMHOME=expand('<sfile>:p:h')
 
-" Vundle Setup
-set nocompatible
-filetype off
+" Install vim-plug if it is not already
+if empty(glob('$VIMHOME/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-set rtp+=$VIMHOME/bundle/Vundle.vim
-call vundle#begin('$VIMHOME/bundle')
-
-Plugin 'VundleVim/Vundle.vim'
+" vim-plug setup
+call plug#begin('$VIMHOME/plugged')
 source $VIMHOME/settings/plugins.vim
-call vundle#end()
+call plug#end()
 
 " Basic Setup
 syntax on

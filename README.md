@@ -9,7 +9,7 @@ vim +BundleInstall +qall
 cd bundle/vimproc.vim
 make
 
-sudo apt install editorconfig silversearcher-ag ctags
+sudo apt install editorconfig silversearcher-ag ctags lua5.1 lua5.1-dev
 
 # Setup Omnisharp
 # Setup Powerline fonts
