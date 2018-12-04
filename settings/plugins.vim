@@ -8,7 +8,7 @@ endfunction
 "#          Usablility
 "##################################
 Plug 'tpope/vim-dispatch'
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mileszs/ack.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
