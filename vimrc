@@ -93,7 +93,7 @@ source $VIMHOME/settings/windows.vim
 
 if(exists('+colorcolumn'))
     set colorcolumn=120
-    highlight ColorColumn ctermbg=red ctermfg=white guibg=#592929
+    highlight ColorColumn ctermbg=darkgrey ctermfg=white guibg=#592929
 endif
 
 " Auto trim whitespace on save
