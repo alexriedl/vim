@@ -13,7 +13,6 @@ Plug 'mileszs/ack.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
@@ -92,6 +91,7 @@ Plug 'vim-scripts/dbext.vim'
 "#             Tmux
 "##################################
 Plug 'tmux-plugins/vim-tmux'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'roxma/vim-tmux-clipboard', Cond(has('nvim'))
 
 "##################################

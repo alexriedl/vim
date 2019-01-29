@@ -50,7 +50,7 @@ set clipboard=unnamedplus  "Use system clipboard as default register
 " set wildignore+=**/node_modules/*
 
 " Folds
-set foldmethod=indent      "Fold on indents
+set foldmethod=indent
 set foldlevelstart=20
 set foldnestmax=2
 
@@ -77,6 +77,7 @@ source $VIMHOME/settings/plugin_snippets.vim
 source $VIMHOME/settings/plugin_sql.vim
 source $VIMHOME/settings/plugin_supertab.vim
 source $VIMHOME/settings/plugin_tags.vim
+source $VIMHOME/settings/plugin_tmux.vim
 source $VIMHOME/settings/plugin_typescript.vim
 source $VIMHOME/settings/plugin_webdevicons.vim
 source $VIMHOME/settings/plugin_wiki.vim

@@ -19,6 +19,10 @@ augroup local_ogm
  au!
  autocmd BufRead */sql/ogm-local/* DBSetOption profile=OGM_LOCAL
 augroup end
+augroup project_ogm
+ au!
+ autocmd BufRead */ogm/core/database/* DBSetOption profile=OGM_LOCAL
+augroup end
 augroup dev_ogm
  au!
  autocmd BufRead */sql/ogm-dev/* DBSetOption profile=OGM_DEV
@@ -35,6 +39,10 @@ augroup end
 augroup local_supplier
  au!
  autocmd BufRead */sql/supplier-local/* DBSetOption profile=PRODUCT_LOCAL
+augroup end
+augroup project_supplier
+ au!
+ autocmd BufRead */ogm/product/database/* DBSetOption profile=PRODUCT_LOCAL
 augroup end
 augroup dev_supplier
  au!
