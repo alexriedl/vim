@@ -9,7 +9,7 @@ vim +BundleInstall +qall
 cd bundle/vimproc.vim
 make
 
-sudo apt install editorconfig silversearcher-ag ctags lua5.1 lua5.1-dev libuv1-dev
+sudo apt install editorconfig silversearcher-ag ctags lua5.1 lua5.1-dev unzip libuv1-dev
 # libuv1-dev is required for omnisharp
 
 # Setup Omnisharp
