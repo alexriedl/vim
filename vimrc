@@ -21,23 +21,24 @@ let mapleader=","
 command! ClearQuickfixList cexpr []
 
 " Normal Settings
-set number                 "Show line numbers
-set tabstop=2              "Tab width
-set shiftwidth=2           "Tab width
-set expandtab              "Use spaces instead of tabs
-set cindent                "Auto indent using c style indents
-set cursorline             "Highlight line cursor is on
-set showmatch              "Show matching parenthesis
-set hlsearch               "Highlight search matches
-set incsearch              "Search as characters are entered
-set ignorecase             "Needed for smart case to work correctly
-set smartcase              "Do case-sensitive search only if theres a cap
-set autoread               "Auto reload file if seved externally
-set nobackup               "Disable backup files
-set noswapfile             "Disable backup files
-set hidden                 "Hide current buffers instead of complain
-set mouse=a                "Allow mouse scrolling + selecting in terminal like gvim
-set clipboard=unnamedplus  "Use system clipboard as default register
+set number                 " Show line numbers
+set tabstop=2              " Tab width
+set shiftwidth=2           " Tab width
+set expandtab              " Use spaces instead of tabs
+set cindent                " Auto indent using c style indents
+set cursorline             " Highlight line cursor is on
+set showmatch              " Show matching parenthesis
+set hlsearch               " Highlight search matches
+set incsearch              " Search as characters are entered
+set ignorecase             " Needed for smart case to work correctly
+set smartcase              " Do case-sensitive search only if theres a cap
+set autoread               " Auto reload file if seved externally
+set nobackup               " Disable backup files
+set noswapfile             " Disable backup files
+set hidden                 " Hide current buffers instead of complain
+set mouse=a                " Allow mouse scrolling + selecting in terminal like gvim
+set clipboard=unnamedplus  " Use system clipboard as default register
+
 
 " Default ignores for stuff (searches and more?) NOTE: Breaks normal vim
 " commands - but without this find commands search ALL files...
@@ -77,6 +78,7 @@ source $VIMHOME/settings/plugin_snippets.vim
 source $VIMHOME/settings/plugin_sql.vim
 source $VIMHOME/settings/plugin_supertab.vim
 source $VIMHOME/settings/plugin_tags.vim
+source $VIMHOME/settings/plugin_tests.vim
 source $VIMHOME/settings/plugin_tmux.vim
 source $VIMHOME/settings/plugin_typescript.vim
 source $VIMHOME/settings/plugin_webdevicons.vim
@@ -87,6 +89,7 @@ source $VIMHOME/settings/colors.vim
 source $VIMHOME/settings/filetypes.vim
 source $VIMHOME/settings/functions.vim
 source $VIMHOME/settings/mappings.vim
+source $VIMHOME/settings/spell.vim
 source $VIMHOME/settings/windows.vim
 
 " Run build.sh in working directory
@@ -99,6 +102,9 @@ endif
 
 " Auto trim whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
+
+" Display extra whitespace
+set list listchars=tab:-»,trail:·,nbsp:·
 
 " Local System Settings (LEAVE ON BOTTOM)
 if filereadable(expand("~/projects/vimrc"))
