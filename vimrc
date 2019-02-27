@@ -39,6 +39,9 @@ set hidden                 " Hide current buffers instead of complain
 set mouse=a                " Allow mouse scrolling + selecting in terminal like gvim
 set clipboard=unnamedplus  " Use system clipboard as default register
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
 
 " Default ignores for stuff (searches and more?) NOTE: Breaks normal vim
 " commands - but without this find commands search ALL files...
