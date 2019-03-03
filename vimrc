@@ -64,6 +64,7 @@ set viminfo='100,f1
 
 source $VIMHOME/settings/plugin_airline.vim
 source $VIMHOME/settings/plugin_ale.vim
+source $VIMHOME/settings/plugin_cpp.vim
 source $VIMHOME/settings/plugin_ctrlp.vim
 source $VIMHOME/settings/plugin_easymotion.vim
 source $VIMHOME/settings/plugin_git.vim
