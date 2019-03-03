@@ -58,6 +58,9 @@ Plug 'RRethy/vim-illuminate'
 "##################################
 "#          Languages
 "##################################
+" Run Tests
+Plug 'janko-m/vim-test'
+
 " Tag manager
 Plug 'ludovicchabant/vim-gutentags'
 

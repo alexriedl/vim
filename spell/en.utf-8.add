@@ -1,0 +1,10 @@
+enum
+API
+GitLab
+csproj
+postgres
+json
+AppSettings
+ConnectionStrings
+dotnet
+Terraform
