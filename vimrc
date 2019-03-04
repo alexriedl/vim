@@ -17,7 +17,7 @@ syntax on
 filetype plugin on
 let mapleader=","
 
-" Simply command to empty the quick fix list
+" Simple command to empty the quick fix list
 command! ClearQuickfixList cexpr []
 
 " Normal Settings
@@ -43,15 +43,10 @@ set clipboard=unnamedplus  " Use system clipboard as default register
 set splitbelow
 set splitright
 
-" Default ignores for stuff (searches and more?) NOTE: Breaks normal vim
-" commands - but without this find commands search ALL files...
-" set wildignore+=**/config/*
-" set wildignore+=**/.git/*
-" set wildignore+=**/.bin/*
-" set wildignore+=**/bin/*
-" set wildignore+=**/obj/*
-" set wildignore+=**/.obj/*
-" set wildignore+=**/node_modules/*
+" Don't autoselect first omnicomplete option, show options even if there is only
+" one (so the preview documentation is accessible). Remove 'preview' if you
+" don't want to see any documentation whatsoever.
+set completeopt=longest,menuone,preview,noinsert,noselect
 
 " Folds
 set foldmethod=indent

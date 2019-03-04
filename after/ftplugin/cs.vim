@@ -9,12 +9,6 @@ nnoremap <buffer> gh :OmniSharpTypeLookup<CR>
 nnoremap <buffer> gi :OmniSharpFindImplementations<CR>
 nnoremap <buffer> gr :ClearQuickfixList<cr>:OmniSharpFindUsages<CR>
 
-" Don't autoselect first omnicomplete option, show options even if there is only
-" one (so the preview documentation is accessible). Remove 'preview' if you
-" don't want to see any documentation whatsoever.
-" set completeopt=longest,menuone,preview
-set completeopt=longest,menuone
-
 " Set desired preview window height for viewing documentation.
 " You might also want to look at the echodoc plugin.
 " set previewheight=5
