@@ -1,3 +1,4 @@
+let g:dbext_default_profile_RECON_LOCAL = 'type=PGSQL:host=localhost:dbname=recon:user=root'
 
 let g:dbext_default_profile_OGM_LOCAL = 'type=PGSQL:host=localhost:dbname=order_guide_management:user=dbup_local'
 let g:dbext_default_profile_OGM_DEV = 'type=PGSQL:host=localhost:port=1234:dbname=order_guide_management:user=dbup_dev'
@@ -14,6 +15,11 @@ let g:dbext_default_profile='OGM_LOCAL'
 
 autocmd VimEnter *.sql DBCompleteTables
 autocmd VimEnter *.sql DBCompleteProcedures
+
+augroup local_recon
+ au!
+ autocmd BufRead */sql/recon-local/* DBSetOption profile=RECON_LOCAL
+augroup end
 
 augroup local_ogm
  au!
