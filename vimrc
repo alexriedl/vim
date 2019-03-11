@@ -38,6 +38,7 @@ set noswapfile             " Disable backup files
 set hidden                 " Hide current buffers instead of complain
 set mouse=a                " Allow mouse scrolling + selecting in terminal like gvim
 set clipboard=unnamedplus  " Use system clipboard as default register
+set noequalalways          " Dont resize windows when closing others
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
