@@ -66,7 +66,8 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'sakhnik/nvim-gdb', { 'do': './install.sh' }
+" Plug 'sakhnik/nvim-gdb', { 'do': './install.sh' }
+Plug 'idanarye/vim-vebugger'
 
 " C#
 Plug 'OmniSharp/omnisharp-vim'
