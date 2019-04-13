@@ -1,7 +1,7 @@
 " Tabs
-nmap <M-l> :tabn<CR>
-nmap <M-h> :tabp<CR>
-nmap <leader>tq :tabc<CR>
+" nmap <M-l> :tabn<CR>
+" nmap <M-h> :tabp<CR>
+" nmap <leader>tq :tabc<CR>
 
 " Moving Buffers
 nmap <S-l> :bnext<CR>
