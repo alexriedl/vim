@@ -71,7 +71,7 @@ source $VIMHOME/settings/plugin_git.vim
 source $VIMHOME/settings/plugin_gitgutter.vim
 source $VIMHOME/settings/plugin_markdown.vim
 source $VIMHOME/settings/plugin_mundo.vim
-source $VIMHOME/settings/plugin_nerdtree.vim
+source $VIMHOME/settings/plugin_file_browser.vim
 source $VIMHOME/settings/plugin_omnisharp.vim
 source $VIMHOME/settings/plugin_search.vim
 source $VIMHOME/settings/plugin_snippets.vim
