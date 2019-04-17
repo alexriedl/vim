@@ -8,8 +8,10 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+  " let g:ctrlp_use_caching = 0
 endif
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
