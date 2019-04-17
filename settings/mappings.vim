@@ -5,7 +5,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>cf :ClearQuickfixList<cr>
 
 " Close Quickfix and Location List
-nnoremap <silent> <C-i> :ClearQuickfixList<cr>:cclose<cr>:lclose<cr>
+nnoremap <silent> <C-u> :ClearQuickfixList<cr>:cclose<cr>:lclose<cr>
 
 " Sort selected lines (in visual line mode)
 xnoremap <C-s> :sort<CR>
