@@ -6,5 +6,7 @@ nmap <silent> t<C-g> :TestVisit<CR>
 
 let g:test#csharp#runner = 'dotnettest'
 let test#strategy = 'neovim'
-let test#neovim#term_position = 'topleft'
-let test#vim#term_position = 'topleft'
+" let test#neovim#term_position = 'topleft'
+" let test#vim#term_position = 'topleft'
+let test#neovim#term_position = 'rightbelow'
+let test#vim#term_position = 'rightbelow'
