@@ -85,9 +85,6 @@ Plug 'peitalin/vim-jsx-typescript'
 " Shell Scripts
 Plug 'PProvost/vim-ps1'
 
-" Batsh (bash/batch transpiled language)
-Plug 'vuryleo/vim-Batsh'
-
 " SQL
 Plug 'vim-scripts/dbext.vim'
 
@@ -101,8 +98,9 @@ Plug 'roxma/vim-tmux-clipboard', Cond(has('nvim'))
 "##################################
 "#             git
 "##################################
-Plug 'zivyangll/git-blame.vim'
+Plug 'rhysd/git-messenger.vim'
 Plug 'airblade/vim-gitgutter'
+
 Plug 'tpope/vim-fugitive'
 " Fugitive Gitlab
 Plug 'shumphrey/fugitive-gitlab.vim'
