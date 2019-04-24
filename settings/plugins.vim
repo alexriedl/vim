@@ -17,6 +17,8 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
+Plug 'Shougo/echodoc.vim'
+
 " Repeat
 Plug 'tpope/vim-repeat'
 

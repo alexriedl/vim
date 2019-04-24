@@ -47,7 +47,12 @@ set splitright
 " Don't autoselect first omnicomplete option, show options even if there is only
 " one (so the preview documentation is accessible). Remove 'preview' if you
 " don't want to see any documentation whatsoever.
-set completeopt=longest,menuone,preview,noinsert,noselect
+" set completeopt=longest,menuone,preview,noinsert,noselect
+set completeopt=longest,menuone,noinsert
+
+" For echodoc to work
+set noshowmode
+let g:echodoc_enable_at_startup = 1
 
 " Folds
 set foldmethod=indent
