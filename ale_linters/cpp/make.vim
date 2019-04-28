@@ -8,12 +8,8 @@ endfunction
 
 call ale#linter#Define('cpp', {
 \   'name': 'make',
-\   'aliases': ['make'],
 \   'output_stream': 'stderr',
-\   'executable_callback': ale#VarFunc('cpp_gcc_executable'),
-\   'read_buffer': 0,
-\   'command_chain': [
-\       {'callback': 'ale_linters#cpp#make#GetCommand'},
-\   ],
+\   'executable': 'make',
+\   'command': function('ale_linters#cpp#make#GetCommand'),
 \   'callback': 'ale#handlers#gcc#HandleGCCFormatWithIncludes',
 \})

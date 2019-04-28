@@ -11,8 +11,10 @@ nnoremap gr :ALEFindReferences<CR>
 nnoremap gh :ALEHover<CR>
 
 let g:ale_linters = {
-\ 'cs': ['OmniSharp']
+\ 'cs': ['OmniSharp'],
+\ 'cpp': ['make']
 \}
+let g:ale_c_parse_makefile = 1
 
 " Close the location list when buffer is closed
 augroup CloseLoclistWindowGroup
