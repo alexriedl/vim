@@ -12,7 +12,8 @@ nnoremap gh :ALEHover<CR>
 
 let g:ale_linters = {
 \ 'cs': ['OmniSharp'],
-\ 'cpp': ['make']
+\ 'cpp': ['make'],
+\ 'sh': ['language_server'],
 \}
 let g:ale_c_parse_makefile = 1
 

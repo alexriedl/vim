@@ -12,6 +12,9 @@ make
 sudo apt install editorconfig silversearcher-ag ctags lua5.1 lua5.1-dev unzip libuv1-dev
 # libuv1-dev is required for omnisharp
 
+# Bash Language Server:
+npm i -g bash-language-server
+
 # Setup Omnisharp
 # Setup Powerline fonts
 # Setup Nerd fonts
