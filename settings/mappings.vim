@@ -4,8 +4,8 @@ nnoremap <leader><space> :nohlsearch<CR>
 " Clear quick fix list
 nnoremap <leader>cf :ClearQuickfixList<cr>
 
-" Close Quickfix and Location List
-nnoremap <silent> <C-u> :ClearQuickfixList<cr>:cclose<cr>:lclose<cr>
+" Close Quickfix and Location List and preview window
+nnoremap <silent> <C-u> :ClearQuickfixList<cr>:cclose<cr>:lclose<cr>:pclose<cr>
 
 " Sort selected lines (in visual line mode)
 xnoremap <C-s> :sort<CR>
@@ -55,8 +55,11 @@ nnoremap 'y yi'
 nnoremap (y yi(
 nnoremap )y yi)
 
-" Save as sudo
-cmap w!! w !sudo tee > /dev/null %
-
 " ctrl+space to omni complete
 inoremap <c-space> <c-x><c-o>
+
+nnoremap <M-}> :cnext<cr>
+nnoremap <M-{> :cprevious<cr>
+
+nnoremap <M-]> :lnext<cr>
+nnoremap <M-[> :lprevious<cr>

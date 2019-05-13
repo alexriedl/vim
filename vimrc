@@ -108,6 +108,9 @@ endif
 " Auto trim whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+" Save as sudo
+cmap w!! w !sudo tee > /dev/null %
+
 " Display extra whitespace
 set list listchars=tab:-»,trail:·,nbsp:·
 
