@@ -12,8 +12,8 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mileszs/ack.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'michaeljsmith/vim-indent-object'
 
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
@@ -29,6 +29,9 @@ Plug 'tpope/vim-repeat'
 
 " Comment sections easily
 Plug 'tpope/vim-commentary'
+
+" Unix Commands
+Plug 'tpope/vim-eunuch'
 
 " Visual Undo tree
 Plug 'simnalamburt/vim-mundo'

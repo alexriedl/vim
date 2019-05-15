@@ -6,5 +6,5 @@ let g:fugitive_gitlab_domains = ['https://gitlab.com', 'https://gitlab.directsup
 " For Linediff
 let g:linediff_first_buffer_command = 'leftabove new'
 let g:linediff_further_buffer_command = 'rightbelow vertical new'
-nnoremap <leader>d :Linediff<CR>
+vnoremap <leader>d :Linediff<CR>
 nnoremap <leader>o :LinediffReset<CR>
