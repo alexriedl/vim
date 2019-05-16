@@ -12,18 +12,26 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mileszs/ack.vim'
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'michaeljsmith/vim-indent-object'
 
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
+" Function Signature in status line
 Plug 'Shougo/echodoc.vim'
+
+" Preview window using nvim floating window instead (Cant get it to work correctly)
+" Plug 'ncm2/float-preview.nvim', Cond(has('nvim'))
+" Plug 'ncm2/ncm2', Cond(has('nvim'))
 
 " Repeat
 Plug 'tpope/vim-repeat'
 
 " Comment sections easily
 Plug 'tpope/vim-commentary'
+
+" Unix Commands
+Plug 'tpope/vim-eunuch'
 
 " Visual Undo tree
 Plug 'simnalamburt/vim-mundo'
@@ -100,8 +108,11 @@ Plug 'roxma/vim-tmux-clipboard', Cond(has('nvim'))
 "##################################
 "#             git
 "##################################
-Plug 'rhysd/git-messenger.vim'
+Plug 'rhysd/git-messenger.vim', Cond(has('nvim'))
 Plug 'airblade/vim-gitgutter'
+
+" Diff sections of text
+Plug 'AndrewRadev/linediff.vim'
 
 Plug 'tpope/vim-fugitive'
 " Fugitive Gitlab
