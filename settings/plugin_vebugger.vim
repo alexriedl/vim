@@ -1,3 +1,6 @@
+nnoremap B <nop>
+let g:vebugger_leader='B'
+
 nnoremap <f11> :VBGstepIn<CR>
 nnoremap <f10> :VBGstepOver<CR>
 nnoremap <f12> :VBGstepOut<CR>

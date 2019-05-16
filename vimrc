@@ -69,7 +69,6 @@ set viminfo='100,f1
 
 source $VIMHOME/settings/plugin_airline.vim
 source $VIMHOME/settings/plugin_ale.vim
-source $VIMHOME/settings/plugin_cpp.vim
 source $VIMHOME/settings/plugin_ctrlp.vim
 source $VIMHOME/settings/plugin_easymotion.vim
 source $VIMHOME/settings/plugin_git.vim
@@ -86,6 +85,7 @@ source $VIMHOME/settings/plugin_tags.vim
 source $VIMHOME/settings/plugin_tests.vim
 source $VIMHOME/settings/plugin_tmux.vim
 source $VIMHOME/settings/plugin_typescript.vim
+source $VIMHOME/settings/plugin_vebugger.vim
 source $VIMHOME/settings/plugin_webdevicons.vim
 source $VIMHOME/settings/plugin_wiki.vim
 

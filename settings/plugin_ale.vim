@@ -14,6 +14,8 @@ let g:ale_linters = {
 \ 'cs': ['OmniSharp'],
 \ 'cpp': ['make']
 \}
+" \ 'cpp': ['make']
+" \ 'cpp': ['clangd']
 let g:ale_c_parse_makefile = 1
 
 " Close the location list when buffer is closed
