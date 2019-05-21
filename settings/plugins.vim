@@ -9,9 +9,11 @@ endfunction
 "##################################
 Plug 'tpope/vim-dispatch'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-Plug 'mileszs/ack.vim'
 
+" Search
+Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
 
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'
