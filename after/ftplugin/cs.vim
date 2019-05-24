@@ -2,6 +2,7 @@ set noexpandtab
 
 nnoremap <buffer> <leader>f :OmniSharpCodeFormat<CR>
 nnoremap <buffer> <leader>r :OmniSharpRestartServer<CR>
+nnoremap <buffer> <leader>cc :OmniSharpGlobalCodeCheck<CR>
 nnoremap <buffer> <F2> :OmniSharpRename<CR>
 nnoremap <buffer> <M-CR> :OmniSharpGetCodeActions<CR>
 nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
