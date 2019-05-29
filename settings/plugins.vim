@@ -95,6 +95,9 @@ Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'peitalin/vim-jsx-typescript'
 
+" Json Formatter
+Plug 'tpope/vim-jdaddy'
+
 " Shell Scripts
 Plug 'PProvost/vim-ps1'
 
