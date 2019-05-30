@@ -8,7 +8,7 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag --literal --files-with-matches --nocolor --hidden -g "" %s'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  " let g:ctrlp_use_caching = 0
+  let g:ctrlp_use_caching = 0
 endif
 
 " Use python backend to pick matches found by ag (MUUUUCH faster)
