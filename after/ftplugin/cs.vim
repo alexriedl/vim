@@ -10,6 +10,10 @@ nnoremap <buffer> gh :OmniSharpTypeLookup<CR>
 nnoremap <buffer> gi :OmniSharpFindImplementations<CR>
 nnoremap <buffer> gr :ClearQuickfixList<cr>:OmniSharpFindUsages<CR>
 
+" TODO: Come up w/ a good mapping for these
+" nnoremap <buffer> ( :OmniSharpNavigateUp<CR>
+" nnoremap <buffer> ) :OmniSharpNavigateDown<CR>
+
 " Set desired preview window height for viewing documentation.
 " You might also want to look at the echodoc plugin.
 " set previewheight=5
@@ -18,4 +22,7 @@ augroup omnisharp_commands
   autocmd!
   " Update the highlighting whenever leaving insert mode
   autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
+
+  " This seems like a good idea, but blows away more important information
+  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 augroup END

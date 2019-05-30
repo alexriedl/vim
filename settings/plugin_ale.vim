@@ -11,7 +11,7 @@ nnoremap gr :ALEFindReferences<CR>
 nnoremap gh :ALEHover<CR>
 
 let g:ale_linters = {
-\ 'cs': ['OmniSharp'],
+\ 'cs': ['omnisharp'],
 \ 'cpp': ['make'],
 \ 'sh': ['language_server'],
 \}

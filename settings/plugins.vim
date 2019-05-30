@@ -29,6 +29,9 @@ Plug 'Shougo/echodoc.vim'
 " Repeat
 Plug 'tpope/vim-repeat'
 
+" Modify quickfix list
+Plug 'stefandtw/quickfix-reflector.vim'
+
 " Comment sections easily
 Plug 'tpope/vim-commentary'
 
