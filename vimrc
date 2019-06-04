@@ -96,9 +96,6 @@ source $VIMHOME/settings/mappings.vim
 source $VIMHOME/settings/spell.vim
 source $VIMHOME/settings/windows.vim
 
-" Run build.sh in working directory
-" nnoremap <F5> <esc>:wa<enter>:make<enter>
-
 if(exists('+colorcolumn'))
     set colorcolumn=120
     highlight ColorColumn ctermbg=darkgrey ctermfg=white guibg=#592929
