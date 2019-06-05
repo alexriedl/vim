@@ -101,8 +101,13 @@ if(exists('+colorcolumn'))
     highlight ColorColumn ctermbg=darkgrey ctermfg=white guibg=#592929
 endif
 
-" Auto trim whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
+" Auto trim whitespace on save and keep the cursor position
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+autocmd BufWritePre * :call TrimWhitespace()
 
 " Save as sudo
 cmap w!! w !sudo tee > /dev/null %
