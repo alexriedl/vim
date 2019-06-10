@@ -14,6 +14,7 @@ Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'mileszs/ack.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'dyng/ctrlsf.vim'
 
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'

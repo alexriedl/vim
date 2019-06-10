@@ -15,8 +15,6 @@ endif
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 cnoreabbrev Ack Ack!
-nnoremap <Leader>a :Ack!<Space>
-nnoremap gf :Ack!<CR>
 
 " Open quickfix window after any grep command
 autocmd QuickFixCmdPost *grep* cwindow
@@ -26,3 +24,14 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_show_hidden = 1
+
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+
+nmap gf <Plug>CtrlSFCwordExec
+nmap <Leader>a <Plug>CtrlSFPrompt
