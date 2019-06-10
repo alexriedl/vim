@@ -1,5 +1,6 @@
 let g:git_messenger_no_default_mappings = v:true
 nnoremap gb :<C-u>GitMessenger<CR>
+nnoremap <leader>g :G<CR>:resize 10 <CR>
 
 let g:fugitive_gitlab_domains = ['https://gitlab.com', 'https://gitlab.directsupply.cloud']
 
