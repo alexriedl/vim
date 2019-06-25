@@ -86,7 +86,6 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
 Plug 'octol/vim-cpp-enhanced-highlight'
-" Plug 'sakhnik/nvim-gdb', { 'do': './install.sh' }
 Plug 'idanarye/vim-vebugger'
 
 " C#
@@ -116,12 +115,12 @@ Plug 'vim-scripts/dbext.vim'
 "##################################
 Plug 'tmux-plugins/vim-tmux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'roxma/vim-tmux-clipboard', Cond(has('nvim'))
+Plug 'roxma/vim-tmux-clipboard'
 
 "##################################
 "#             git
 "##################################
-Plug 'rhysd/git-messenger.vim', Cond(has('nvim'))
+Plug 'rhysd/git-messenger.vim'
 Plug 'airblade/vim-gitgutter'
 
 " Diff sections of text
