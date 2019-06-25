@@ -27,7 +27,7 @@ Plug 'Shougo/echodoc.vim'
 " Plug 'ncm2/float-preview.nvim', Cond(has('nvim'))
 " Plug 'ncm2/ncm2', Cond(has('nvim'))
 
-" Repeat
+" Repeat plugin commands
 Plug 'tpope/vim-repeat'
 
 " Modify quickfix list
@@ -47,6 +47,8 @@ Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'puremourning/vimspector', Cond(!has('nvim'), {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'})
+
 " Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -62,12 +64,11 @@ Plug 'ajmwagar/vim-deus'
 " Plug 'scrooloose/nerdtree'
 " Plug 'jistr/vim-nerdtree-tabs'
 " Plug 'Xuyuanp/nerdtree-git-plugin'
+" Requires Nerd Fonts installed (Shows icons in nerdtree)
+" Plug 'ryanoasis/vim-devicons'
 
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
-
-" Requires Nerd Fonts installed (Shows icons in nerdtree)
-Plug 'ryanoasis/vim-devicons'
 
 " Display marks in gutter
 Plug 'kshenoy/vim-signature'
@@ -87,7 +88,7 @@ Plug 'ludovicchabant/vim-gutentags'
 " C / C++
 Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'sakhnik/nvim-gdb', { 'do': './install.sh' }
-Plug 'idanarye/vim-vebugger'
+" Plug 'idanarye/vim-vebugger'
 
 " C#
 Plug 'OmniSharp/omnisharp-vim'
