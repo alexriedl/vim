@@ -14,8 +14,11 @@ let g:dbext_default_profile_PRODUCT_PROD = 'type=PGSQL:host=localhost:port=1235:
 let g:dbext_default_profile='OGM_LOCAL'
 
 
-autocmd VimEnter *.sql DBCompleteTables
-autocmd VimEnter *.sql DBCompleteProcedures
+augroup general_sql_autocommands
+  autocmd!
+  autocmd VimEnter *.sql DBCompleteTables
+  autocmd VimEnter *.sql DBCompleteProcedures
+augroup END
 
 augroup local_recon
  au!

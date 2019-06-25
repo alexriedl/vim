@@ -55,7 +55,7 @@ set noshowmode
 let g:echodoc_enable_at_startup = 1
 
 " Folds
-set foldmethod=indent
+set foldmethod=marker
 set foldlevelstart=20
 set foldnestmax=2
 
@@ -84,7 +84,7 @@ source $VIMHOME/settings/plugin_tags.vim
 source $VIMHOME/settings/plugin_tests.vim
 source $VIMHOME/settings/plugin_tmux.vim
 source $VIMHOME/settings/plugin_typescript.vim
-source $VIMHOME/settings/plugin_vebugger.vim
+source $VIMHOME/settings/plugin_debugger.vim
 source $VIMHOME/settings/plugin_webdevicons.vim
 source $VIMHOME/settings/plugin_wiki.vim
 
@@ -107,7 +107,10 @@ fun! TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
-autocmd BufWritePre * :call TrimWhitespace()
+augroup whitespace_autocommands
+  autocmd!
+  autocmd BufWritePre * :call TrimWhitespace()
+augroup END
 
 " Save as sudo
 cmap w!! w !sudo tee > /dev/null %
