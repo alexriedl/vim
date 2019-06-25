@@ -16,8 +16,11 @@ let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
 cnoreabbrev Ack Ack!
 
-" Open quickfix window after any grep command
-autocmd QuickFixCmdPost *grep* cwindow
+augroup search_autocommands
+  autocmd!
+  " Open quickfix window after any grep command
+  autocmd QuickFixCmdPost *grep* cwindow
+augroup END
 
 let g:ctrlp_custom_ignore = '\v[\/](bundle|undo|node_modules|target|dist|bin|obj|build*)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_by_filename = 1
