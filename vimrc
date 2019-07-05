@@ -118,6 +118,19 @@ cmap w!! w !sudo tee > /dev/null %
 " Display extra whitespace
 set list listchars=tab:-»,trail:·,nbsp:·
 
+set runtimepath+=~/projects/personal/test-runner
+
+" Fix vim.basic cursor
+let &t_SI = '\e[6 q'
+let &t_EI = '\e[2 q'
+augroup cursor_style
+  autocmd!
+  autocmd VimEnter * silent !echo -ne '\e[2 q'
+augroup END
+
+" Fix vim.basic escape delay
+set timeoutlen=1000 ttimeoutlen=0
+
 " Local System Settings (LEAVE ON BOTTOM)
 if filereadable(expand("~/projects/vimrc"))
     source ~/projects/vimrc
