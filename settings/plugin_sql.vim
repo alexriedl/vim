@@ -13,7 +13,6 @@ let g:dbext_default_profile_PRODUCT_PROD = 'type=PGSQL:host=localhost:port=1235:
 
 let g:dbext_default_profile='OGM_LOCAL'
 
-
 augroup general_sql_autocommands
   autocmd!
   autocmd VimEnter *.sql DBCompleteTables
@@ -21,52 +20,52 @@ augroup general_sql_autocommands
 augroup END
 
 augroup local_recon
- au!
- autocmd BufRead */sql/recon-local/* DBSetOption profile=RECON_LOCAL
+  au!
+  autocmd BufRead */sql/recon-local/* DBSetOption profile=RECON_LOCAL
 augroup end
 augroup prod_tunnel
- au!
- autocmd BufRead */sql/recon-tunnel/* DBSetOption profile=RECON_TUNNEL
+  au!
+  autocmd BufRead */sql/recon-tunnel/* DBSetOption profile=RECON_TUNNEL
 augroup end
 
 augroup local_ogm
- au!
- autocmd BufRead */sql/ogm-local/* DBSetOption profile=OGM_LOCAL
+  au!
+  autocmd BufRead */sql/ogm-local/* DBSetOption profile=OGM_LOCAL
 augroup end
 augroup project_ogm
- au!
- autocmd BufRead */ogm/core/database/* DBSetOption profile=OGM_LOCAL
+  au!
+  autocmd BufRead */ogm/core/database/* DBSetOption profile=OGM_LOCAL
 augroup end
 augroup dev_ogm
- au!
- autocmd BufRead */sql/ogm-dev/* DBSetOption profile=OGM_DEV
+  au!
+  autocmd BufRead */sql/ogm-dev/* DBSetOption profile=OGM_DEV
 augroup end
 augroup qa_ogm
- au!
- autocmd BufRead */sql/ogm-qa/* DBSetOption profile=OGM_QA
+  au!
+  autocmd BufRead */sql/ogm-qa/* DBSetOption profile=OGM_QA
 augroup end
 augroup production_ogm
- au!
- autocmd BufRead */sql/ogm-prod/* DBSetOption profile=OGM_PROD
+  au!
+  autocmd BufRead */sql/ogm-prod/* DBSetOption profile=OGM_PROD
 augroup end
 
 augroup local_supplier
- au!
- autocmd BufRead */sql/supplier-local/* DBSetOption profile=PRODUCT_LOCAL
+  au!
+  autocmd BufRead */sql/supplier-local/* DBSetOption profile=PRODUCT_LOCAL
 augroup end
 augroup project_supplier
- au!
- autocmd BufRead */ogm/product/database/* DBSetOption profile=PRODUCT_LOCAL
+  au!
+  autocmd BufRead */ogm/product/database/* DBSetOption profile=PRODUCT_LOCAL
 augroup end
 augroup dev_supplier
- au!
- autocmd BufRead */sql/supplier-dev/* DBSetOption profile=PRODUCT_DEV
+  au!
+  autocmd BufRead */sql/supplier-dev/* DBSetOption profile=PRODUCT_DEV
 augroup end
 augroup qa_supplier
- au!
- autocmd BufRead */sql/supplier-qa/* DBSetOption profile=PRODUCT_QA
+  au!
+  autocmd BufRead */sql/supplier-qa/* DBSetOption profile=PRODUCT_QA
 augroup end
 augroup production_supplier
- au!
- autocmd BufRead */sql/supplier-prod/* DBSetOption profile=PRODUCT_PROD
+  au!
+  autocmd BufRead */sql/supplier-prod/* DBSetOption profile=PRODUCT_PROD
 augroup end

@@ -63,3 +63,6 @@ nnoremap <M-{> :cprevious<cr>
 
 nnoremap <M-]> :lnext<cr>
 nnoremap <M-[> :lprevious<cr>
+
+" Save as sudo
+cmap w!! w !sudo tee > /dev/null %

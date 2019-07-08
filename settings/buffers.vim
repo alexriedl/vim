@@ -10,8 +10,8 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 
 " Skip quick fix buffer
 augroup qf
-    autocmd!
-    autocmd FileType qf set nobuflisted
+  autocmd!
+  autocmd FileType qf set nobuflisted
 augroup END
 
 " Split Window

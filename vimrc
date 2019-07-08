@@ -60,7 +60,6 @@ set foldlevelstart=20
 set foldnestmax=2
 
 " Undo Settings
-" set noundofile          "Disable undo files
 set undofile
 set undodir=$VIMHOME/undo
 
@@ -96,29 +95,32 @@ source $VIMHOME/settings/mappings.vim
 source $VIMHOME/settings/spell.vim
 source $VIMHOME/settings/windows.vim
 
-if(exists('+colorcolumn'))
-    set colorcolumn=120
-    highlight ColorColumn ctermbg=darkgrey ctermfg=white guibg=#592929
-endif
-
 " Auto trim whitespace on save and keep the cursor position
 fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
 endfun
 augroup whitespace_autocommands
   autocmd!
   autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
-" Save as sudo
-cmap w!! w !sudo tee > /dev/null %
+" Fix vim.basic cursor (Double quotes are required)
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+augroup cursor_style
+  autocmd!
+  autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
 
-" Display extra whitespace
-set list listchars=tab:-»,trail:·,nbsp:·
+" Fix vim.basic escape delay
+set timeoutlen=1000 ttimeoutlen=0
+
+" Plugin Development
+set runtimepath+=~/projects/personal/test-runner
 
 " Local System Settings (LEAVE ON BOTTOM)
 if filereadable(expand("~/projects/vimrc"))
-    source ~/projects/vimrc
+  source ~/projects/vimrc
 endif
