@@ -15,7 +15,8 @@ call plug#end()
 " Basic Setup
 syntax on
 filetype plugin on
-let mapleader=","
+let mapleader=','
+let maplocalleader=','
 
 " Simple command to empty the quick fix list
 command! ClearQuickfixList cexpr []

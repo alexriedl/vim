@@ -1,27 +1,25 @@
 set noexpandtab
 
-nnoremap <buffer> <leader>f :OmniSharpCodeFormat<CR>
-nnoremap <buffer> <leader>r :OmniSharpRestartServer<CR>
-nnoremap <buffer> <leader>cc :OmniSharpGlobalCodeCheck<CR>
-nnoremap <buffer> <F2> :OmniSharpRename<CR>
-nnoremap <buffer> <M-CR> :OmniSharpGetCodeActions<CR>
-nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
-nnoremap <buffer> gh :OmniSharpTypeLookup<CR>
-nnoremap <buffer> gi :OmniSharpFindImplementations<CR>
-nnoremap <buffer> gr :ClearQuickfixList<cr>:OmniSharpFindUsages<CR>
-
-" TODO: Come up w/ a good mapping for these
-" nnoremap <buffer> ( :OmniSharpNavigateUp<CR>
-" nnoremap <buffer> ) :OmniSharpNavigateDown<CR>
-
-" Set desired preview window height for viewing documentation.
-" You might also want to look at the echodoc plugin.
-" set previewheight=5
+nnoremap <silent> <buffer> <localleader>f :OmniSharpCodeFormat<cr>
+nnoremap <silent> <buffer> <localleader>r :OmniSharpRestartServer<cr>
+nnoremap <silent> <buffer> <localleader>cc :OmniSharpGlobalCodeCheck<cr>
+nnoremap <silent> <buffer> <F2> :OmniSharpRename<cr>
+nnoremap <silent> <buffer> <M-cr> :OmniSharpGetCodeActions<cr>
+xnoremap <silent> <buffer> <M-cr> :OmniSharpGetCodeActions<cr>
+nnoremap <silent> <buffer> gd :OmniSharpGotoDefinition<cr>
+nnoremap <silent> <buffer> gh :OmniSharpTypeLookup<cr>
+nnoremap <silent> <buffer> gi :OmniSharpFindImplementations<cr>
+nnoremap <silent> <buffer> gr :ClearQuickfixList<cr>:OmniSharpFindUsages<cr>
+nnoremap <silent> <buffer> [[ :OmniSharpNavigateUp<cr>
+nnoremap <silent> <buffer> ]] :OmniSharpNavigateDown<cr>
+nnoremap <silent> <buffer> <C-space> :OmniSharpSignatureHelp<cr>
+inoremap <silent> <buffer> <C-space> <c-O>:OmniSharpSignatureHelp<cr>
 
 augroup omnisharp_commands
   autocmd!
   " Update the highlighting whenever leaving insert mode
-  autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
+  " autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
+  autocmd InsertLeave *.cs :pclose
 
   " This seems like a good idea, but blows away more important information
   " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()

@@ -50,8 +50,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'puremourning/vimspector', Cond(!has('nvim'), {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'})
 
 " Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
 
 "##################################
 "#       Layout + Look/Feel
@@ -87,12 +87,11 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
 Plug 'octol/vim-cpp-enhanced-highlight'
-" Plug 'sakhnik/nvim-gdb', { 'do': './install.sh' }
-" Plug 'idanarye/vim-vebugger'
 
 " C#
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'OrangeT/vim-csharp'
+Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
@@ -115,9 +114,17 @@ Plug 'vim-scripts/dbext.vim'
 "##################################
 "#             Tmux
 "##################################
-Plug 'tmux-plugins/vim-tmux'
-Plug 'christoomey/vim-tmux-navigator'
+" For highlighting
+Plug 'https://github.com/tmux-plugins/vim-tmux.git'
+
+" Allows mappings to move from vim to tmux splits
+Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
+
+" Help with tmux clipboard
 Plug 'roxma/vim-tmux-clipboard'
+
+" Make tmux pass focus events through so plugins work
+Plug 'https://github.com/tmux-plugins/vim-tmux-focus-events.git'
 
 "##################################
 "#             git
