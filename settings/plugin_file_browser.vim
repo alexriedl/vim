@@ -16,3 +16,8 @@
 " let g:netrw_winsize = 25
 " nnoremap <leader>f :Explore<cr>
 " nnoremap <F9> :Vexplore<cr>
+
+augroup dirvish_commands
+  autocmd!
+  autocmd FileType dirvish nmap <esc> <Plug>(dirvish_quit)
+augroup END
