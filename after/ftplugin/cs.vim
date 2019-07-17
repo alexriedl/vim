@@ -1,5 +1,3 @@
-set noexpandtab
-
 nnoremap <silent> <buffer> <localleader>f :OmniSharpCodeFormat<cr>
 nnoremap <silent> <buffer> <localleader>r :OmniSharpRestartServer<cr>
 nnoremap <silent> <buffer> <localleader>cc :OmniSharpGlobalCodeCheck<cr>
@@ -17,10 +15,13 @@ inoremap <silent> <buffer> <C-space> <c-O>:OmniSharpSignatureHelp<cr>
 
 augroup omnisharp_commands
   autocmd!
-  " Update the highlighting whenever leaving insert mode
-  " autocmd InsertLeave *.cs call OmniSharp#HighlightBuffer()
-  autocmd InsertLeave *.cs :pclose
+  " OmniSharp throws an error in the autocommand OmniSharpReady
+  " autocmd User OmniSharpReady *.cs call OmniSharp#HighlightBuffer()
+  " autocmd User OmniSharpReady *.cs call timer_start(1000, {id -> echo 'timeout'})
 
-  " This seems like a good idea, but blows away more important information
-  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+  " Use tabs in cs files
+  autocmd BufRead,BufNewFile *.cs setlocal noexpandtab
+
+  " Ensure the preview window is closed when we leave insert mode
+  autocmd InsertLeave *.cs :pclose
 augroup END
