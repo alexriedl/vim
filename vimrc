@@ -74,6 +74,9 @@ function! s:LoadAllSettingsFiles()
 endfunction
 call s:LoadAllSettingsFiles()
 
+function! s:Tester()
+endfunction
+
 " Auto trim whitespace on save and keep the cursor position
 function! TrimWhitespace()
   let l:save = winsaveview()

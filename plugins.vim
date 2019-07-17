@@ -44,8 +44,9 @@ Plug 'simnalamburt/vim-mundo'
 
 " Syntax + Code complete
 Plug 'ervandew/supertab'
-Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'w0rp/ale'
+Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
 
 " Debugger. Currently only officially support in vim (not neovim).
 " More info at: https://github.com/puremourning/vimspector/pull/30
