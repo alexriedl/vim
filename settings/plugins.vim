@@ -49,9 +49,8 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Debugger. Currently only officially support in vim (not neovim).
 " More info at: https://github.com/puremourning/vimspector/pull/30
-let s:vimspector_actions = {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'}
-Plug 'https://github.com/puremourning/vimspector.git', s:vimspector_actions
-unlet s:vimspector_actions
+Plug 'https://github.com/puremourning/vimspector.git',
+  \ Cond(!has('nvim'), {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'})
 
 " Snippets
 " Plug 'SirVer/ultisnips'
