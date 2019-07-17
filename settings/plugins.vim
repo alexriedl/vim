@@ -47,7 +47,11 @@ Plug 'ervandew/supertab'
 Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'puremourning/vimspector', Cond(!has('nvim'), {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'})
+" Debugger. Currently only officially support in vim (not neovim).
+" More info at: https://github.com/puremourning/vimspector/pull/30
+let s:vimspector_actions = {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'}
+Plug 'https://github.com/puremourning/vimspector.git', s:vimspector_actions
+unlet s:vimspector_actions
 
 " Snippets
 " Plug 'SirVer/ultisnips'
@@ -89,8 +93,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " C#
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'OrangeT/vim-csharp'
+Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
+Plug 'https://github.com/OrangeT/vim-csharp.git'
 Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
