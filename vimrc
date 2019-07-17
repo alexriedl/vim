@@ -9,7 +9,7 @@ endif
 
 " vim-plug setup
 call plug#begin('$VIMHOME/plugged')
-source $VIMHOME/settings/plugins.vim
+source $VIMHOME/plugins.vim
 call plug#end()
 
 " Basic Setup
@@ -67,41 +67,19 @@ set undodir=$VIMHOME/undo
 " Save marks between closes of vim
 set viminfo='100,f1
 
-source $VIMHOME/settings/plugin_airline.vim
-source $VIMHOME/settings/plugin_ale.vim
-source $VIMHOME/settings/plugin_easymotion.vim
-source $VIMHOME/settings/plugin_file_browser.vim
-source $VIMHOME/settings/plugin_git.vim
-source $VIMHOME/settings/plugin_gitgutter.vim
-source $VIMHOME/settings/plugin_markdown.vim
-source $VIMHOME/settings/plugin_mundo.vim
-source $VIMHOME/settings/plugin_omnisharp.vim
-source $VIMHOME/settings/plugin_search.vim
-source $VIMHOME/settings/plugin_snippets.vim
-source $VIMHOME/settings/plugin_sql.vim
-source $VIMHOME/settings/plugin_supertab.vim
-source $VIMHOME/settings/plugin_tags.vim
-source $VIMHOME/settings/plugin_tests.vim
-source $VIMHOME/settings/plugin_tmux.vim
-source $VIMHOME/settings/plugin_typescript.vim
-source $VIMHOME/settings/plugin_debugger.vim
-source $VIMHOME/settings/plugin_webdevicons.vim
-source $VIMHOME/settings/plugin_wiki.vim
-
-source $VIMHOME/settings/buffers.vim
-source $VIMHOME/settings/colors.vim
-source $VIMHOME/settings/filetypes.vim
-source $VIMHOME/settings/functions.vim
-source $VIMHOME/settings/mappings.vim
-source $VIMHOME/settings/spell.vim
-source $VIMHOME/settings/windows.vim
+function! s:LoadAllSettingsFiles()
+  for l:file in split(globpath($VIMHOME . '/settings', '*'), '\n')
+    execute 'source ' . l:file
+  endfor
+endfunction
+call s:LoadAllSettingsFiles()
 
 " Auto trim whitespace on save and keep the cursor position
-fun! TrimWhitespace()
+function! TrimWhitespace()
   let l:save = winsaveview()
   keeppatterns %s/\s\+$//e
   call winrestview(l:save)
-endfun
+endfunction
 augroup whitespace_autocommands
   autocmd!
   autocmd BufWritePre * :call TrimWhitespace()
