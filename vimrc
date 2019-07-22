@@ -41,6 +41,12 @@ set mouse=a                " Allow mouse scrolling + selecting in terminal like 
 set clipboard=unnamedplus  " Use system clipboard as default register
 set noequalalways          " Dont resize windows when closing others
 
+if has('nvim')
+  set signcolumn=auto:2      " Dont show sign column unless there is something to show, up to 2 columns
+else
+  set signcolumn=auto        " Dont show sign column unless there is something to show
+endif
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright

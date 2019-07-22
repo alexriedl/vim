@@ -1,26 +1,10 @@
 {
-  "yank.highlight.enable": false,
-  "yank": {
-    "highlight": {
-      "enabled": false
-    },
-    "list": {
-      "maxsize": 10
-    }
-  },
   "languageserver": {
-    "vimls": {
-      "command": "vim-language-server",
-      "args": ["--stdio"],
-      "initializationOptions": {
-        "iskeyword": "vim iskeyword option",
-        "vimruntime": "path/to/$VIMRUNTIME",
-        "runtimepath": "vim/runtime/path",
-        "diagnostic": {
-          "enable": true
-        }
-      },
-      "filetypes": [ "vim" ]
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   }
 }
