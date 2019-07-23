@@ -101,10 +101,14 @@ Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 Plug 'plasticboy/vim-markdown'
 
 " Typescript/Javascript + Client Side Stuffs
-Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'peitalin/vim-jsx-typescript'
+" ts server client
+" Plug 'https://github.com/Quramy/tsuquyomi.git'
+" Syntax file for typescript
+Plug 'https://github.com/leafgarland/typescript-vim.git'
+" More Syntax? and indenting
+" Plug 'https://github.com/pangloss/vim-javascript.git'
+" Syntax for jsx
+Plug 'https://github.com/peitalin/vim-jsx-typescript.git'
 
 " Json Formatter
 Plug 'tpope/vim-jdaddy'

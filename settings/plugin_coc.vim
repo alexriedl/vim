@@ -1,6 +1,9 @@
 let g:coc_global_extensions=[
-  \ 'coc-marketplace',
   \ 'coc-json',
+  \ 'coc-marketplace',
+  \ 'coc-sh',
+  \ 'coc-tslint',
+  \ 'coc-tsserver',
   \ 'coc-vimlsp',
   \ 'coc-yank',
 \]
