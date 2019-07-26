@@ -1,4 +1,8 @@
 {
+  "yank.highlight.enable": true,
+  "yank.highlight.duration": 100,
+  "yank.list.maxsize": 20,
+
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
