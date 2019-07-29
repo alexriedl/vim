@@ -107,9 +107,9 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " Plugin Development
 if match(getcwd(), '\v.*test-runner-multiple-runners.*') < 0
-  set runtimepath += ~/projects/personal/test-runner
+  set runtimepath+=~/projects/personal/test-runner
 else
-  set runtimepath += ~/projects/personal/test-runner-multiple-runners
+  set runtimepath+=~/projects/personal/test-runner-multiple-runners
 endif
 
 " Local System Settings (LEAVE ON BOTTOM)
