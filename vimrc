@@ -106,7 +106,11 @@ augroup END
 set timeoutlen=1000 ttimeoutlen=0
 
 " Plugin Development
-set runtimepath+=~/projects/personal/test-runner
+if match(getcwd(), '\v.*test-runner-multiple-runners.*') < 0
+  set runtimepath += ~/projects/personal/test-runner
+else
+  set runtimepath += ~/projects/personal/test-runner-multiple-runners
+endif
 
 " Local System Settings (LEAVE ON BOTTOM)
 if filereadable(expand("~/projects/vimrc"))
