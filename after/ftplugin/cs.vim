@@ -1,5 +1,3 @@
-function! s:comment()
-
 nnoremap <silent> <buffer> <localleader>f :OmniSharpCodeFormat<cr>
 nnoremap <silent> <buffer> <localleader>r :OmniSharpRestartServer<cr>
 nnoremap <silent> <buffer> <localleader>cc :OmniSharpGlobalCodeCheck<cr>
@@ -26,8 +24,7 @@ augroup omnisharp_commands
 
   " Ensure the preview window is closed when we leave insert mode
   autocmd InsertLeave *.cs :pclose
+
+  autocmd BufNew,BufEnter *.cs,*.csproj execute "silent! CocDisable"
+  autocmd BufLeave *.cs,*.csproj execute "silent! CocEnable"
 augroup END
-
-endfunction
-
-call s:comment()
