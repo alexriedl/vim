@@ -3,6 +3,10 @@
   "yank.highlight.duration": 100,
   "yank.list.maxsize": 20,
 
+  "suggest.enablePreview": true,
+  "suggest.timeout": 5000,
+  "suggest.noselect": true,
+
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
