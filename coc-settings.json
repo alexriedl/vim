@@ -7,12 +7,21 @@
   "suggest.timeout": 5000,
   "suggest.noselect": true,
 
+  "vimlsp.diagnostic.enable": true,
+  "vimlsp.debug": false,
+  "vimlsp.trace.server": "messages",
+
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
+      "args": [ "start" ],
+      "filetypes": [ "sh" ],
+      "ignoredRootPaths": [ "~" ]
+    },
+    "vimls": {
+      "command": "vim-language-server",
+      "args": [ "--stdio" ],
+      "filetypes": [ "vim" ]
     }
   }
 }
