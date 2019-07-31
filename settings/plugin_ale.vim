@@ -18,9 +18,3 @@ let g:ale_linters = {
 " \ 'cpp': ['make']
 " \ 'cpp': ['clangd']
 let g:ale_c_parse_makefile = 1
-
-" Close the location list when buffer is closed
-augroup CloseLoclistWindowGroup
-  autocmd!
-  autocmd QuitPre * if empty(&buftype) | lclose | endif
-augroup END

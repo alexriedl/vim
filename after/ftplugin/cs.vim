@@ -25,6 +25,9 @@ augroup omnisharp_commands
   " Ensure the preview window is closed when we leave insert mode
   autocmd InsertLeave *.cs :pclose
 
+  " Close loclist window when buffer is closed
+  autocmd QuitPre *.cs if empty(&buftype) | lclose | endif
+
   autocmd BufNew,BufEnter *.cs,*.csproj execute "silent! CocDisable"
   autocmd BufLeave *.cs,*.csproj execute "silent! CocEnable"
 augroup END
