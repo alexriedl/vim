@@ -9,8 +9,7 @@ sudo apt install editorconfig silversearcher-ag ctags lua5.1 lua5.1-dev unzip li
 # libuv1-dev is required for omnisharp
 
 # Language Servers:
-npm install -g bash-language-server
-npm install -g vim-language-server
+npm install -g bash-language-server vim-language-server
 
 # For typescript
 npm i -g typescript tslint
