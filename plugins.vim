@@ -63,7 +63,8 @@ Plug 'https://github.com/puremourning/vimspector.git',
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-Plug 'ajmwagar/vim-deus'
+Plug 'https://github.com/ajmwagar/vim-deus.git'
+Plug 'https://github.com/joshdick/onedark.vim'
 
 " Plug 'scrooloose/nerdtree'
 " Plug 'jistr/vim-nerdtree-tabs'

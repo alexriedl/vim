@@ -8,13 +8,14 @@ if empty(glob('$VIMHOME/autoload/plug.vim'))
 endif
 
 " vim-plug setup
-call plug#begin('$VIMHOME/plugged')
-source $VIMHOME/plugins.vim
-call plug#end()
+silent! if plug#begin('$VIMHOME/plugged')
+  source $VIMHOME/plugins.vim
+  call plug#end()
+endif
 
 " Basic Setup
 syntax on
-filetype plugin on
+filetype indent plugin on
 let mapleader=','
 let maplocalleader=','
 
