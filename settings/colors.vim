@@ -21,4 +21,4 @@ if(exists('+colorcolumn'))
 endif
 
 " Allow tmux to handle background colors
-highlight Normal guibg=none ctermbg=none
+highlight Normal guibg=NONE ctermbg=NONE

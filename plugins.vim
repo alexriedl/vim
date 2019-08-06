@@ -156,3 +156,8 @@ Plug 'tommcdo/vim-fubitive'
 "#             Other
 "##################################
 Plug 'vimwiki/vimwiki'
+
+"##################################
+"#             Tests
+"##################################
+Plug 'https://github.com/junegunn/vader.vim'
