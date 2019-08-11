@@ -31,5 +31,5 @@ augroup omnisharp_commands
   autocmd BufNew,BufEnter *.cs,*.csproj execute "silent! CocDisable"
   autocmd BufLeave *.cs,*.csproj execute "silent! CocEnable"
 
-  autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+  " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 augroup END

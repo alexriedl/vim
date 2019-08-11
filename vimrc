@@ -106,6 +106,10 @@ augroup END
 " Fix vim.basic escape delay
 set timeoutlen=1000 ttimeoutlen=0
 
+" Smooth scroll. These probably don't belong here...
+let g:comfortable_motion_friction = 200.0
+let g:comfortable_motion_air_drag = 0.0
+
 " Plugin Development
 if match(getcwd(), '\v.*test-runner-multiple-runners.*') < 0
   set runtimepath+=~/projects/personal/test-runner

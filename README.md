@@ -5,8 +5,12 @@ git clone git@github.com:alexriedl/vim.git ~/.vim
 vim +PlugInstall +qall
 
 sudo apt install editorconfig silversearcher-ag ctags lua5.1 lua5.1-dev unzip libuv1-dev
-# silversearcher is used by ctrlp
-# libuv1-dev is required for omnisharp
+# editorconfig - editor config plugin
+# silversearcher-ag - Use ag for searching (ctrlp)
+# ctags - Used for tag plugin
+# lua - ???
+# unzip - ???
+# libuv1-dev is required for omnisharp (at least the http version, stdio may not require it anymore)
 
 # Language Servers:
 npm install -g bash-language-server vim-language-server

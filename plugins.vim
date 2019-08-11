@@ -20,6 +20,9 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
+" Smooth Scroll
+Plug 'https://github.com/yuttie/comfortable-motion.vim'
+
 " Function Signature in status line
 Plug 'Shougo/echodoc.vim'
 
@@ -81,6 +84,9 @@ Plug 'kshenoy/vim-signature'
 " Highlight word under cursor
 Plug 'RRethy/vim-illuminate'
 
+" Basically all languages syntax highlighting
+Plug 'https://github.com/sheerun/vim-polyglot'
+
 "##################################
 "#          Languages
 "##################################
@@ -91,11 +97,11 @@ Plug 'janko-m/vim-test'
 Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
-Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'octol/vim-cpp-enhanced-highlight'
 
 " C#
 Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
-Plug 'https://github.com/OrangeT/vim-csharp.git'
+" Plug 'https://github.com/OrangeT/vim-csharp.git'
 Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
@@ -109,13 +115,10 @@ Plug 'https://github.com/leafgarland/typescript-vim.git'
 " More Syntax? and indenting
 " Plug 'https://github.com/pangloss/vim-javascript.git'
 " Syntax for jsx
-Plug 'https://github.com/peitalin/vim-jsx-typescript.git'
+" Plug 'https://github.com/peitalin/vim-jsx-typescript.git'
 
 " Json Formatter
-Plug 'tpope/vim-jdaddy'
-
-" Shell Scripts
-Plug 'PProvost/vim-ps1'
+Plug 'https://github.com/tpope/vim-jdaddy.git'
 
 " SQL
 Plug 'vim-scripts/dbext.vim'
@@ -156,8 +159,3 @@ Plug 'tommcdo/vim-fubitive'
 "#             Other
 "##################################
 Plug 'vimwiki/vimwiki'
-
-"##################################
-"#             Tests
-"##################################
-Plug 'https://github.com/junegunn/vader.vim'
