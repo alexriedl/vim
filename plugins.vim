@@ -98,6 +98,7 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
 " Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight.git'
 
 " C#
 Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
