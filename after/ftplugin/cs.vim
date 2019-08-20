@@ -10,8 +10,8 @@ nnoremap <silent> <buffer> gi :OmniSharpFindImplementations<cr>
 nnoremap <silent> <buffer> gr :ClearQuickfixList<cr>:OmniSharpFindUsages<cr>
 nnoremap <silent> <buffer> [[ :OmniSharpNavigateUp<cr>
 nnoremap <silent> <buffer> ]] :OmniSharpNavigateDown<cr>
-nnoremap <silent> <buffer> <C-space> :OmniSharpSignatureHelp<cr>
-inoremap <silent> <buffer> <C-space> <c-O>:OmniSharpSignatureHelp<cr>
+nnoremap <silent> <buffer> K :OmniSharpSignatureHelp<cr>
+inoremap <silent> <buffer> K <c-O>:OmniSharpSignatureHelp<cr>
 
 augroup omnisharp_commands
   autocmd!

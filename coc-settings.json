@@ -1,11 +1,15 @@
 {
-  "yank.highlight.enable": true,
-  "yank.highlight.duration": 100,
-  "yank.list.maxsize": 20,
-
   "suggest.enablePreview": true,
   "suggest.timeout": 5000,
   "suggest.noselect": true,
+
+  "diagnostic.virtualText": true,
+
+  "coc.source.omni.filetypes": [ "sql" ],
+
+  "yank.highlight.enable": true,
+  "yank.highlight.duration": 100,
+  "yank.list.maxsize": 20,
 
   "vimlsp.diagnostic.enable": true,
   "vimlsp.debug": false,

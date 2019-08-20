@@ -2,6 +2,7 @@ let g:coc_global_extensions=[
   \ 'coc-ccls',
   \ 'coc-json',
   \ 'coc-marketplace',
+  \ 'coc-omni',
   \ 'coc-sh',
   \ 'coc-tslint',
   \ 'coc-tsserver',
