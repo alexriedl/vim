@@ -55,3 +55,12 @@ nmap <leader>qf  <Plug>(coc-fix-current)
 
 " List recently yanked lines
 nnoremap <silent> <leader>y  :<C-u>CocList -A --normal yank<cr>
+
+augroup coc-group
+  autocmd!
+  autocmd CursorHold * silent call CocActionAsync('highlight')
+augroup end
+
+" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+" Coc only does snippet and additional edit on confirm.
+inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<c-g>u\<cr>"
