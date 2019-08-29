@@ -47,6 +47,7 @@ if has('nvim')
 else
   set signcolumn=auto        " Dont show sign column unless there is something to show
 endif
+set signcolumn=yes " Limit to 1 column and always show it
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
