@@ -45,6 +45,9 @@ Plug 'tpope/vim-eunuch'
 " Visual Undo tree
 Plug 'simnalamburt/vim-mundo'
 
+" Nicer Expand commands, More replace syntax, name style conversion
+Plug 'https://github.com/tpope/vim-abolish.git'
+
 " Syntax + Code complete
 Plug 'ervandew/supertab'
 Plug 'editorconfig/editorconfig-vim'
@@ -101,9 +104,9 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight.git'
 
 " C#
-Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
+" Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
 " Plug 'https://github.com/OrangeT/vim-csharp.git'
-Plug 'https://github.com/nickspoons/vim-sharpenup.git'
+" Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
@@ -160,3 +163,6 @@ Plug 'tommcdo/vim-fubitive'
 "#             Other
 "##################################
 Plug 'vimwiki/vimwiki'
+
+" Chrome/Firefox nvim extension
+Plug 'https://github.com/glacambre/firenvim.git'

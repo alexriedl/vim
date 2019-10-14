@@ -8,9 +8,9 @@ let g:coc_global_extensions=[
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
   \ 'coc-yank',
+  \ 'coc-omnisharp',
 \]
 
-" \ 'coc-omnisharp',
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.

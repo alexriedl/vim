@@ -1,3 +1,4 @@
+function! s:comment()
 nnoremap <silent> <buffer> <localleader>f :OmniSharpCodeFormat<cr>
 nnoremap <silent> <buffer> <localleader>r :OmniSharpRestartServer<cr>
 nnoremap <silent> <buffer> <localleader>cc :OmniSharpGlobalCodeCheck<cr>
@@ -33,3 +34,4 @@ augroup omnisharp_commands
 
   " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 augroup END
+endfunction

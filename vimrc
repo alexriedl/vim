@@ -57,7 +57,8 @@ set splitright
 " one (so the preview documentation is accessible). Remove 'preview' if you
 " don't want to see any documentation whatsoever.
 " set completeopt=longest,menuone,preview,noinsert,noselect
-set completeopt=longest,menuone,noinsert
+" set completeopt=longest,menuone,noinsert
+set completeopt=noinsert,noselect,menuone
 
 " For echodoc to work
 set noshowmode
@@ -81,9 +82,6 @@ function! s:LoadAllSettingsFiles()
   endfor
 endfunction
 call s:LoadAllSettingsFiles()
-
-function! s:Tester()
-endfunction
 
 " Auto trim whitespace on save and keep the cursor position
 function! TrimWhitespace()
