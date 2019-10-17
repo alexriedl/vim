@@ -3,12 +3,13 @@ let g:coc_global_extensions=[
   \ 'coc-json',
   \ 'coc-marketplace',
   \ 'coc-omni',
+  \ 'coc-omnisharp',
   \ 'coc-sh',
+  \ 'coc-sql',
   \ 'coc-tslint',
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
   \ 'coc-yank',
-  \ 'coc-omnisharp',
 \]
 
 

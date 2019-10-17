@@ -3,6 +3,9 @@
   "suggest.timeout": 5000,
   "suggest.noselect": true,
 
+  "sql.lintOnSave": false,
+  "sql.lintOnChange": false,
+
   "diagnostic.virtualText": true,
 
   "coc.source.omni.filetypes": [ "sql" ],
@@ -17,17 +20,6 @@
   "vimlsp.trace.server": "messages",
 
   "languageserver": {
-    "bash": {
-      "command": "bash-language-server",
-      "args": [ "start" ],
-      "filetypes": [ "sh" ],
-      "ignoredRootPaths": [ "~" ]
-    },
-    "vimls": {
-      "command": "vim-language-server",
-      "args": [ "--stdio" ],
-      "filetypes": [ "vim" ]
-    },
     "ccls": {
       "command": "ccls",
       "filetypes": ["c", "cpp", "objc", "objcpp"],
