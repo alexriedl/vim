@@ -12,6 +12,10 @@ let g:firenvim_config = {
             \ 'selector': 'div[role="textbox"]',
             \ 'priority': 1,
         \ },
+        \ 'console.aws.amazon.com*': {
+            \ 'selector': '',
+            \ 'priority': 1,
+        \ },
         \ 'outsystems.directsupply.com*': {
             \ 'selector': '',
             \ 'priority': 1,
