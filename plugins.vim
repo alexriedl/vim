@@ -165,4 +165,4 @@ Plug 'tommcdo/vim-fubitive'
 Plug 'vimwiki/vimwiki'
 
 " Chrome/Firefox nvim extension
-Plug 'https://github.com/glacambre/firenvim.git'
+Plug 'https://github.com/glacambre/firenvim.git', { 'do': function('firenvim#install') }
