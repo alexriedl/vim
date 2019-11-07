@@ -9,6 +9,7 @@ let g:coc_global_extensions=[
   \ 'coc-tslint',
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
+  \ 'coc-xml',
   \ 'coc-yank',
 \]
 

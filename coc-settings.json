@@ -19,6 +19,8 @@
   "vimlsp.debug": false,
   "vimlsp.trace.server": "messages",
 
+  "xml.java.home": "/usr/lib/jvm/default-java",
+
   "languageserver": {
     "ccls": {
       "command": "ccls",
