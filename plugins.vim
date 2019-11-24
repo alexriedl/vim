@@ -26,10 +26,6 @@ Plug 'https://github.com/yuttie/comfortable-motion.vim'
 " Function Signature in status line
 Plug 'Shougo/echodoc.vim'
 
-" Preview window using nvim floating window instead (Cant get it to work correctly)
-" Plug 'ncm2/float-preview.nvim', Cond(has('nvim'))
-" Plug 'ncm2/ncm2', Cond(has('nvim'))
-
 " Repeat plugin commands
 Plug 'tpope/vim-repeat'
 
@@ -51,8 +47,8 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 " Syntax + Code complete
 Plug 'ervandew/supertab'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'w0rp/ale'
 Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
+Plug 'https://github.com/neovim/nvim-lsp.git', Cond(has('nvim'))
 
 " Debugger. Currently only officially support in vim (not neovim).
 " More info at: https://github.com/puremourning/vimspector/pull/30
@@ -71,12 +67,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'https://github.com/ajmwagar/vim-deus.git'
 Plug 'https://github.com/joshdick/onedark.vim'
-
-" Plug 'scrooloose/nerdtree'
-" Plug 'jistr/vim-nerdtree-tabs'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-" Requires Nerd Fonts installed (Shows icons in nerdtree)
-" Plug 'ryanoasis/vim-devicons'
 
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
@@ -104,9 +94,9 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight.git'
 
 " C#
-" Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
-" Plug 'https://github.com/OrangeT/vim-csharp.git'
-" Plug 'https://github.com/nickspoons/vim-sharpenup.git'
+Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
+Plug 'https://github.com/OrangeT/vim-csharp.git'
+Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'

@@ -1,10 +1,10 @@
 let g:firenvim_config = {
-    \ 'localSettings': {
-        \ '.*': {
-            \ 'selector': '',
-            \ 'priority': 0,
-        \ }
+  \ 'localSettings': {
+    \ '.*': {
+      \ 'selector': '',
+      \ 'priority': 1,
     \ }
+  \ }
 \ }
 
 augroup firenvim_ag
