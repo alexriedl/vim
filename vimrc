@@ -8,13 +8,14 @@ if empty(glob('$VIMHOME/autoload/plug.vim'))
 endif
 
 " vim-plug setup
-call plug#begin('$VIMHOME/plugged')
-source $VIMHOME/settings/plugins.vim
-call plug#end()
+silent! if plug#begin('$VIMHOME/plugged')
+  source $VIMHOME/plugins.vim
+  call plug#end()
+endif
 
 " Basic Setup
 syntax on
-filetype plugin on
+filetype indent plugin on
 let mapleader=','
 let maplocalleader=','
 
@@ -41,6 +42,13 @@ set mouse=a                " Allow mouse scrolling + selecting in terminal like 
 set clipboard=unnamedplus  " Use system clipboard as default register
 set noequalalways          " Dont resize windows when closing others
 
+if has('nvim')
+  set signcolumn=auto:2      " Dont show sign column unless there is something to show, up to 2 columns
+else
+  set signcolumn=auto        " Dont show sign column unless there is something to show
+endif
+set signcolumn=yes " Limit to 1 column and always show it
+
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
@@ -49,7 +57,8 @@ set splitright
 " one (so the preview documentation is accessible). Remove 'preview' if you
 " don't want to see any documentation whatsoever.
 " set completeopt=longest,menuone,preview,noinsert,noselect
-set completeopt=longest,menuone,noinsert
+" set completeopt=longest,menuone,noinsert
+set completeopt=noinsert,noselect,menuone
 
 " For echodoc to work
 set noshowmode
@@ -67,41 +76,19 @@ set undodir=$VIMHOME/undo
 " Save marks between closes of vim
 set viminfo='100,f1
 
-source $VIMHOME/settings/plugin_airline.vim
-source $VIMHOME/settings/plugin_ale.vim
-source $VIMHOME/settings/plugin_easymotion.vim
-source $VIMHOME/settings/plugin_file_browser.vim
-source $VIMHOME/settings/plugin_git.vim
-source $VIMHOME/settings/plugin_gitgutter.vim
-source $VIMHOME/settings/plugin_markdown.vim
-source $VIMHOME/settings/plugin_mundo.vim
-source $VIMHOME/settings/plugin_omnisharp.vim
-source $VIMHOME/settings/plugin_search.vim
-source $VIMHOME/settings/plugin_snippets.vim
-source $VIMHOME/settings/plugin_sql.vim
-source $VIMHOME/settings/plugin_supertab.vim
-source $VIMHOME/settings/plugin_tags.vim
-source $VIMHOME/settings/plugin_tests.vim
-source $VIMHOME/settings/plugin_tmux.vim
-source $VIMHOME/settings/plugin_typescript.vim
-source $VIMHOME/settings/plugin_debugger.vim
-source $VIMHOME/settings/plugin_webdevicons.vim
-source $VIMHOME/settings/plugin_wiki.vim
-
-source $VIMHOME/settings/buffers.vim
-source $VIMHOME/settings/colors.vim
-source $VIMHOME/settings/filetypes.vim
-source $VIMHOME/settings/functions.vim
-source $VIMHOME/settings/mappings.vim
-source $VIMHOME/settings/spell.vim
-source $VIMHOME/settings/windows.vim
+function! s:LoadAllSettingsFiles()
+  for l:file in split(globpath($VIMHOME . '/settings', '*'), '\n')
+    execute 'source ' . l:file
+  endfor
+endfunction
+call s:LoadAllSettingsFiles()
 
 " Auto trim whitespace on save and keep the cursor position
-fun! TrimWhitespace()
+function! TrimWhitespace()
   let l:save = winsaveview()
   keeppatterns %s/\s\+$//e
   call winrestview(l:save)
-endfun
+endfunction
 augroup whitespace_autocommands
   autocmd!
   autocmd BufWritePre * :call TrimWhitespace()
@@ -118,8 +105,16 @@ augroup END
 " Fix vim.basic escape delay
 set timeoutlen=1000 ttimeoutlen=0
 
+" Smooth scroll. These probably don't belong here...
+let g:comfortable_motion_friction = 200.0
+let g:comfortable_motion_air_drag = 0.0
+
 " Plugin Development
-set runtimepath+=~/projects/personal/test-runner
+if match(getcwd(), '\v.*test-runner-multiple-runners.*') < 0
+  set runtimepath+=~/projects/personal/test-runner
+else
+  set runtimepath+=~/projects/personal/test-runner-multiple-runners
+endif
 
 " Local System Settings (LEAVE ON BOTTOM)
 if filereadable(expand("~/projects/vimrc"))

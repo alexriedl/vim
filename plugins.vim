@@ -20,12 +20,11 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 
+" Smooth Scroll
+Plug 'https://github.com/yuttie/comfortable-motion.vim'
+
 " Function Signature in status line
 Plug 'Shougo/echodoc.vim'
-
-" Preview window using nvim floating window instead (Cant get it to work correctly)
-" Plug 'ncm2/float-preview.nvim', Cond(has('nvim'))
-" Plug 'ncm2/ncm2', Cond(has('nvim'))
 
 " Repeat plugin commands
 Plug 'tpope/vim-repeat'
@@ -42,12 +41,19 @@ Plug 'tpope/vim-eunuch'
 " Visual Undo tree
 Plug 'simnalamburt/vim-mundo'
 
+" Nicer Expand commands, More replace syntax, name style conversion
+Plug 'https://github.com/tpope/vim-abolish.git'
+
 " Syntax + Code complete
 Plug 'ervandew/supertab'
-Plug 'w0rp/ale'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
+Plug 'https://github.com/neovim/nvim-lsp.git', Cond(has('nvim'))
 
-Plug 'puremourning/vimspector', Cond(!has('nvim'), {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'})
+" Debugger. Currently only officially support in vim (not neovim).
+" More info at: https://github.com/puremourning/vimspector/pull/30
+Plug 'https://github.com/puremourning/vimspector.git',
+  \ Cond(!has('nvim'), {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'})
 
 " Snippets
 " Plug 'SirVer/ultisnips'
@@ -59,13 +65,8 @@ Plug 'puremourning/vimspector', Cond(!has('nvim'), {'do' : './install_gadget.py 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
-Plug 'ajmwagar/vim-deus'
-
-" Plug 'scrooloose/nerdtree'
-" Plug 'jistr/vim-nerdtree-tabs'
-" Plug 'Xuyuanp/nerdtree-git-plugin'
-" Requires Nerd Fonts installed (Shows icons in nerdtree)
-" Plug 'ryanoasis/vim-devicons'
+Plug 'https://github.com/ajmwagar/vim-deus.git'
+Plug 'https://github.com/joshdick/onedark.vim'
 
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
@@ -75,6 +76,9 @@ Plug 'kshenoy/vim-signature'
 
 " Highlight word under cursor
 Plug 'RRethy/vim-illuminate'
+
+" Basically all languages syntax highlighting
+Plug 'https://github.com/sheerun/vim-polyglot'
 
 "##################################
 "#          Languages
@@ -86,27 +90,29 @@ Plug 'janko-m/vim-test'
 Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
-Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight.git'
 
 " C#
-Plug 'OmniSharp/omnisharp-vim'
-Plug 'OrangeT/vim-csharp'
+Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
+Plug 'https://github.com/OrangeT/vim-csharp.git'
 Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
 
 " Typescript/Javascript + Client Side Stuffs
-Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'peitalin/vim-jsx-typescript'
+" ts server client
+" Plug 'https://github.com/Quramy/tsuquyomi.git'
+" Syntax file for typescript
+Plug 'https://github.com/leafgarland/typescript-vim.git'
+" More Syntax? and indenting
+" Plug 'https://github.com/pangloss/vim-javascript.git'
+" Syntax for jsx
+" Plug 'https://github.com/peitalin/vim-jsx-typescript.git'
 
 " Json Formatter
-Plug 'tpope/vim-jdaddy'
-
-" Shell Scripts
-Plug 'PProvost/vim-ps1'
+Plug 'https://github.com/tpope/vim-jdaddy.git'
 
 " SQL
 Plug 'vim-scripts/dbext.vim'
@@ -147,3 +153,6 @@ Plug 'tommcdo/vim-fubitive'
 "#             Other
 "##################################
 Plug 'vimwiki/vimwiki'
+
+" Chrome/Firefox nvim extension
+Plug 'https://github.com/glacambre/firenvim.git', { 'do': function('firenvim#install') }

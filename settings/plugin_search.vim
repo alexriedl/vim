@@ -28,13 +28,17 @@ let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_show_hidden = 1
 
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
+nmap     <leader>ff <Plug>CtrlSFPrompt
+" nmap     <leader>fp <Plug>CtrlSFPwordPath
+
+nmap     <leader>fn <Plug>CtrlSFCwordExec
+nmap     <leader>fN <Plug>CtrlSFCwordPath
+
+vmap     <leader>ff <Plug>CtrlSFVwordExec
+vmap     <leader>fF <Plug>CtrlSFVwordPath
+
+nnoremap <leader>fo :CtrlSFOpen<CR>
+nnoremap <leader>ft :CtrlSFToggle<CR>
 
 nmap gf <Plug>CtrlSFCwordExec
 nmap <Leader>a <Plug>CtrlSFPrompt

@@ -9,3 +9,10 @@ let g:linediff_first_buffer_command = 'leftabove new'
 let g:linediff_further_buffer_command = 'rightbelow vertical new'
 vnoremap <leader>d :Linediff<CR>
 nnoremap <leader>o :LinediffReset<CR>
+
+" Git Gutter
+set updatetime=100
+let g:gitgutter_map_keys = 0
+
+nmap ]g <Plug>GitGutterNextHunk
+nmap [g <Plug>GitGutterPrevHunk
