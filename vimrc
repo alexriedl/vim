@@ -63,6 +63,7 @@ set completeopt=noinsert,noselect,menuone
 " For echodoc to work
 set noshowmode
 let g:echodoc_enable_at_startup = 1
+let g:echodoc#type = 'popup'
 
 " Folds
 set foldmethod=marker

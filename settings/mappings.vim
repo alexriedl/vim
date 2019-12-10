@@ -58,6 +58,9 @@ nnoremap )y yi)
 " ctrl+space to omni complete
 inoremap <c-space> <c-x><c-o>
 
+inoremap <c-c> <Esc>
+nnoremap <c-c> <Esc>
+
 nnoremap <M-}> :cnext<cr>
 nnoremap <M-{> :cprevious<cr>
 

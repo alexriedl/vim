@@ -19,6 +19,6 @@ autocmd Filetype vim,python,c,cpp setl omnifunc=lsp#omnifunc
 " nnoremap <silent> ;s  :call lsp#text_document_signature_help()<CR>
 " nnoremap <silent> ;td :call lsp#text_document_type_definition()<CR>
 
-call nvim_lsp#setup("tsserver", {})
-call nvim_lsp#setup("ccls", {})
-call nvim_lsp#setup("bashls", {})
+" call nvim_lsp#setup("tsserver", {})
+" call nvim_lsp#setup("ccls", {})
+" call nvim_lsp#setup("bashls", {})
