@@ -4,7 +4,7 @@ function! s:configure_omnisharp()
   nnoremap <silent> <buffer> <localleader>cc :OmniSharpGlobalCodeCheck<cr>
   nnoremap <silent> <buffer> <F2> :OmniSharpRename<cr>
   nnoremap <silent> <buffer> <M-cr> :OmniSharpGetCodeActions<cr>
-  xnoremap <silent> <buffer> <M-cr> :OmniSharpGetCodeActions<cr>
+  xnoremap <silent> <buffer> <M-cr> :call OmniSharp#GetCodeActions('visual')<cr>
   nnoremap <silent> <buffer> gd :OmniSharpGotoDefinition<cr>
   nnoremap <silent> <buffer> gh :OmniSharpTypeLookup<cr>
   nnoremap <silent> <buffer> gi :OmniSharpFindImplementations<cr>
@@ -12,14 +12,10 @@ function! s:configure_omnisharp()
   nnoremap <silent> <buffer> [[ :OmniSharpNavigateUp<cr>
   nnoremap <silent> <buffer> ]] :OmniSharpNavigateDown<cr>
   nnoremap <silent> <buffer> K :OmniSharpSignatureHelp<cr>
-  inoremap <silent> <buffer> K <c-O>:OmniSharpSignatureHelp<cr>
+  " inoremap <silent> <buffer> K <c-O>:OmniSharpSignatureHelp<cr>
 
   augroup omnisharp_commands
     autocmd!
-    " OmniSharp throws an error in the autocommand OmniSharpReady
-    " autocmd User OmniSharpReady *.cs call OmniSharp#HighlightBuffer()
-    " autocmd User OmniSharpReady *.cs call timer_start(1000, {id -> echo 'timeout'})
-
     " Use tabs in cs files
     autocmd BufRead,BufNewFile *.cs setlocal noexpandtab
 
@@ -28,8 +24,6 @@ function! s:configure_omnisharp()
 
     " Close loclist window when buffer is closed
     autocmd QuitPre *.cs if empty(&buftype) | lclose | endif
-
-    " autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
   augroup END
 endfunction
 
