@@ -16,10 +16,6 @@ inoremap \fn <C-R>=expand("%:t:r")<CR>
 " Toggle folding
 nnoremap <space> za
 
-" Alternate escape sequences
-" inoremap jk <esc>
-" inoremap kj <esc>
-
 " Skip 'fake' lines
 nnoremap j gj
 nnoremap k gk
@@ -30,9 +26,6 @@ nnoremap E $
 " Unbind old beginning/end of line movements (forces use of new bindings)
 nnoremap $ <nop>
 nnoremap ^ <nop>
-
-" Add a new line without entering insert mode
-nnoremap <S-CR> O<Esc>
 
 inoremap <C-j> <C-n>
 inoremap <C-k> <C-p>

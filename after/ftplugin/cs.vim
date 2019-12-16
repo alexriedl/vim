@@ -3,8 +3,8 @@ function! s:configure_omnisharp()
   nnoremap <silent> <buffer> <localleader>r :OmniSharpRestartServer<cr>
   nnoremap <silent> <buffer> <localleader>cc :OmniSharpGlobalCodeCheck<cr>
   nnoremap <silent> <buffer> <F2> :OmniSharpRename<cr>
-  nnoremap <silent> <buffer> <M-cr> :OmniSharpGetCodeActions<cr>
-  xnoremap <silent> <buffer> <M-cr> :call OmniSharp#GetCodeActions('visual')<cr>
+  nnoremap <silent> <buffer> <a-cr> :OmniSharpGetCodeActions<cr>
+  xnoremap <silent> <buffer> <a-cr> :call OmniSharp#GetCodeActions('visual')<cr>
   nnoremap <silent> <buffer> gd :OmniSharpGotoDefinition<cr>
   nnoremap <silent> <buffer> gh :OmniSharpTypeLookup<cr>
   nnoremap <silent> <buffer> gi :OmniSharpFindImplementations<cr>

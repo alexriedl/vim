@@ -63,12 +63,18 @@ set completeopt=noinsert,noselect,menuone
 " For echodoc to work
 set noshowmode
 let g:echodoc_enable_at_startup = 1
-let g:echodoc#type = 'popup'
+if has('nvim')
+  let g:echodoc#type = 'floating'
+  highlight link EchoDocFloat Pmenu
+else
+  let g:echodoc#type = 'popup'
+  highlight link EchoDocPopup Pmenu
+endif
 
 " Folds
 set foldmethod=marker
 set foldlevelstart=20
-set foldnestmax=2
+set foldnestmax=8
 
 " Undo Settings
 set undofile
