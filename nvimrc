@@ -3,21 +3,22 @@ set runtimepath^=~/.vim runtimepath+=~/.vim/after
 let &packpath = &runtimepath
 source ~/.vim/vimrc
 
-" NVim Specific Settings
-" Dont use shada files.....too many issues
-" set shada="NONE"
-
 " Escape in a terminal actually escapes...
 tnoremap <Esc> <C-\><C-n>
 
+call luaeval("require'nvim_lsp'.ccls.setup{}")
+call luaeval("require'nvim_lsp'.bashls.setup{}")
+
 autocmd CompleteDone * pclose
-autocmd Filetype vim,python,c,cpp setl omnifunc=lsp#omnifunc
-" nnoremap <silent> ;dc :call lsp#text_document_declaration()<CR>
-" nnoremap <silent> ;df :call lsp#text_document_definition()<CR>
-" nnoremap <silent> ;h  :call lsp#text_document_hover()<CR>
-" nnoremap <silent> ;i  :call lsp#text_document_implementation()<CR>
-" nnoremap <silent> ;s  :call lsp#text_document_signature_help()<CR>
-" nnoremap <silent> ;td :call lsp#text_document_type_definition()<CR>
+" autocmd Filetype vim,python,c,cpp setl omnifunc=lsp#omnifunc
+autocmd Filetype vim,sh,python,c,cpp setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
 
 " call nvim_lsp#setup("tsserver", {})
 " call nvim_lsp#setup("ccls", {})
