@@ -47,7 +47,7 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 " Syntax + Code complete
 Plug 'ervandew/supertab'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
+" Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
 Plug 'https://github.com/neovim/nvim-lsp.git', Cond(has('nvim'))
 
 " Debugger. Currently only officially support in vim (not neovim).

@@ -70,4 +70,4 @@ function! s:setup_coc()
 
 endfunction
 
-call s:setup_coc()
+" call s:setup_coc()
