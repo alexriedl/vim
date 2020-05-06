@@ -8,6 +8,9 @@ tnoremap <Esc> <C-\><C-n>
 
 call luaeval("require'nvim_lsp'.ccls.setup{}")
 call luaeval("require'nvim_lsp'.bashls.setup{}")
+call luaeval("require'nvim_lsp'.sumneko_lua.setup{}")
+" Manuall run :LspInstall sumneko_lua in vim to install the lua language
+" server
 
 autocmd CompleteDone * pclose
 " autocmd Filetype vim,python,c,cpp setl omnifunc=lsp#omnifunc

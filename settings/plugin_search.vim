@@ -18,7 +18,7 @@ augroup search_autocommands
   autocmd QuickFixCmdPost *grep* cwindow
 augroup END
 
-let g:ctrlp_custom_ignore = '\v[\/](bundle|undo|node_modules|target|dist|bin|obj|build*)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](bundle|undo|node_modules|target|dist|bin|obj|build*)|(\.(swp|ico|git|svn|ccls-cache))$'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 let g:ctrlp_clear_cache_on_exit = 1
