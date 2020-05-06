@@ -87,10 +87,13 @@ endfunction
 call s:LoadAllSettingsFiles()
 
 " Auto trim whitespace on save and keep the cursor position
+let g:trim_whitespace_on_save = v:true
 function! TrimWhitespace()
-  let l:save = winsaveview()
-  keeppatterns %s/\s\+$//e
-  call winrestview(l:save)
+  if g:trim_whitespace_on_save
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+  endif
 endfunction
 augroup whitespace_autocommands
   autocmd!
