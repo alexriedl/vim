@@ -47,13 +47,13 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 " Syntax + Code complete
 Plug 'ervandew/supertab'
 Plug 'editorconfig/editorconfig-vim'
-" Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
+Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
 Plug 'https://github.com/neovim/nvim-lsp.git', Cond(has('nvim'))
 
-" Debugger. Currently only officially support in vim (not neovim).
-" More info at: https://github.com/puremourning/vimspector/pull/30
-Plug 'https://github.com/puremourning/vimspector.git',
-  \ Cond(!has('nvim'), {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'})
+Plug 'https://github.com/puremourning/vimspector.git', {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'}
+
+" Easy format keybindings (like align on =)
+Plug 'https://github.com/godlygeek/tabular.git'
 
 " Snippets
 " Plug 'SirVer/ultisnips'
@@ -116,6 +116,7 @@ Plug 'https://github.com/tpope/vim-jdaddy.git'
 
 " SQL
 Plug 'vim-scripts/dbext.vim'
+" Plug 'https://github.com/joereynolds/SQHell.vim.git'
 
 "##################################
 "#             Tmux

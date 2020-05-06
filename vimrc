@@ -1,4 +1,5 @@
 let $VIMHOME=expand('<sfile>:p:h')
+let $TMP=$HOME . "/temp_dir"
 
 " Install vim-plug if it is not already
 if empty(glob('$VIMHOME/autoload/plug.vim'))
@@ -41,13 +42,7 @@ set hidden                 " Hide current buffers instead of complain
 set mouse=a                " Allow mouse scrolling + selecting in terminal like gvim
 set clipboard=unnamedplus  " Use system clipboard as default register
 set noequalalways          " Dont resize windows when closing others
-
-if has('nvim')
-  set signcolumn=auto:2      " Dont show sign column unless there is something to show, up to 2 columns
-else
-  set signcolumn=auto        " Dont show sign column unless there is something to show
-endif
-set signcolumn=yes " Limit to 1 column and always show it
+set signcolumn=yes         " Limit to 1 column and always show it
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -60,8 +55,9 @@ set splitright
 " set completeopt=longest,menuone,noinsert
 set completeopt=noinsert,noselect,menuone
 
-" For echodoc to work
-set noshowmode
+set wildmode=longest,list,full
+set wildmenu
+
 let g:echodoc_enable_at_startup = 1
 if has('nvim')
   let g:echodoc#type = 'floating'

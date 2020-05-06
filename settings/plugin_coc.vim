@@ -1,23 +1,24 @@
 function! s:setup_coc()
 
   let g:coc_global_extensions=[
-    \ 'coc-ccls',
     \ 'coc-json',
     \ 'coc-marketplace',
     \ 'coc-omni',
-    \ 'coc-sh',
-    \ 'coc-sql',
-    \ 'coc-tslint',
-    \ 'coc-tsserver',
-    \ 'coc-vimlsp',
-    \ 'coc-xml',
+    \ 'coc-omnisharp',
     \ 'coc-yank',
   \]
-
+    " \ 'coc-ccls',
+    " \ 'coc-sh',
+    " \ 'coc-sql',
+    " \ 'coc-tslint',
+    " \ 'coc-tsserver',
+    " \ 'coc-vimlsp',
+    " \ 'coc-xml',
 
   " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
   " Coc only does snippet and additional edit on confirm.
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+  inoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<c-g>u\<cr>"
+  " inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<c-g>u\<cr>"
 
   " Use `[c` and `]c` to navigate diagnostics
   nmap <silent> [c <Plug>(coc-diagnostic-prev)
@@ -51,6 +52,14 @@ function! s:setup_coc()
   xmap <leader>a  <Plug>(coc-codeaction-selected)
   nmap <leader>a  <Plug>(coc-codeaction-selected)
 
+  " Function text objects
+  xmap if <Plug>(coc-funcobj-i)
+  xmap af <Plug>(coc-funcobj-a)
+  omap if <Plug>(coc-funcobj-i)
+  omap af <Plug>(coc-funcobj-a)
+
+  nnoremap <silent> <leader>p :<C-u>CocList diagnostics<cr>
+
   " Remap for do codeAction of current line
   nmap <leader>ac  <Plug>(coc-codeaction)
   " Fix autofix problem of current line
@@ -64,10 +73,6 @@ function! s:setup_coc()
     autocmd CursorHold * silent call CocActionAsync('highlight')
   augroup end
 
-  " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-  " Coc only does snippet and additional edit on confirm.
-  inoremap <expr> <cr> pumvisible() ? "\<c-y>\<cr>" : "\<c-g>u\<cr>"
-
 endfunction
 
-" call s:setup_coc()
+call s:setup_coc()

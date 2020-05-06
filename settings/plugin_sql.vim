@@ -1,3 +1,5 @@
+function! s:enable_dbext()
+
 let g:dbext_default_profile_RECON_LOCAL =   'type=PGSQL:host=localhost:dbname=recon:user=root'
 let g:dbext_default_profile_RECON_TUNNEL =  'type=PGSQL:host=localhost:port=1234:dbname=recon:user=db_root_user'
 
@@ -56,3 +58,20 @@ augroup aramark
   autocmd BufRead */sql/aramark-qa/*       DBSetOption profile=ARAMARK_QA
   autocmd BufRead */sql/aramark-prod/*     DBSetOption profile=ARAMARK_PROD
 augroup end
+
+endfunction
+
+function! s:enable_sqhell()
+let g:sqh_connections = {
+    \ 'default': {
+    \   'user': 'dbup_local',
+    \   'password': '#1place2work',
+    \   'host': 'localhost',
+    \   'database': 'postgres'
+    \}
+\}
+let g:sqh_provider = 'psql'
+endfunction
+
+call s:enable_dbext()
+" call s:enable_sqhell()

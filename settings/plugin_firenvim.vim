@@ -6,6 +6,8 @@ let g:firenvim_config = {
     \ }
   \ }
 \ }
+      " \ 'takeover': 'never',
+      " \ 'cmdline' : 'firenvim'
 
 augroup firenvim_ag
   autocmd!
