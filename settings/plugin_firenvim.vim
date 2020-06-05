@@ -47,4 +47,7 @@ function! OnUiEnter(event) abort
     autocmd TextChangedI * ++nested call s:delayBufferWrite()
   endif
 endfunction
-autocmd UIEnter * call OnUiEnter(deepcopy(v:event))
+
+if has('nvim')
+  autocmd UIEnter * call OnUiEnter(deepcopy(v:event))
+endif
