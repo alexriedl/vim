@@ -47,7 +47,6 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 " Syntax + Code complete
 Plug 'ervandew/supertab'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'https://github.com/neoclide/coc.nvim.git', {'branch': 'release'}
 Plug 'https://github.com/neovim/nvim-lsp.git', Cond(has('nvim'))
 
 Plug 'https://github.com/puremourning/vimspector.git', {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'}
@@ -70,6 +69,9 @@ Plug 'https://github.com/joshdick/onedark.vim'
 
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
+
+" Highlight yanked region
+Plug 'https://github.com/machakann/vim-highlightedyank.git'
 
 " Display marks in gutter
 Plug 'kshenoy/vim-signature'

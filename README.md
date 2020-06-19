@@ -26,7 +26,7 @@ npm i -g typescript tslint
 ## Fonts ##
 1. Powerline:
 2. Nerd Fonts: This was only used in nerdtree
-  a) https://github.com/ryanoasis/nerd-fonts#font-installation<Paste>
+  a) https://github.com/ryanoasis/nerd-fonts#font-installation
   b) Extract to same directory powerline installed to: `~/.local/share/fonts`
 3. Setup terminal to use font
 
