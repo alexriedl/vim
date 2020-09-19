@@ -28,14 +28,14 @@ set number                 " Show line numbers
 set tabstop=2              " Tab width
 set shiftwidth=2           " Tab width
 set expandtab              " Use spaces instead of tabs
-set cindent                " Auto indent using c style indents
+" set cindent                " Auto indent using c style indents
 set cursorline             " Highlight line cursor is on
 set showmatch              " Show matching parenthesis
 set hlsearch               " Highlight search matches
 set incsearch              " Search as characters are entered
 set ignorecase             " Needed for smart case to work correctly
 set smartcase              " Do case-sensitive search only if theres a cap
-set autoread               " Auto reload file if seved externally
+set autoread               " Auto reload file if changed externally
 set nobackup               " Disable backup files
 set noswapfile             " Disable backup files
 set hidden                 " Hide current buffers instead of complain
