@@ -27,4 +27,4 @@ function! s:configure_omnisharp()
   augroup END
 endfunction
 
-call s:configure_omnisharp()
+" call s:configure_omnisharp()
