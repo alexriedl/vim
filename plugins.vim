@@ -47,7 +47,8 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 " Syntax + Code complete
 Plug 'ervandew/supertab'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'https://github.com/neovim/nvim-lsp.git', Cond(has('nvim'))
+Plug 'https://github.com/neovim/nvim-lspconfig.git', Cond(has('nvim'))
+Plug 'https://github.com/nvim-lua/diagnostic-nvim.git', Cond(has('nvim'))
 
 Plug 'https://github.com/puremourning/vimspector.git', {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'}
 
@@ -92,13 +93,12 @@ Plug 'janko-m/vim-test'
 Plug 'ludovicchabant/vim-gutentags'
 
 " C / C++
-" Plug 'octol/vim-cpp-enhanced-highlight'
-" Plug 'https://github.com/jackguo380/vim-lsp-cxx-highlight.git'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " C#
-Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
-Plug 'https://github.com/OrangeT/vim-csharp.git'
-Plug 'https://github.com/nickspoons/vim-sharpenup.git'
+" Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
+" Plug 'https://github.com/OrangeT/vim-csharp.git'
+" Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
@@ -107,7 +107,7 @@ Plug 'plasticboy/vim-markdown'
 " ts server client
 " Plug 'https://github.com/Quramy/tsuquyomi.git'
 " Syntax file for typescript
-Plug 'https://github.com/leafgarland/typescript-vim.git'
+" Plug 'https://github.com/leafgarland/typescript-vim.git'
 " More Syntax? and indenting
 " Plug 'https://github.com/pangloss/vim-javascript.git'
 " Syntax for jsx
