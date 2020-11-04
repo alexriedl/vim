@@ -1,13 +1,22 @@
 set background=dark
 
-" let g:airline_theme='gruvbox'
+set t_Co=256
+set termguicolors
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 " silent! colorscheme gruvbox
 
-" let g:airline_theme='deus'
 " silent! colorscheme deus
+" let g:deus_termcolors=256
 
-let g:airline_theme='onedark'
-silent! colorscheme onedark
+" silent! colorscheme onedark
+" let g:onedark_termcolors=256
+
+silent! colorscheme nvcode
+let g:nvcode_termcolors=256
+
 
 " Display extra whitespace
 set list listchars=tab:-»,trail:·,nbsp:·

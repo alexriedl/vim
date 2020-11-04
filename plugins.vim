@@ -7,48 +7,47 @@ endfunction
 "##################################
 "#          Usablility
 "##################################
-Plug 'tpope/vim-dispatch'
-Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+" Async - Not sure if either of these are required anymore
+Plug 'https://github.com/tpope/vim-dispatch'
+Plug 'https://github.com/Shougo/vimproc.vim', {'do' : 'make'}
 
 " Search
-Plug 'mileszs/ack.vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'dyng/ctrlsf.vim'
+Plug 'https://github.com/mileszs/ack.vim'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/FelikZ/ctrlp-py-matcher'
+Plug 'https://github.com/dyng/ctrlsf.vim'
 
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'easymotion/vim-easymotion'
-Plug 'tpope/vim-surround'
+Plug 'https://github.com/michaeljsmith/vim-indent-object'
+Plug 'https://github.com/easymotion/vim-easymotion'
+Plug 'https://github.com/tpope/vim-surround'
 
 " Smooth Scroll
 Plug 'https://github.com/yuttie/comfortable-motion.vim'
 
-" Function Signature in status line
-Plug 'Shougo/echodoc.vim'
-
 " Repeat plugin commands
-Plug 'tpope/vim-repeat'
+Plug 'https://github.com/tpope/vim-repeat'
 
 " Modify quickfix list
-Plug 'stefandtw/quickfix-reflector.vim'
+Plug 'https://github.com/stefandtw/quickfix-reflector.vim'
 
 " Comment sections easily
-Plug 'tpope/vim-commentary'
+Plug 'https://github.com/tpope/vim-commentary'
 
 " Unix Commands
-Plug 'tpope/vim-eunuch'
+Plug 'https://github.com/tpope/vim-eunuch'
 
 " Visual Undo tree
-Plug 'simnalamburt/vim-mundo'
+Plug 'https://github.com/simnalamburt/vim-mundo'
 
 " Nicer Expand commands, More replace syntax, name style conversion
 Plug 'https://github.com/tpope/vim-abolish.git'
 
 " Syntax + Code complete
-Plug 'ervandew/supertab'
-Plug 'editorconfig/editorconfig-vim'
+Plug 'https://github.com/ervandew/supertab'
+Plug 'https://github.com/editorconfig/editorconfig-vim'
 Plug 'https://github.com/neovim/nvim-lspconfig.git', Cond(has('nvim'))
 Plug 'https://github.com/nvim-lua/diagnostic-nvim.git', Cond(has('nvim'))
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter', Cond(has('nvim'))
 
 Plug 'https://github.com/puremourning/vimspector.git', {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'}
 
@@ -62,23 +61,29 @@ Plug 'https://github.com/godlygeek/tabular.git'
 "##################################
 "#       Layout + Look/Feel
 "##################################
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'morhetz/gruvbox'
+" Tabbar
+Plug 'https://github.com/itchyny/lightline.vim'
+Plug 'https://github.com/romgrk/barbar.nvim.git', Cond(has('nvim'))
+Plug 'https://github.com/kyazdani42/nvim-web-devicons.git', Cond(has('nvim'))
+
+" Colors
+Plug 'https://github.com/morhetz/gruvbox'
 Plug 'https://github.com/ajmwagar/vim-deus.git'
 Plug 'https://github.com/joshdick/onedark.vim'
+Plug 'https://github.com/christianchiarulli/nvcode-color-schemes.vim'
 
-Plug 'justinmk/vim-dirvish'
-Plug 'kristijanhusak/vim-dirvish-git'
+" File Explorer
+Plug 'https://github.com/justinmk/vim-dirvish'
+Plug 'https://github.com/kristijanhusak/vim-dirvish-git'
 
 " Highlight yanked region
 Plug 'https://github.com/machakann/vim-highlightedyank.git'
 
 " Display marks in gutter
-Plug 'kshenoy/vim-signature'
+Plug 'https://github.com/kshenoy/vim-signature'
 
 " Highlight word under cursor
-Plug 'RRethy/vim-illuminate'
+Plug 'https://github.com/RRethy/vim-illuminate'
 
 " Basically all languages syntax highlighting
 Plug 'https://github.com/sheerun/vim-polyglot'
@@ -87,13 +92,13 @@ Plug 'https://github.com/sheerun/vim-polyglot'
 "#          Languages
 "##################################
 " Run Tests
-Plug 'janko-m/vim-test'
+Plug 'https://github.com/janko-m/vim-test'
 
 " Tag manager
-Plug 'ludovicchabant/vim-gutentags'
+Plug 'https://github.com/ludovicchabant/vim-gutentags'
 
 " C / C++
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
 
 " C#
 " Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
@@ -101,7 +106,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " Plug 'https://github.com/nickspoons/vim-sharpenup.git'
 
 " Markdown
-Plug 'plasticboy/vim-markdown'
+Plug 'https://github.com/plasticboy/vim-markdown'
 
 " Typescript/Javascript + Client Side Stuffs
 " ts server client
@@ -117,7 +122,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'https://github.com/tpope/vim-jdaddy.git'
 
 " SQL
-Plug 'vim-scripts/dbext.vim'
+Plug 'https://github.com/vim-scripts/dbext.vim'
 " Plug 'https://github.com/joereynolds/SQHell.vim.git'
 
 "##################################
@@ -130,7 +135,7 @@ Plug 'https://github.com/tmux-plugins/vim-tmux.git'
 Plug 'https://github.com/christoomey/vim-tmux-navigator.git'
 
 " Help with tmux clipboard
-Plug 'roxma/vim-tmux-clipboard'
+Plug 'https://github.com/roxma/vim-tmux-clipboard'
 
 " Make tmux pass focus events through so plugins work
 Plug 'https://github.com/tmux-plugins/vim-tmux-focus-events.git'
@@ -138,24 +143,24 @@ Plug 'https://github.com/tmux-plugins/vim-tmux-focus-events.git'
 "##################################
 "#             git
 "##################################
-Plug 'rhysd/git-messenger.vim'
-Plug 'airblade/vim-gitgutter'
+Plug 'https://github.com/rhysd/git-messenger.vim'
+Plug 'https://github.com/airblade/vim-gitgutter'
 
 " Diff sections of text
-Plug 'AndrewRadev/linediff.vim'
+Plug 'https://github.com/AndrewRadev/linediff.vim'
 
-Plug 'tpope/vim-fugitive'
+Plug 'https://github.com/tpope/vim-fugitive'
 " Fugitive Gitlab
-Plug 'shumphrey/fugitive-gitlab.vim'
+Plug 'https://github.com/shumphrey/fugitive-gitlab.vim'
 " Fugitive Github
-Plug 'tpope/vim-rhubarb'
+Plug 'https://github.com/tpope/vim-rhubarb'
 " Fugitive Bitbucket
-Plug 'tommcdo/vim-fubitive'
+Plug 'https://github.com/tommcdo/vim-fubitive'
 
 "##################################
 "#             Other
 "##################################
-Plug 'vimwiki/vimwiki'
+Plug 'https://github.com/vimwiki/vimwiki'
 
 " Chrome/Firefox nvim extension
 Plug 'https://github.com/glacambre/firenvim.git', Cond(has('nvim'), { 'do': { _ -> firenvim#install(0) } })

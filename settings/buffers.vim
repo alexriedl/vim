@@ -4,9 +4,12 @@
 " nmap <leader>tq :tabc<CR>
 
 " Moving Buffers
-nmap <S-l> :bnext<CR>
-nmap <S-h> :bprevious<CR>
-nmap <leader>bq :bp <BAR> bd #<CR>
+if has('nvim')
+else
+  nmap <S-l> :bnext<CR>
+  nmap <S-h> :bprevious<CR>
+  nmap <leader>bq :bp <BAR> bd #<CR>
+endif
 
 " Skip quick fix buffer
 augroup qf

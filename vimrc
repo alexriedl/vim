@@ -58,15 +58,6 @@ set completeopt=noinsert,noselect,menuone
 set wildmode=longest,list,full
 set wildmenu
 
-let g:echodoc_enable_at_startup = 1
-if has('nvim')
-  let g:echodoc#type = 'floating'
-  highlight link EchoDocFloat Pmenu
-else
-  let g:echodoc#type = 'popup'
-  highlight link EchoDocPopup Pmenu
-endif
-
 " Folds
 set foldmethod=marker
 set foldlevelstart=20
@@ -101,12 +92,14 @@ augroup whitespace_autocommands
 augroup END
 
 " Fix vim.basic cursor (Double quotes are required)
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-augroup cursor_style
-  autocmd!
-  autocmd VimEnter * silent !echo -ne "\e[2 q"
-augroup END
+if !has('nvim')
+  let &t_SI = "\e[6 q"
+  let &t_EI = "\e[2 q"
+  augroup cursor_style
+    autocmd!
+    autocmd VimEnter * silent !echo -ne "\e[2 q"
+  augroup END
+endif
 
 " Fix vim.basic escape delay
 set timeoutlen=1000 ttimeoutlen=0
