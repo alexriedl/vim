@@ -46,8 +46,8 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 Plug 'https://github.com/ervandew/supertab'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 Plug 'https://github.com/neovim/nvim-lspconfig.git', Cond(has('nvim'))
-Plug 'https://github.com/nvim-lua/diagnostic-nvim.git', Cond(has('nvim'))
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter', Cond(has('nvim'))
+Plug 'https://github.com/nvim-lua/completion-nvim', Cond(has('nvim'))
 
 Plug 'https://github.com/puremourning/vimspector.git', {'do' : './install_gadget.py --enable-c --enable-bash --force-enable-csharp'}
 
@@ -67,10 +67,16 @@ Plug 'https://github.com/romgrk/barbar.nvim.git', Cond(has('nvim'))
 Plug 'https://github.com/kyazdani42/nvim-web-devicons.git', Cond(has('nvim'))
 
 " Colors
-Plug 'https://github.com/morhetz/gruvbox'
-Plug 'https://github.com/ajmwagar/vim-deus.git'
-Plug 'https://github.com/joshdick/onedark.vim'
+" Plug 'https://github.com/morhetz/gruvbox'
+" Plug 'https://github.com/ajmwagar/vim-deus.git'
+" Plug 'https://github.com/joshdick/onedark.vim'
 Plug 'https://github.com/christianchiarulli/nvcode-color-schemes.vim'
+" Plug 'https://github.com/bluz71/vim-moonfly-colors.git'
+" Plug 'https://github.com/bluz71/vim-nightfly-guicolors.git'
+" Plug 'https://github.com/mhartington/oceanic-next.git'
+
+" Basically all languages syntax highlighting
+" Plug 'https://github.com/sheerun/vim-polyglot'
 
 " File Explorer
 Plug 'https://github.com/justinmk/vim-dirvish'
@@ -85,9 +91,6 @@ Plug 'https://github.com/kshenoy/vim-signature'
 " Highlight word under cursor
 Plug 'https://github.com/RRethy/vim-illuminate'
 
-" Basically all languages syntax highlighting
-Plug 'https://github.com/sheerun/vim-polyglot'
-
 "##################################
 "#          Languages
 "##################################
@@ -95,10 +98,10 @@ Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/janko-m/vim-test'
 
 " Tag manager
-Plug 'https://github.com/ludovicchabant/vim-gutentags'
+" Plug 'https://github.com/ludovicchabant/vim-gutentags'
 
 " C / C++
-Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
+" Plug 'https://github.com/octol/vim-cpp-enhanced-highlight'
 
 " C#
 " Plug 'https://github.com/OmniSharp/omnisharp-vim.git'
@@ -161,6 +164,9 @@ Plug 'https://github.com/tommcdo/vim-fubitive'
 "#             Other
 "##################################
 Plug 'https://github.com/vimwiki/vimwiki'
+
+" UML/Sequence Diagrams in plantuml syntax (requires java installed)
+Plug 'https://github.com/scrooloose/vim-slumlord.git'
 
 " Chrome/Firefox nvim extension
 Plug 'https://github.com/glacambre/firenvim.git', Cond(has('nvim'), { 'do': { _ -> firenvim#install(0) } })

@@ -23,17 +23,16 @@ nnoremap <silent> <leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>
 " C++:        Manually install ccls
 
 lua <<EOF
-require'nvim_lsp'.ccls.setup{        on_attach=require'diagnostic'.on_attach }
-require'nvim_lsp'.bashls.setup{      on_attach=require'diagnostic'.on_attach }
-require'nvim_lsp'.tsserver.setup{    on_attach=require'diagnostic'.on_attach }
-require'nvim_lsp'.terraformls.setup{ on_attach=require'diagnostic'.on_attach }
-require'nvim_lsp'.vimls.setup{       on_attach=require'diagnostic'.on_attach }
-require'nvim_lsp'.sumneko_lua.setup{ on_attach=require'diagnostic'.on_attach }
-require'nvim_lsp'.omnisharp.setup{   on_attach=require'diagnostic'.on_attach }
+require'lspconfig'.ccls.setup{}
+require'lspconfig'.bashls.setup{}
+require'lspconfig'.tsserver.setup{}
+require'lspconfig'.terraformls.setup{}
+require'lspconfig'.vimls.setup{}
+require'lspconfig'.sumneko_lua.setup{}
+require'lspconfig'.omnisharp.setup{}
 EOF
 
-" TODO: Move to plugin settings
-let g:diagnostic_enable_virtual_text = 1
+autocmd BufEnter * lua require'completion'.on_attach()
 
 lua << EOF
 require'nvim-treesitter.configs'.setup {

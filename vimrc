@@ -15,7 +15,6 @@ silent! if plug#begin('$VIMHOME/plugged')
 endif
 
 " Basic Setup
-syntax on
 filetype indent plugin on
 let mapleader=','
 let maplocalleader=','

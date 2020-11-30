@@ -1,3 +1,4 @@
+syntax on
 set background=dark
 
 set t_Co=256
@@ -7,15 +8,15 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " silent! colorscheme gruvbox
-
 " silent! colorscheme deus
-" let g:deus_termcolors=256
-
 " silent! colorscheme onedark
-" let g:onedark_termcolors=256
-
-silent! colorscheme nvcode
-let g:nvcode_termcolors=256
+" silent! colorscheme nvcode
+" silent! colorscheme aurora
+silent! colorscheme snazzy
+" silent! colorscheme palenight
+" silent! colorscheme moonfly
+" silent! colorscheme nightfly
+" silent! colorscheme OceanicNext
 
 
 " Display extra whitespace
@@ -33,7 +34,7 @@ endif
 highlight Normal guibg=NONE ctermbg=NONE
 
 
-highlight LspDiagnosticsError guifg=Red3 ctermfg=160
-highlight LspDiagnosticsWarning guifg=Gold3 ctermfg=178
-highlight LspDiagnosticsInformation guifg=SteelBlue1 ctermfg=75
-highlight LspDiagnosticsHint guifg=DarkCyan ctermfg=DarkCyan
+" highlight LspDiagnosticsError guifg=Red3 ctermfg=160
+" highlight LspDiagnosticsWarning guifg=Gold3 ctermfg=178
+" highlight LspDiagnosticsInformation guifg=SteelBlue1 ctermfg=75
+" highlight LspDiagnosticsHint guifg=DarkCyan ctermfg=DarkCyan
