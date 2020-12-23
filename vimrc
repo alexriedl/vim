@@ -61,6 +61,9 @@ set wildmenu
 set foldmethod=marker
 set foldlevelstart=20
 set foldnestmax=8
+" Trying treesitter folding
+set foldmethod=expr
+set foldexpr=nvim_treesitter#foldexpr()
 
 " Undo Settings
 set undofile
