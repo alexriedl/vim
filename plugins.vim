@@ -46,6 +46,7 @@ Plug 'https://github.com/tpope/vim-abolish.git'
 Plug 'https://github.com/ervandew/supertab'
 Plug 'https://github.com/editorconfig/editorconfig-vim'
 Plug 'https://github.com/neovim/nvim-lspconfig.git', Cond(has('nvim'))
+Plug 'https://github.com/mattn/vim-lsp-settings.git', Cond(has('nvim'))
 Plug 'https://github.com/nvim-treesitter/nvim-treesitter', Cond(has('nvim'), {'do': ':TSUpdate'})
 Plug 'https://github.com/nvim-lua/completion-nvim', Cond(has('nvim'))
 
