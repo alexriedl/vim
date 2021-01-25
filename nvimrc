@@ -23,13 +23,15 @@ nnoremap <silent> <leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>
 " C++:        Manually install ccls
 
 lua <<EOF
-require'lspconfig'.ccls.setup{}
-require'lspconfig'.bashls.setup{}
-require'lspconfig'.tsserver.setup{}
-require'lspconfig'.terraformls.setup{}
-require'lspconfig'.vimls.setup{}
-require'lspconfig'.sumneko_lua.setup{}
-require'lspconfig'.omnisharp.setup{}
+local pid = vim.fn.getpid()
+local lspconfig = require'lspconfig'
+lspconfig.ccls.setup{}
+lspconfig.bashls.setup{}
+lspconfig.tsserver.setup{}
+lspconfig.terraformls.setup{}
+lspconfig.vimls.setup{}
+lspconfig.sumneko_lua.setup{}
+lspconfig.omnisharp.setup{ cmd = {  "/home/alex/.omnisharp/1.37.6/run", "--languageserver", "--hostPID", tostring(pid) }; }
 EOF
 
 autocmd BufEnter * lua require'completion'.on_attach()
