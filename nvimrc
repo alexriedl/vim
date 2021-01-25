@@ -14,6 +14,7 @@ nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gi    <cmd>lua vim.lsp.buf.implementation()<CR>
 inoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <leader>ca <cmd>lua vim.lsp.buf.code_action()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 
 " Manual language server installs:
 " lua:        LspInstall sumneko_lua
